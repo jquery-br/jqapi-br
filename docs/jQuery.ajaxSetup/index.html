@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.ajaxSetup()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/low-level-interface/" title="View all posts in Low-Level Interface">Low-Level Interface</a></span>
   
 
@@ -17,29 +17,29 @@
 <span class="name">jQuery.ajaxSetup( options )</span> <span class="returns"></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Set default values for future Ajax requests.</p>
+<p class="desc"><strong>Descrição: </strong>Atribui valores padrão para futuras requisições Ajax.</p>
 <ul class="signatures"><li class="signature" id="jQuery-ajaxSetup-options">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.1/">1.1</a></span>jQuery.ajaxSetup( options )</h4>
-<p class="arguement"><strong>options</strong>A set of key/value pairs that configure the default Ajax request. All options are optional. </p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.1/">1.1</a></span> jQuery.ajaxSetup( options )</h4>
+<p class="arguement"><strong>options</strong> Um conjunto de pares key/value que configura uma requisição padrão Ajax. Todas opções são opcionais. </p>
 </li></ul>
 <div class="longdesc">
-<p>For details on the settings available for <code>$.ajaxSetup()</code>, see <code><a href="/jQuery.ajax">$.ajax()</a></code>. </p>
-<p>All subsequent Ajax calls using any function will use the new settings, unless overridden by the individual calls, until the next invocation of <code>$.ajaxSetup()</code>.</p>
-<p>For example, the following sets a default for the <code>url</code> parameter before pinging the server repeatedly:</p>
+<p>Para detalhes das configurações disponíveis para <code>$.ajaxSetup()</code>, veja <code><a href="/jQuery.ajax">$.ajax()</a></code>. </p>
+<p>Todas calls Ajax subsequentes usando qualquer função irão usar as novas configurações, a não ser que sejam substituídas por calls individuais, até a próxima invocação do <code>$.ajaxSetup()</code>.</p>
+<p>Por exemplo, a seguir atribuímos um um valor padrão para o parâmetro <code>url</code> antes de fazer ping  repetidamente no servidor:</p>
 <pre>$.ajaxSetup({
   url: 'ping.php'
 });</pre>
-<p>Now each time an Ajax request is made, the "ping.php" URL will be used automatically:</p>
+<p>Agora, cada vez que uma requisição Ajax é realizada, a URL "ping.php" será usada automaticamente:</p>
 <pre>$.ajax({
   // url not set here; uses ping.php
   data: {'name': 'Dan'}
 });</pre>
-<blockquote><p>Note: Global callback functions should be set with their respective global Ajax event handler methods—<code><a href="/ajaxStart">.ajaxStart()</a></code>, <code><a href="/ajaxStop">.ajaxStop()</a></code>, <code><a href="/ajaxComplete">.ajaxComplete()</a></code>, <code><a href="/ajaxError">.ajaxError()</a></code>, <code><a href="/ajaxSuccess">.ajaxSuccess()</a></code>, <code><a href="/ajaxSend">.ajaxSend()</a></code>—rather than within the <code>options</code> object for <code>$.ajaxSetup()</code>.</p></blockquote>
+<blockquote><p>Nota: Funções globais de callback devem ser configuradas com seus respectivos métodos do event handler global Ajax —<code><a href="/ajaxStart">.ajaxStart()</a></code>, <code><a href="/ajaxStop">.ajaxStop()</a></code>, <code><a href="/ajaxComplete">.ajaxComplete()</a></code>, <code><a href="/ajaxError">.ajaxError()</a></code>, <code><a href="/ajaxSuccess">.ajaxSuccess()</a></code>, <code><a href="/ajaxSend">.ajaxSend()</a></code>— e não dentro do objeto <code>options</code> para <code>$.ajaxSetup()</code>.</p></blockquote>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Sets the defaults for Ajax requests to the url "/xmlhttp/", disables global handlers and uses POST instead of GET. The following Ajax requests then sends some data without having to set anything else.</span></h4>
+<h4><span class="desc">Atribui valores padrão para requisições Ajax à url "/xmlhttp/", desabilita handlers globais e usa POST ao invés de GET.  A requisição Ajax a seguir envia alguns dados sem ter que configurar mais nada.</span></h4>
 <pre class="prettyprint"><code class="example">$.ajaxSetup({
    url: "/xmlhttp/",
    global: false,

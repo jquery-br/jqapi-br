@@ -32,18 +32,18 @@
 <p class="desc"><strong>Descrição: </strong>Oculta o elemento alvo do seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="hide"><h4 class="name">
-<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span>.hide()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.hide()</h4></li>
 <li class="signature" id="hide-duration-callback">
 <h4 class="name">
-<span class="versionAdded">criado na versãod: <a href="/category/version/1.0/">1.0</a></span>.hide( duration, [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>Um texto ou número determinando o tempo de duração da animação.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.hide( duration, [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando o tempo de duração da animação.</p>
 <p class="arguement"><strong>callback</strong>Função a ser chamada ao finalizar a animação.</p>
 </li>
 <li class="signature" id="hide-duration-easing-callback">
 <h4 class="name">
 <span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.hide( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>Um texto ou número determinando o tempo de duração da animação.</p>
-<p class="arguement"><strong>easing</strong>Indica qual função do plugin easing usar na transição.</p>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando o tempo de duração da animação.</p>
+<p class="arguement"><strong>easing</strong>Indica qual função do easing usar na transição.</p>
 <p class="arguement"><strong>callback</strong>Função a ser chamada ao finalizar a animação.</p>
 </li>
 </ul>
@@ -57,7 +57,7 @@ pode ser restaurado posteriormente ao seu valor inicial. Se um elemento tem <cod
 então ele será oculto e mostrado novamente de forma <code>inline</code>.</p>
 <p>Quando uma duração é informada, <code>.hide()</code> se torna uma função de animação. O método <code>.hide()</code> anima a largura, altura e opacidade do elemento alvo simultâneamente. Quando essas propriedades chegam a 0, a propriedade <code>display</code> é determinada como <code>none</code> para assegurar que o elemento não afetará mais o layout da página.</p>
 <p>A duração é informada em milisegundos; Valores altos indicam animações mais lentas e não mais rápidas. Textos como <code>'fast'</code> e <code>'slow'</code> podem ser informados para indicar durações de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
-<p>A partir da jQuery 1.4.3, uma opção chamada de função easing passou a poder ser usada. Funções easing determinam a velocidade que a animação irá progredir em diferentes momentos dentro da mesma. A única implementação da easing na jQuery são somente as padrões, chamada <code>swing</code>, e outra que vem progredindo em constante ritmo de paz, chamada <code>linear</code>. Mais funções easing estão disponíveis com o uso de plugins, mais notavelmente a <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>A partir do jQuery 1.4.3, uma opção chamada de função easing passou a poder ser usada. Funções easing determinam a velocidade que a animação irá progredir em diferentes momentos dentro da mesma. A única implementação da easing no jQuery são somente as padrões, chamada <code>swing</code>, e outra que vem progredindo em constante ritmo, chamada <code>linear</code>. Mais funções easing estão disponíveis com o uso de plugins, mais notavelmente a <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
 <p>Se for informado o callback é chamado assim que a animação é finalizada. Isto pode ser útil para unir animações diferentes em uma sequência. 
 O callback não envia nenhum argumento, porém <code>this</code> é definido como o elemento DOM sendo animado. Se vários elementos estão sendo animados, 
 é importante notar que o callback é executado uma vez por elemento correspondente e não para a animação como um todo.</p>
@@ -66,10 +66,10 @@ O callback não envia nenhum argumento, porém <code>this</code> é definido com
 <pre>&lt;div id="clickme"&gt;
   Clique Aqui
 &lt;/div&gt;
-&lt;img id="livro" src="book.png" alt="" width="100" height="123" /&gt;
+&lt;img id="book" src="book.png" alt="" width="100" height="123" /&gt;
 Com o elemento sendo apresentado, nós podemos lentamente ocultá-lo:
 $('#clickme').click(function() {
-  $('#livro').hide('slow', function() {
+  $('#book').hide('slow', function() {
     alert('Animação Completa.');
   });
 });</pre>
@@ -107,7 +107,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Anima todos os parágrafos para ocultar lentamente, completandoa animação em 600 milisegundos.</span>
+<h4>Exemplo: <span class="desc">Anima todos os parágrafos para ocultar lentamente, completando a animação em 600 milisegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -173,7 +173,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-3">
-<h4>Exemplo: <span class="desc">Oculta as divs quando clicadas em mais de 2 seconds, então remove o elemento div quando estiver oculto. Tente clicar em mais de um box por vez.</span>
+<h4>Exemplo: <span class="desc">Oculta as divs quando clicadas em mais de 2 segundos, então remove o elemento div quando estiver oculto. Tente clicar em mais de um box por vez.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

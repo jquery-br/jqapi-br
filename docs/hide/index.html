@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
+
         <div class="entry-title roundTop">
+
           
+
           <h1 class="jq-clearfix">.hide()</h1>
+
           <div class="entry-meta jq-clearfix">
+
                         Categories:
+
             <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/basics/" title="View all posts in Basics">Basics</a></span>
+
   
+
+
 
           </div>
 
+
+
 </div>
+
 <div id="hide1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.hide(  )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.hide(  )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Hide the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Oculta o elemento alvo do seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="hide"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.hide()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.hide()</h4></li>
 <li class="signature" id="hide-duration-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.hide( duration, [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.hide( duration, [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando o tempo de duração da animação.</p>
+<p class="arguement"><strong>callback</strong>Função a ser chamada ao finalizar a animação.</p>
 </li>
 <li class="signature" id="hide-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.hide( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>easing</strong>A string indicating which easing function to use for the transition.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.hide( [ duration ], [ easing ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando o tempo de duração da animação.</p>
+<p class="arguement"><strong>easing</strong>Indica qual função do easing usar na transição.</p>
+<p class="arguement"><strong>callback</strong>Função a ser chamada ao finalizar a animação.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>With no parameters, the <code>.hide()</code> method is the simplest way to hide an element:</p>
-<pre>$('.target').hide();
+<p>Sem nenhum parâmetro, o método <code>.hide()</code> vai simplesmente ocultar o elemento:</p>
+<pre>$('.alvo').hide();
 </pre>
-<p>The matched elements will be hidden immediately, with no animation. This is roughly equivalent to calling <code>.css('display', 'none')</code>, except that the value of the <code>display</code> property is saved in jQuery's data cache so that <code>display</code> can later be restored to its initial value. If an element has a <code>display</code> value of <code>inline</code>, then is hidden and shown, it will once again be displayed <code>inline</code>.</p>
-<p>When a duration is provided, <code>.hide()</code> becomes an animation method. The <code>.hide()</code> method animates the width, height, and opacity of the matched elements simultaneously. When these properties reach 0, the <code>display</code> style property is set to <code>none</code> to ensure that the element no longer affects the layout of the page.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively.</p>
-<p>As of jQuery 1.4.3, an optional string naming an easing function may be used. Easing functions specify the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
-<p>We can animate any element, such as a simple image:</p>
+<p>Os elementos alvo serão ocultos automaticamente, sem nenhum animação. Isso é aproximadamente o mesmo que utilizar <code>.css('display', 'none')</code>, 
+exceto que o valor da propriedade <code>display</code> é salva no jQuery's Data Cache assim o <code>display</code> 
+pode ser restaurado posteriormente ao seu valor inicial. Se um elemento tem <code>display</code> com valor <code>inline</code>, 
+então ele será oculto e mostrado novamente de forma <code>inline</code>.</p>
+<p>Quando uma duração é informada, <code>.hide()</code> se torna uma função de animação. O método <code>.hide()</code> anima a largura, altura e opacidade do elemento alvo simultâneamente. Quando essas propriedades chegam a 0, a propriedade <code>display</code> é determinada como <code>none</code> para assegurar que o elemento não afetará mais o layout da página.</p>
+<p>A duração é informada em milisegundos; Valores altos indicam animações mais lentas e não mais rápidas. Textos como <code>'fast'</code> e <code>'slow'</code> podem ser informados para indicar durações de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
+<p>A partir do jQuery 1.4.3, uma opção chamada de função easing passou a poder ser usada. Funções easing determinam a velocidade que a animação irá progredir em diferentes momentos dentro da mesma. A única implementação da easing no jQuery são somente as padrões, chamada <code>swing</code>, e outra que vem progredindo em constante ritmo, chamada <code>linear</code>. Mais funções easing estão disponíveis com o uso de plugins, mais notavelmente a <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>Se for informado o callback é chamado assim que a animação é finalizada. Isto pode ser útil para unir animações diferentes em uma sequência. 
+O callback não envia nenhum argumento, porém <code>this</code> é definido como o elemento DOM sendo animado. Se vários elementos estão sendo animados, 
+é importante notar que o callback é executado uma vez por elemento correspondente e não para a animação como um todo.</p>
+<p>Podemos animar qualquer elemento, por exemplo uma simples imagem:</p>
+
 <pre>&lt;div id="clickme"&gt;
-  Click here
+  Clique Aqui
 &lt;/div&gt;
 &lt;img id="book" src="book.png" alt="" width="100" height="123" /&gt;
-With the element initially shown, we can hide it slowly:
+Com o elemento sendo apresentado, nós podemos lentamente ocultá-lo:
 $('#clickme').click(function() {
   $('#book').hide('slow', function() {
-    alert('Animation complete.');
+    alert('Animação Completa.');
   });
 });</pre>
 <p class="image four-across"> 
   <img src="/images/0042_06_05.png" alt=""><img src="/images/0042_06_06.png" alt=""><img src="/images/0042_06_07.png" alt=""><img src="/images/0042_06_08.png" alt=""></p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.hide()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Nota Adicional:</h3>
+<div class="longdesc"><ul><li>Todos os efeitos da jQuery, incluíndo <code>.hide()</code>, podem ser globalmente desativados pela configuração <code>jQuery.fx.off = true</code>, que efetivamente determina a duração como 0. Para mais informações, veja <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Hides all paragraphs then the link on click.</span>
+<h4>Exemplo: <span class="desc">Oculta todos os parágrafos e o link ao ser clicado.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -71,9 +89,9 @@ $('#clickme').click(function() {
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;Hello&lt;/p&gt;
-  &lt;a href="#"&gt;Click to hide me too&lt;/a&gt;
-  &lt;p&gt;Here is another paragraph&lt;/p&gt;
+  &lt;p&gt;Olá&lt;/p&gt;
+  &lt;a href="#"&gt;Clique para me ocultar também&lt;/a&gt;
+  &lt;p&gt;Aqui vem outro parágrafo&lt;/p&gt;
 &lt;script&gt;
 
     $("p").hide();
@@ -89,7 +107,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Animates all shown paragraphs to hide slowly, completing the animation within 600 milliseconds.</span>
+<h4>Exemplo: <span class="desc">Anima todos os parágrafos para ocultar lentamente, completando a animação em 600 milisegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -100,10 +118,10 @@ $('#clickme').click(function() {
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button&gt;Hide 'em&lt;/button&gt;
+  &lt;button&gt;Ocultar&lt;/button&gt;
 
-  &lt;p&gt;Hiya&lt;/p&gt;
-  &lt;p&gt;Such interesting text, eh?&lt;/p&gt;
+  &lt;p&gt;Olá&lt;/p&gt;
+  &lt;p&gt;Texto muito interessante, eh?&lt;/p&gt;
 &lt;script&gt;
     $("button").click(function () {
       $("p").hide("slow");
@@ -116,7 +134,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Animates all spans (words in this case) to hide fastly, completing each animation within 200 milliseconds. Once each animation is done, it starts the next one.</span>
+<h4>Exemplo: <span class="desc">Anima todos os spans (palavras nesse caso) para ocultar-se rapidamente, completando cada animação em 200 milisegundos. Assim que uma animação termina, se inicia a próxima.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -127,8 +145,8 @@ $('#clickme').click(function() {
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button id="hidr"&gt;Hide&lt;/button&gt;
-  &lt;button id="showr"&gt;Show&lt;/button&gt;
+  &lt;button id="hidr"&gt;Ocultar&lt;/button&gt;
+  &lt;button id="showr"&gt;Mostrar&lt;/button&gt;
   &lt;div&gt;
 
     &lt;span&gt;Once&lt;/span&gt; &lt;span&gt;upon&lt;/span&gt; &lt;span&gt;a&lt;/span&gt; 
@@ -139,7 +157,7 @@ $('#clickme').click(function() {
 &lt;script&gt;
     $("#hidr").click(function () {
       $("span:last-child").hide("fast", function () {
-        // use callee so don't have to name the function
+        // use callee portanto não terá que nomear a função
         $(this).prev().hide("fast", arguments.callee); 
       });
     });
@@ -155,7 +173,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">Hides the divs when clicked over 2 seconds, then removes the div element when its hidden.  Try clicking on more than one box at a time.</span>
+<h4>Exemplo: <span class="desc">Oculta as divs quando clicadas em mais de 2 segundos, então remove o elemento div quando estiver oculto. Tente clicar em mais de um box por vez.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -187,6 +205,7 @@ $('#clickme').click(function() {
 </div>
 </div>
 </div>
+
 
         </div>
 

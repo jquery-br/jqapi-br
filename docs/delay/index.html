@@ -20,7 +20,7 @@
 <p class="desc"><strong>Descrição: </strong>Configura um tempo de atraso na execução do itens subsequentes na fila.</p>
 <ul class="signatures"><li class="signature" id="delay-duration-queueName">
 <h4 class="name">
-<span class="versionAdded">versão adicionada: <a href="/category/version/1.4/">1.4</a></span> .delay( duração, [ nome_da_fila ] )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span> .delay( duração, [ nome_da_fila ] )</h4>
 <p class="arguement"><strong>duração: </strong> Um valor inteiro indicando o número em millisegundos para atrasar a execução do próximo item que está na fila.</p>
 <p class="arguement"><strong>nome_da_fila: </strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
 </li></ul>
@@ -42,21 +42,21 @@
 &lt;head&gt;
   &lt;style&gt;
 div { width: 60px; height: 60px; float: left; }
-.primeira { background-color: #3f3; }
-.segunda { background-color: #33f;}
+.first { background-color: #3f3; }
+.second { background-color: #33f;}
 &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
 &lt;p&gt;&lt;button&gt;Run&lt;/button&gt;&lt;/p&gt;
-&lt;div class="primeira"&gt;&lt;/div&gt;
-&lt;div class="segunda"&gt;&lt;/div&gt;
-	
+&lt;div class="first"&gt;&lt;/div&gt;
+&lt;div class="second"&gt;&lt;/div&gt;
+
 &lt;script&gt;
     $("button").click(function() {
-      $("div.primeira").slideUp(300).delay(800).fadeIn(400);
-      $("div.segunda").slideUp(300).fadeIn(400);
+      $("div.first").slideUp(300).delay(800).fadeIn(400);
+      $("div.second").slideUp(300).fadeIn(400);
     });
 &lt;/script&gt;
 

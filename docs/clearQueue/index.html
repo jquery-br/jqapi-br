@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.clearQueue()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="View all posts in Custom">Custom</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts sobre Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="Ver todos os posts em Personalizados">Personalizado</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="Ver todos os posts relacionado a Dados">Dados</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="Ver todos os post relacionados a Utilidades">Utilidades</a></span>
   
 
           </div>
@@ -14,19 +14,20 @@
 </div>
 <div id="clearQueue1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.clearQueue( [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.clearQueue( [ nome_da_fila ] )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Remove from the queue all items that have not yet been run.</p>
+<p class="desc"><strong>Descrição: </strong>Remove da fila todos os itens que ainda não foram executados.</p>
 <ul class="signatures"><li class="signature" id="clearQueue-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.clearQueue( [ queueName ] )</h4>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.4/">1.4</a></span> .clearQueue( [ nome_da_fila ] )</h4>
+<p class="arguement"><strong>queueName: </strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
 </li></ul>
-<div class="longdesc"><p>When the <code>.clearQueue()</code> method is called, all functions on the queue that have not been executed are removed from the queue. When used without an argument, <code>.clearQueue()</code> removes the remaining functions from <code>fx</code>, the standard effects queue. In this way it is similar to <code>.stop(true)</code>. However,  while the <code>.stop()</code> method is meant to be used only with animations, <code>.clearQueue()</code> can also be used to remove any function that has been added to a generic jQuery queue with the <code>.queue()</code> method. </p></div>
-<h3>Example:</h3>
+<div class="longdesc"><p>Quando a função <code>.clearQueue()</code> é chamada, todas as funções que estão na fila e ainda não foram executadas são removidas. Quando utilizado sem um argumento, <code>.clearQueue()</code> remove as funções restantes da fila <code>fx</code>, a fila padrão de efeitos. É parecida com a função <code>.stop(true)</code>. Entretanto, enquanto a função <code>.stop()</code> é utiliza somente para animações, <code>.clearQueue()</code> também pode ser utilizada para remover qualquer função que foi adicionada para uma fila jQuery genérica utilizando a função <code>.queue()</code>. </p></div>
+
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Empty the queue.</span></h4>
+<h4><span class="desc">Esvazia a fila.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

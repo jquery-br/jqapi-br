@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.delay()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="View all posts in Custom">Custom</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts sobre Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="Ver todos os posts em Personalizados">Personalizado</a></span>
   
 
           </div>
@@ -14,47 +14,49 @@
 </div>
 <div id="delay1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.delay( duration, [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.delay( duração, [ nome_da_fila ] )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Set a timer to delay execution of subsequent items in the queue.</p>
+<p class="desc"><strong>Descrição: </strong>Configura um tempo de atraso na execução do itens subsequentes na fila.</p>
 <ul class="signatures"><li class="signature" id="delay-duration-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.delay( duration, [ queueName ] )</h4>
-<p class="arguement"><strong>duration</strong>An integer indicating the number of milliseconds to delay execution of the next item in the queue.</p>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.4/">1.4</a></span> .delay( duração, [ nome_da_fila ] )</h4>
+<p class="arguement"><strong>duração: </strong> Um valor inteiro indicando o número em millisegundos para atrasar a execução do próximo item que está na fila.</p>
+<p class="arguement"><strong>nome_da_fila: </strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
 </li></ul>
 <div class="longdesc">
-<p>Added to jQuery in version 1.4, the <code>.delay()</code> method allows us to delay the execution of functions that follow it in the queue. It can be used with the standard effects queue or with a custom queue. Only subsequent events in a queue are delayed; for example this will <em>not</em> delay the no-arguments forms of <code>.show()</code> or <code>.hide()</code>  which do not use the effects queue.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of 200 and 600 milliseconds, respectively.</p>
-<p>Using the standard effects queue, we can, for example, set an 800-millisecond delay between the <code>.slideUp()</code> and <code>.fadeIn()</code> of <code>&lt;div id="foo"&gt;</code>:</p>
+<p>Adicionado ao jQuery na versão 1.4, a função <code>.delay()</code> nos permite atrasar a execução das funções que seguem na fila. Pode ser utilizada com a fila de efeitos padrão ou com uma fila personalizada. Somente eventos posteriores que estão na fila são atrasados; por exemplo, isto <em>não</em> atrasará os formulários sem argumentos de <code>.show()</code> ou <code>.hide()</code>  os quais não utilizam a fila de efeitos.</p>
+<p>A duração é passada através do valor em milisegundos; valores maiores indicam animações mais lentas e não mais rápidas. Os valores <code>'fast'</code> e <code>'slow'</code> podem ser fornecidos para indicar a duração de 200 e 600 milisegundos respectivamente.</p>
+<p>Utilizando a fila de efeitos padrão, nós podemos por exemplo, adicionar um atraso de 800 milisegundos entre <code>.slideUp()</code> e <code>.fadeIn()</code> do elemento <code>&lt;div id="foo"&gt;</code>:</p>
 <pre>$('#foo').slideUp(300).delay(800).fadeIn(400);</pre>
-<p>When this statement is executed, the element slides up for 300 milliseconds and then pauses for 800 milliseconds before fading in for 400 milliseconds.</p>
-<blockquote><p><strong>The <code>.delay()</code> method is best for delaying between queued jQuery effects. Because it is limited—it doesn't, for example, offer a way to cancel the delay—<code>.delay()</code> is not a replacement for JavaScript's native <a href="https://developer.mozilla.org/en/DOM/window.setTimeout">setTimeout</a> function, which may be more appropriate for certain use cases.</strong></p></blockquote>
+
+<p>Quando esta função é executada, o elemento realiza o efeito de slide (escorregar) para cima por 300 milisegundos e pausa por 800 milisegundos antes de aplicar o efeito fade(sumir) em 400 milisegundos.</p>
+<blockquote><p><strong>A função <code>.delay()</code> foi feita para atrasar efeitos jQuery que estão na fila. Mas, por que é limitado— por exemplo, não oferece uma maneira de cancelar o atraso— a função <code>.delay()</code> não é um substituto para a função JavaScript nativa <a href="https://developer.mozilla.org/en/DOM/window.setTimeout">setTimeout</a> , a qual é mais apropriada para certos casos.</strong></p></blockquote>
 </div>
-<h3>Example:</h3>
+
+<h3>exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Animate the hiding and showing of two divs, delaying the first before showing it.</span></h4>
+<h4><span class="desc">Anima escondendo e mostrando os dois elementos DIVs, atrasando antes de mostrar a primeira DIV novamente.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
 div { width: 60px; height: 60px; float: left; }
-.first { background-color: #3f3; }
-.second { background-color: #33f;}
+.primeira { background-color: #3f3; }
+.segunda { background-color: #33f;}
 &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
 &lt;p&gt;&lt;button&gt;Run&lt;/button&gt;&lt;/p&gt;
-&lt;div class="first"&gt;&lt;/div&gt;
-&lt;div class="second"&gt;&lt;/div&gt;
+&lt;div class="primeira"&gt;&lt;/div&gt;
+&lt;div class="segunda"&gt;&lt;/div&gt;
 	
 &lt;script&gt;
     $("button").click(function() {
-      $("div.first").slideUp(300).delay(800).fadeIn(400);
-      $("div.second").slideUp(300).fadeIn(400);
+      $("div.primeira").slideUp(300).delay(800).fadeIn(400);
+      $("div.segunda").slideUp(300).fadeIn(400);
     });
 &lt;/script&gt;
 

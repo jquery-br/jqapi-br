@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.load()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/shorthand-methods/" title="View all posts in Shorthand Methods">Shorthand Methods</a></span>
   
 
@@ -14,40 +14,40 @@
 </div>
 <div id="load1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.load( url, [ data ], [ complete(responseText, textStatus, XMLHttpRequest) ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.load( url, [ data ], [ complete(responseText, textStatus, XMLHttpRequest) ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Load data from the server and place the returned HTML into the matched element.</p>
+<p class="desc"><strong>Descrição: </strong>Carrega dados do servidor e insere o HTML retornado no elemento correspondente.</p>
 <ul class="signatures"><li class="signature" id="load-url-data-completeresponseText- textStatus- XMLHttpRequest">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.load( url, [ data ], [ complete(responseText, textStatus, XMLHttpRequest) ] )</h4>
-<p class="arguement"><strong>url</strong>A string containing the URL to which the request is sent.</p>
-<p class="arguement"><strong>data</strong>A map or string that is sent to the server with the request.</p>
-<p class="arguement"><strong>complete(responseText, textStatus, XMLHttpRequest)</strong>A callback function that is executed when the request completes.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span> .load( url, [ data ], [ complete(responseText, textStatus, XMLHttpRequest) ] )</h4>
+<p class="arguement"><strong>url</strong> Uma string contendo a URL para a qual a requisição é enviada.</p>
+<p class="arguement"><strong>data</strong> Um  map ou string que é enviado ao servidor junto com a requisição.</p>
+<p class="arguement"><strong>complete(responseText, textStatus, XMLHttpRequest)</strong> Uma função callback que é executada quando a requisição é concluída.</p>
 </li></ul>
 <div class="longdesc">
-<p>This method is the simplest way to fetch data from the server. It is roughly equivalent to <code>$.get(url, data, success)</code> except that it is a method rather than global function and it has an implicit callback function.  When a successful response is detected (i.e. when <code>textStatus</code> is "success" or "notmodified"), <code>.load()</code> sets the HTML contents of the matched element to the returned data. This means that most uses of the method can be quite simple:</p>
+<p>Esse método é a maneira mais simples de coletar dados de um servidor. Ele é muito parecido com o <code>$.get(url, data, success)</code> exceto por ser um método e não uma função global e possuir uma função callback implícita. Quando uma resposta bem sucedida é detectada  (ou seja. quando <code>textStatus</code> é "success" ou "notmodified"), <code>.load()</code> define o conteúdo do HTML do elemento correspondente para os dados de retorno. Isso significa que em sua maioria o uso do método pode ser bastante simples:</p>
 <pre>$('#result').load('ajax/test.html');</pre>
-<p>The provided callback, if any, is executed after this post-processing has been performed:</p>
+<p>O callback provido, se houver algum, é executado depois que o pós-processamento tenha sido realizado:</p>
 <pre>$('#result').load('ajax/test.html', function() {
   alert('Load was performed.');
 });</pre>
-<p>In the two examples above, if the current document does not contain an element with an ID of "result," the <code>.load()</code> method is not executed.</p>
-<p>The POST method is used if data is provided as an object; otherwise, GET is assumed.</p>
-<blockquote><p>Note: The event handling suite also has a method named <code><a href="/load-event">.load()</a></code>. Which one is fired depends on the set of arguments passed.</p></blockquote>
-<h4>Loading Page Fragments</h4>
-<p>The <code>.load()</code> method, unlike <code><a href="/jQuery.get">$.get()</a></code>, allows us to specify a portion of the remote document to be inserted. This is achieved with a special syntax for the <code>url</code> parameter. If one or more space characters are included in the string, the portion of the string following the first space is assumed to be a jQuery selector that determines the content to be loaded.   </p>
-<p>We could modify the example above to use only part of the document that is fetched:</p>
+<p>Nos dois exemplos acim, caso o documento atual não contenha um elemento com a ID de "result," o método <code>.load()</code> não será executado.</p>
+<p>O método POST é utilizado se dados são fornecidos como objeto; caso contrário, GET é adotado.</p>
+<blockquote><p>Nota: A suite de manipuladores de evento possuem um método chamado  <code><a href="/load-event">.load()</a></code>. Qual deles é disparado depende do conjunto de argumentos passado.</p></blockquote>
+<h4>Carregando Fragmentos de Página:</h4>
+<p>O método <code>.load()</code> , ao contrário do <code><a href="/jQuery.get">$.get()</a></code>, nospermite especificar uma parte do documento remoto a ser inserida. Isso é possível com uma sintaxe especial para o parâmetro <code>url</code> . Se um ou mais carácteres de espaço forem incluidos na string, a parte da string após o primeiro espaço presume-se que seja um seletor jQuery que determina o conteúdo a ser carregado.   </p>
+<p>Nós podemos modificar o exemplo acima para usar apenas parte do documento que é obtido:</p>
 <pre>$('#result').load('ajax/test.html #container');</pre>
-<p>When this method executes, it retrieves the content of <code>ajax/test.html</code>, but then jQuery parses the returned document to find the element with an ID of <code>container</code>. This element, along with its contents, is inserted into the element with an ID of <code>result</code>, and the rest of the retrieved document is discarded.</p>
-<p>jQuery uses the browser's <code>.innerHTML</code> property to parse the retrieved document and insert it into the current document. During this process, browsers often filter elements from the document such as <code>&lt;html&gt;</code>, <code>&lt;title&gt;</code>, or <code>&lt;head&gt;</code> elements. As a result, the elements retrieved by <code>.load()</code> may not be exactly the same as if the document were retrieved directly by the browser.</p>
+<p>Quando o método executa, ele recupera o conteúdo do <code>ajax/test.html</code>, mas então jQuery analisa o documento retornado para encontrar o elemento com a ID de <code>container</code>. O elemento, junto com seu conteúdo, é inserido no elemento com a ID de  <code>result</code>, e o resto do documento recuperado é descartado.</p>
+<p>jQuery usa a propriedade <code>.innerHTML</code> do navegador para anlisar o documento recuperado e inserí-lo dentro do documento atual. Durante o processo, navegadores geralmente filtram elementos do documento como <code>&lt;html&gt;</code>, <code>&lt;title&gt;</code>, ou <code>&lt;head&gt;</code>. Como resultado, os elementos recuperados por <code>.load()</code> podem não ser exatamente os mesmos se o documento fosse recuperado diretamente pelo navegador.</p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>Due to browser security restrictions, most "Ajax" requests are subject to the <a title="Same Origin Policy on Wikipedia" href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>; the request can not successfully retrieve data from a different domain, subdomain, or protocol.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Notas Adicionais:</h3>
+<div class="longdesc"><ul><li>Devido a restrições de segurança dos browsers, a maioria das requisições "Ajax" estão sujeitas a <a title="Same Origin Policy on Wikipedia" href="http://en.wikipedia.org/wiki/Same_origin_policy">política de mesma origem</a>; a requisição pode não ser bem sucedida ao recuperar dados de um domínio diferente, subdomínio, ou protocolo.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Load the main page's footer navigation into an ordered list.</span>
+<h4>Example: <span class="desc">Carrega o rodapé da página principal dentro de uma lista ordenada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -72,7 +72,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Display a notice if the Ajax request encounters an error.</span>
+<h4>Exemplo: <span class="desc">Mostrar um aviso se a requisição Ajax encontra um erro.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -104,14 +104,14 @@ $("#success").load("/not-here.php", function(response, status, xhr) {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Load the feeds.html file into the div with the ID of feeds.</span>
+<h4>Example: <span class="desc">Carrega o arquivo feed.html dentro de uma div com a ID feeds.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("#feeds").load("feeds.html");</code></pre>
 <h4>Result:</h4>
 <pre><code class="results">&lt;div id="feeds"&gt;&lt;b&gt;45&lt;/b&gt; feeds found.&lt;/div&gt;</code></pre>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">pass arrays of data to the server.</span>
+<h4>Exemplo: <span class="desc">passa arrays de dados para o servidor.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("#objectID").load("test.php", { 'choices[]': ["Jon", "Susan"] } );</code></pre>
 </div>

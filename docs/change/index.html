@@ -14,60 +14,59 @@
 </div>
 <div id="change1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.change( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.change( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "change" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Atrela um manipulador de evento ao evento JavaScript "change", ou dispara o evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="change-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.change( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .change( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="change-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.change( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span> .change( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong> Mapa de dados a serem passados ao manipulador do evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="change"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.change()</h4></li>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .change()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('change', handler)</code> in the first two variations, and <code>.trigger('change')</code> in the third.</p>
-<p>The <code>change</code> event is sent to an element when its value changes. This event is limited to <code>&lt;input&gt;</code> elements, <code>&lt;textarea&gt;</code> boxes and <code>&lt;select&gt;</code> elements. For select boxes, checkboxes, and radio buttons, the event is fired immediately when the user makes a selection with the mouse, but for the other element types the event is deferred until the element loses focus.</p>
-<p>For example, consider the HTML:</p>
+<p>Nos dois primeiros casos mostrados anteriormente este método é uma forma abreviada para o método <code>.bind('change', handler)</code> e na terceiro  para o método <code>.trigger('change')</code>.</p>
+<p>O evento <code>change</code> ocorre em um elemento quando seu vapr muda. Este evento ocorre nos elementos <code>&lt;input&gt;</code>,  <code>&lt;textarea&gt;</code> e <code>&lt;select&gt;</code>. Para select boxes, checkboxes e radio buttons o evento é disparado quando o usuário faz uma seleção. Para os demais elementos o evento dispara somente quando o elemento perde o foco.</p>
+<p>Considere a seguinte marcação HTML:</p>
 <pre>&lt;form&gt;
   &lt;input class="target" type="text" value="Field 1" /&gt;
   &lt;select class="target"&gt;
-    &lt;option value="option1" selected="selected"&gt;Option 1&lt;/option&gt;
-    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="option1" selected="selected"&gt;Opção 1&lt;/option&gt;
+    &lt;option value="option2"&gt;Opção 2&lt;/option&gt;
   &lt;/select&gt;
 &lt;/form&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o evento
 &lt;/div&gt;</pre>
-<p>The event handler can be bound to the text input and the select box:</p>
+<p>O evento pode ser atrelado ao campo de texto e à caixa de seleção.</p>
 <pre>$('.target').change(function() {
-  alert('Handler for .change() called.');
+  alert('Chamado o manipulador do evento .change()');
 });</pre>
-<p>Now when the second option is selected from the dropdown, the alert is displayed. It is also displayed if you change the text in the field and then click away. If the field loses focus without the contents having changed, though, the event is not triggered. To trigger the event manually, apply <code>.change()</code> without arguments:</p>
+<p>Quando a segunda opção é selecionado o alerta é mostrado. É mostrado também quando se altera o campo de texto e tira-se o foco dele. Para disparar o evento manualmente use <code>.change()</code> sem parâmetros:</p>
 <pre>$('#other').click(function() {
   $('.target').change();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also alert the message. The message will display twice, because the handler has been bound to the <code>change</code> event on both of the form elements.</p>
-<p>As of jQuery 1.4, the <code>change</code> event bubbles in Internet Explorer, behaving consistently with the event in other modern browsers.</p>
+<p>Segundo este código <span class="output">disparando o evento</span> o alerta é mostrado. O alerta será mostrado duas vezes pois o evento <code>change</code> foi atrelado aos dois campos do formulário.</p>
+<p>A partir da jQuery 1.4 o evento <code>change</code> se propaga pelo efeito bolha (bubble) no Internet Explorer e é consistente nos navegadores modernos.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Attaches a change event to the select that gets the text for each selected option and writes them in the div.  It then triggers the event for the initial text draw.</span>
+<h4>Exemplo: <span class="desc">Atrela o evento change ao elemento select e cada vez que uma opção é escolhida escreve-a em um div.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
-
   div { color:red; }
   &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
@@ -76,12 +75,10 @@
   &lt;select name="sweets" multiple="multiple"&gt;
     &lt;option&gt;Chocolate&lt;/option&gt;
     &lt;option selected="selected"&gt;Candy&lt;/option&gt;
-
     &lt;option&gt;Taffy&lt;/option&gt;
     &lt;option selected="selected"&gt;Caramel&lt;/option&gt;
     &lt;option&gt;Fudge&lt;/option&gt;
     &lt;option&gt;Cookie&lt;/option&gt;
-
   &lt;/select&gt;
   &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -94,17 +91,17 @@
         })
         .change();
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
+
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">To add a validity test to all text input elements:</span>
+<h4>Exemplo: <span class="desc">Código para teste de validação em campos de texto:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("input[type='text']").change( function() {
-  // check input ($(this).val()) for validity here
+  // Verifique se o valor ($(this).val()) passa na validação aqui
 });</code></pre>
 </div>
 </div>

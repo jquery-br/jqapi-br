@@ -14,52 +14,54 @@
 </div>
 <div id="blur1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.blur( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.blur( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "blur" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Atrela um manipulador de evento ao evento JavaScript "blur", ou dispara o evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="blur-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.blur( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a> </span>blur( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="blur-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.blur( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span> .blur( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong> Mapa de dados a serem passados ao manipulador do evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
-<li class="signature" id="blur"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.blur()</h4></li>
+<li class="signature" id="blur">
+  <h4 class="name">
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .blur()</h4>
+</li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('blur', handler)</code> in the first two variations, and <code>.trigger('blur')</code> in the third.</p>
-<p>The <code>blur</code> event is sent to an element when it loses focus. Originally, this event was only applicable to form elements, such as <code>&lt;input&gt;</code>. In recent browsers, the domain of the event has been extended to include all element types. An element can lose focus via keyboard commands, such as the Tab key, or by mouse clicks elsewhere on the page.</p>
-<p>For example, consider the HTML:</p>
+<p>Nos dois primeiros casos mostrados anteriormente este método é uma forma abreviada para o método <code>.bind('blur', handler)</code> e na terceiro  para o método <code>.trigger('blur')</code>.</p>
+<p>O evento  <code>blur</code> ocorre em um elemento quando ele perde o foco. Antigamente este evento aplicava-se somente a elementos de formulário, tal como <code>&lt;input&gt;</code>.  Em navegadores modernos o evento se aplica a todos os elementos. Um elemento pode perder o foco via comandos de teclado, tal como tecla Tab ou por clique do mouse em um ponto da página fora do elemento.</p>
+<p>Considere a seguinte marcação HTML:</p>
 <pre>&lt;form&gt;
   &lt;input id="target" type="text" value="Field 1" /&gt;
   &lt;input type="text" value="Field 2" /&gt;
 &lt;/form&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara do evento
 &lt;/div&gt;
-The event handler can be bound to the first input field:
+O disparador do evento pode ser atrelado ao primeiro campo input:
 $('#target').blur(function() {
-  alert('Handler for .blur() called.');
+  alert('Chamado o manipulador do evento .blur()');
 });</pre>
-<p>Now if the first field has the focus, clicking elsewhere or tabbing away from it displays the alert:</p>
-<p><span class="output">Handler for .blur() called.</span></p>
-<p>To trigger the event programmatically, apply <code>.blur()</code> without an argument:</p>
+<p>Se o primeiro campo do formulário tem o foco, ao se clicar em um ponto fora dele na página ou se acionar a tecla de tabulação o alerta é mostrado:</p>
+<p><span class="output">Chamado o manipulador do evento .blur()</span></p>
+<p>Para disparar o evento de forma programática  chama-se o método <code>.blur()</code> sem argumentos:</p>
 <pre>$('#other').click(function() {
   $('#target').blur();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also alert the message.</p>
-<p>The <code>blur</code> event does not bubble in Internet Explorer. Therefore, scripts that rely on event delegation with the <code>blur</code> event will not work consistently across browsers. As of version 1.4.2, however, jQuery works around this limitation by mapping <code>blur</code> to the <code>focusout</code> event in its event delegation methods, <a href="http://api.jquery.com/live/"><code>.live()</code></a> and <a href="http://api.jquery.com/delegate/"><code>.delegate()</code></a>.</p>
+<p>Agora, ao clicar no disparador o alerta é mostrado.</p>
+<p>O evento  <code>blur</code> não se propaga pelo  efeito bolha (bubble) no Internet Explorer. Assim,  scripts que dependem de delegação de evento para <code>blur</code> não funcionam de forma consistente em todos os navegadores. Contudo, a partir da versão jQuery 1.4.2 foi introduzida a alternativa de mapear  <code>blur</code> para <code>focusout</code> com seus métodos para delegação de eventos  <a href="http://api.jquery.com/live/"><code>.live()</code></a> e <a href="http://api.jquery.com/delegate/"><code>.delegate()</code></a>.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">To trigger the blur event on all paragraphs:</span></h4>
+<h4><span class="desc">Para atrelar o evento  blur em todos os parágrafos:</span></h4>
 <pre class="prettyprint"><code class="example">$("p").blur();</code></pre>
 </div></div>
 </div>

@@ -14,58 +14,60 @@
 </div>
 <div id="focus1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.focus( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.focus( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Atrela um manipulador de evento ao evento JavaScript "focus", ou dispara o evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="focus-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.focus( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .focus( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject) </strong>Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="focus-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.focus( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span> .focus( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong> Mapa de dados a serem passados ao manipulador do evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
+ </li>
+<li class="signature" id="focus">
+  <h4 class="name">
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .focus()</h4>
 </li>
-<li class="signature" id="focus"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.focus()</h4></li>
 </ul>
 <div class="longdesc">
 <ul>
-<li>This method is a shortcut for <code>.bind('focus', handler)</code> in the first and second variations, and <code>.trigger('focus')</code> in the third.</li>
-<li>The <code>focus</code> event is sent to an element when it gains focus. This event is implicitly applicable to a limited set of elements, such as  form elements (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, etc.) and links (<code>&lt;a href&gt;</code>). In recent browser versions, the event can be extended to include all element types by explicitly setting the element's <code>tabindex</code> property. An element can gain focus via keyboard commands, such as the Tab key, or by mouse clicks on the element.</li>
-<li>Elements with focus are usually highlighted in some way by the browser, for example with a dotted line surrounding the element. The focus is used to determine which element is the first to receive keyboard-related events.</li>
+<li>Nos dois primeiros casos mostrados anteriormente este método é uma forma abreviada para o método <code>.bind('focus', handler)</code> e na terceiro  para o método <code>.trigger('focus')</code>.</li>
+<li>O evento <code>focus</code> ocorre em um elemento quando ele perde o foco. Este evento aplica-se a um conjunto limitado de elementos, tais como elementos de formulário (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, etc.) e links (<code>&lt;a href&gt;</code>). Em navegadores recentes o evento pode ocorrer em todos os elementos desde que se declare explicitamente o atributo  <code>tabindex</code> para ele. Um elemento pode ganhar o foco via comandos de teclado, tal como tecla Tab ou por clique do mouse em um ponto da página fora do elemento.</li>
+<li>Elementos que ganham o foco são destacados pelo navegador, por exemplo: com uma linha pontilhada em torno do elemento. Usa-se o foco para determinar qual elemento receberá eventos relacionados ao teclado.</li>
 </ul>
-<p>For example, consider the HTML:</p>
+<p>Considere a seguinte marcação  HTML:</p>
 <pre>&lt;form&gt;
   &lt;input id="target" type="text" value="Field 1" /&gt;
   &lt;input type="text" value="Field 2" /&gt;
 &lt;/form&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o evento
 &lt;/div&gt;
 </pre>
-<p>The event handler can be bound to the first input field:</p>
+<p>O evento pode ser atrelado ao primeiro campo input:</p>
 <pre>$('#target').focus(function() {
-  alert('Handler for .focus() called.');
+  alert('Chamado o manipulador do evento .focus()');
 });</pre>
-<p>Now clicking on the first field, or tabbing to it from another field, displays the alert:</p>
-<p><span class="output">Handler for .focus() called.</span></p>
-<p>We can trigger the event when another element is clicked:</p>
+<p>Clicando no primeiro campo do formulário ou entrando nele via tecla Tab o alerta é mostrado:</p>
+<p><span class="output">Chamado o manipulador do evento .focus()</span></p>
+<p>Podemos também disparar o evento com um clique em qualquer elemento:</p>
 <pre>$('#other').click(function() {
   $('#target').focus();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also alert the message.</p>
-<p>The <code>focus</code> event does not bubble in Internet Explorer. Therefore, scripts that rely on event delegation with the <code>focus</code> event will not work consistently across browsers. As of version 1.4.2, however, jQuery works around this limitation by mapping <code>focus</code> to the <code>focusin</code> event in its event delegation methods, <a href="http://api.jquery.com/live/"><code>.live()</code></a> and <a href="http://api.jquery.com/delegate/"><code>.delegate()</code></a>.</p>
-<blockquote><p>Triggering the focus on hidden elements causes an error in Internet Explorer. Take care to only call <code>.focus()</code> without parameters on elements that are visible.</p></blockquote>
+<p>Segundo este código <span class="output">disparando o evento</span> o alerta é mostrado.</p>
+<p>O evento  <code>focus</code> não se propaga pelo  efeito bolha (bubble) no Internet Explorer. Assim,  scripts que dependem de delegação de evento para <code>focus</code> não funcionam de forma consistente em todos os navegadores. Contudo, a partir da versão jQuery 1.4.2 foi introduzida a alternativa de mapear  <code>focus</code> para <code>focusin</code> com seus métodos para delegação de eventos, <a href="http://api.jquery.com/live/"><code>.live()</code></a> e <a href="http://api.jquery.com/delegate/"><code>.delegate()</code></a>.</p>
+<blockquote><p>Disparar o foco em elementos invisíveis causa um erro no Internet Explorer. Certifique-se de chamar o método <code>.focus()</code>, sem parâmetros, em elementos visíveis.</p></blockquote>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Fire focus.</span>
+<h4>Exemplo: <span class="desc">Ativando foco.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -75,28 +77,26 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;p&gt;&lt;input type="text" /&gt; &lt;span&gt;focus fire&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;input type="password" /&gt; &lt;span&gt;focus fire&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="password" /&gt; &lt;span&gt;focus fire&lt;/span&gt;&lt;/p&gt;
 &lt;script&gt;
     $("input").focus(function () {
          $(this).next("span").css('display','inline').fadeOut(1000);
     });
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">To stop people from writing in text input boxes, try:</span>
+<h4>Exemplo: <span class="desc">O código a seguir desabilita escrita em campos de texto:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("input[type=text]").focus(function(){
   $(this).blur();
 });</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">To focus on a login input box with id 'login' on page startup, try:</span>
+<h4>Exemplo: <span class="desc">O código a seguir destina-se a dar foco a um campo com id 'login' tão logo a página seja carregada:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$(document).ready(function(){
   $("#login").focus();

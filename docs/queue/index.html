@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.queue()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="View all posts in Custom">Custom</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
+                        Categoria:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts sobre Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="Ver todos os posts em Personalizados">Personalizado</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="Ver todos os posts em Dados">Dados</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="Ver todos os posts em Utilidades">Utilidades</a></span>
   
 
           </div>
@@ -14,17 +14,17 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Conteúdos:</span></h4>
 <ul class="toc-list">
 <li>
-<a href="#queue1">queue( [ queueName ] ) </a><ul><li>.queue( [ queueName ] )
+<a href="#queue1">queue( [ nome_da_fila ] ) </a><ul><li>.queue( [ nome_da_fila ] )
               </li></ul>
 </li>
 <li>
-<a href="#queue2">queue( [ queueName ], newQueue ) </a><ul>
-<li>.queue( [ queueName ], newQueue )
+<a href="#queue2">queue( [ nome_da_fila ], nova_fila ) </a><ul>
+<li>.queue( [ nome_da_fila ], nova_fila )
               </li>
-<li>.queue( [ queueName ], callback( next ) )
+<li>.queue( [ nome_da_fila ], função_retorno( próximo ) )
               </li>
 </ul>
 </li>
@@ -32,18 +32,18 @@
 </div>
 <div id="queue1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.queue( [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
+<span class="name">.queue( [ nome_da_fila ] )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Show the queue of functions to be executed on the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong> Mostra a fila de funções que estão para ser executadas dos elementos encontrados.</p>
 <ul class="signatures"><li class="signature" id="queue-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.queue( [ queueName ] )</h4>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2/">1.2</a></span> .queue( [ nome_da_fila ] )</h4>
+<p class="arguement"><strong>nome_da_fila: </strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
 </li></ul>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show the length of the queue.</span></h4>
+<h4><span class="desc">Mostra o tamanho da fila.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -83,50 +83,50 @@
 </div>
 <div id="queue2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.queue( [ queueName ], newQueue )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.queue( [ nome_da_fila ], nova_fila )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Manipulate the queue of functions to be executed on the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong> Manipula a fila de funções que estão para ser executadas dos elementos encontrados.</p>
 <ul class="signatures">
 <li class="signature" id="queue-queueName-newQueue">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.queue( [ queueName ], newQueue )</h4>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
-<p class="arguement"><strong>newQueue</strong>An array of functions to replace the current queue contents.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2/">1.2</a></span> .queue( [ nome_da_fila ], nova_fila )</h4>
+<p class="arguement"><strong>nome_da_fila:</strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
+<p class="arguement"><strong>nova_fila:</strong> Um array de funções para substituir os itens que estão na fila.</p>
 </li>
 <li class="signature" id="queue-queueName-callback next ">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.queue( [ queueName ], callback( next ) )</h4>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
-<p class="arguement"><strong>callback( next )</strong>The new function to add to the queue, with a function to call that will dequeue the next item.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2/">1.2</a></span> .queue( [ nome_da_fila ], função_retorno( próximo ) )</h4>
+<p class="arguement"><strong>nome_da_fila:</strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
+<p class="arguement"><strong>função_retorno(próximo): </strong> Uma nova função para ser adicionada para fila, com uma função para ser chamada que retirará o próximo item da fila.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Every element can have one to many queues of functions attached to it by jQuery. In most applications, only one queue (called <code>fx</code>) is used. Queues allow a sequence of actions to be called on an element asynchronously, without halting program execution. The typical example of this is calling multiple animation methods on an element. For example:</p>
+<p>Todo elemento pode ter uma ou mais filas de funções referênciadas pelo jQuery. Na maioria das aplicações somente uma fila (<code>fx</code>) é utilizada. A função queue permite que uma sequência de ações sejam chamadas em um elemento assíncronamente sem interromper a execução do programa. Um exemplo típico desta situação é a chamada de multíplas funções de animações em um elemento. Por exemplo:</p>
 <pre>$('#foo').slideUp().fadeIn();</pre>
-<p>When this statement is executed, the element begins its sliding animation immediately, but the fading transition is placed on the <code>fx</code> queue to be called only once the sliding transition is complete.</p>
-<p>The <code>.queue()</code> method allows us to directly manipulate this queue of functions. Calling <code>.queue()</code> with a callback is particularly useful; it allows us to place a new function at the end of the queue.</p>
-<p>This feature is similar to providing a callback function with an animation method, but does not require the callback to be given at the time the animation is performed.</p>
+<p>Quando este trecho de código é executado, o elemento começa a sua animação (slideUp) imediatamente, mas a animação (fadeIn) é colocada na fila <code>fx</code> para ser chamada somente quando a animação (slideUp) estiver completa.</p>
+<p>A função <code>.queue()</code> nos permite manipular diretamente a fila de funções. Chamando a função <code>.queue()</code> com uma função de retorno é particularmente vantajoso; ela nos permite adicionar uma nova função ao final da fila.</p>
+<p>Este recurso é similar a quando fornecemos uma função de retorno para uma função de animação, mas não necessita que a função de retorno seja passada assim que a animação é executada.</p>
 <pre>$('#foo').slideUp();
 $('#foo').queue(function() {
   alert('Animation complete.');
   $(this).dequeue();
 });</pre>
-<p>This is equivalent to:</p>
+<p>Isto é equivalente a:</p>
 <pre>$('#foo').slideUp(function() {
   alert('Animation complete.');
 });</pre>
-<p>Note that when adding a function with <code>.queue()</code>, we should ensure that <code>.dequeue()</code> is eventually called so that the next function in line executes.</p>
-<p>In jQuery 1.4 the function that's called is passed in another function, as the first argument, that when called automatically dequeues the next item and keeps the queue moving. You would use it like so:</p>
+<p>Note que quando a função é adicionada utilizando a função <code>.queue()</code>, nós devemos garantir que eventualmente a função <code>.dequeue()</code> é chamada para que a próxima função na fila seja executada.</p>
+<p>No jQuery 1.4 a função que é chamada é passada em outra função como o primeiro argumento, que quando chamado automaticamente executa a função dequeue para o próximo item e mantém a fila em movimento. Você deverá utilizar desta forma:</p>
 <pre>$("#test").queue(function(next) {
     // Do some stuff...
     next();
 });</pre>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples-1">
 <div id="example-1-0">
-<h4>Example: <span class="desc">Queue a custom function.</span>
+<h4>Exemplo: <span class="desc">Adiciona na fila uma função personalizada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -163,7 +163,7 @@ $('#foo').queue(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1-1">
-<h4>Example: <span class="desc">Set a queue array to delete the queue.</span>
+<h4>Exemplo: <span class="desc">Adiciona um array de filas para substituir a fila atual.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

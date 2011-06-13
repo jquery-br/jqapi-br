@@ -5,28 +5,27 @@
           
           <h1 class="jq-clearfix">.dequeue()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="View all posts in Custom">Custom</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
+                        Categoria:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts sobre Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/custom-effects/" title="Ver todos os posts em Personalizados">Personalizado</a></span> | <span class="category"><a href="http://api.jquery.com/category/data/" title="Ver todos os posts em Dados">Dados</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="Ver todos os posts em Utilidades">Utilidades</a></span>
   
-
           </div>
 
 </div>
 <div id="dequeue1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.dequeue( [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.dequeue( [ nome_da_fila ] )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Execute the next function on the queue for the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong> Executa a próxima função que esta na fila através dos elementos encontrados.</p>
 <ul class="signatures"><li class="signature" id="dequeue-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.dequeue( [ queueName ] )</h4>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2/">1.2</a></span> .dequeue( [ nome_da_fila ] )</h4>
+<p class="arguement"><strong>nome_da_fila: </strong> Uma string contendo o nome da fila. O valor padrão é <code>fx</code>, esta é a fila padrão de efeitos que estão sendo executados.</p>
 </li></ul>
-<div class="longdesc"><p>When <code>.dequeue()</code> is called, the next function on the queue is removed from the queue, and then executed. This function should in turn (directly or indirectly) cause <code>.dequeue()</code> to be called, so that the sequence can continue.</p></div>
-<h3>Example:</h3>
+<div class="longdesc"><p>Quando a função <code>.dequeue()</code> é chamada, a próxima função que esta na fila é removida da fila e é executada. Esta função deve (diretamente ou indiretamente) chamar a função <code>.dequeue()</code> para que a sequência da fila possa continuar.</p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Use dequeue to end a custom queue function which allows the queue to keep going.</span></h4>
+<h4><span class="desc">Utiliza a função dequeue para encerrar uma função que esta na fila permitindo com que a fila continue sua sequência.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

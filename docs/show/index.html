@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.show()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/basics/" title="View all posts in Basics">Basics</a></span>
+                        Categoria:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts sobre Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/basics/" title="Ver todos os posts relacionado a Básico">Básicos</a></span>
   
 
           </div>
@@ -14,41 +14,41 @@
 </div>
 <div id="show1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.show(  )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.show(  )</span> <span class="returns">Retornar para: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Display the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong> Motra os elementos encontrados.</p>
 <ul class="signatures">
 <li class="signature" id="show"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.show()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span> .show()</h4></li>
 <li class="signature" id="show-duration-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.show( duration, [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span> .show( duração, [ função_de_retorno ] )</h4>
+<p class="arguement"><strong>duração: </strong>Uma string ou número determinando a duração da animação.</p>
+<p class="arguement"><strong>função_de_retorno: </strong>Uma função a ser chamada quando a animação estiver completa.</p>
 </li>
 <li class="signature" id="show-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.show( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>easing</strong>A string indicating which easing function to use for the transition.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.show( [ duração ], [ função_de_efeito ], [ função_de_retorno ] )</h4>
+<p class="arguement"><strong>duração: </strong>Uma string ou número determinando a duração da animação.</p>
+<p class="arguement"><strong>função_de_efeito: </strong>Uma string indicando qual função de animação utilizar durante a transição.</p>
+<p class="arguement"><strong>função_de_retorno: </strong>Uma função a ser chamada quando a animação estiver completa.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>With no parameters, the <code>.show()</code> method is the simplest way to display an element:
+<p>Sem parâmetros, a função <code>.show()</code> é o jeito mais simples de visualizar um elemento:
 </p>
 <pre>$('.target').show();
 </pre>
-<p>The matched elements will be revealed immediately, with no animation. This is roughly equivalent to calling <code>.css('display', 'block')</code>, except that the <code>display</code> property is restored to whatever it was initially. If an element has a <code>display</code> value of <code>inline</code>, then is hidden and shown, it will once again be displayed <code>inline</code>.</p>
-<p><strong>Note: </strong> If using !important in your styles, such as
+<p>Os elementos encontrados serão revelado imediatamente sem um efeito de transição (animação). Isto é equivalente a chamar o método <code>.css('display', 'block')</code>, exceto que a propriedade <code>display</code> é restaurada ao que era inicialmente. Quando um elemento possui a propriedade <code>display</code> com o valor <code>inline</code> e é escondido (hidden) e mostrada (show) ela será novamente visualizada com a propriedade com o valor <code>inline</code>.</p>
+<p><strong>Nota: </strong> Se estiver utilizando o valor !important no estilos, por exemplo:
 <code>display: none !important</code>,
-it is necessary to override the style using <code>.css('display', 'block !important')</code> should you wish for <code>.show()</code> to function correctly.</p>
-<p>When a duration is provided, <code>.show()</code> becomes an animation method. The <code>.show()</code> method animates the width, height, and opacity of the matched elements simultaneously.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively.</p>
-<p>As of jQuery 1.4.3, an optional string naming an easing function may be used. Easing functions specify the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
-<p>We can animate any element, such as a simple image:</p>
+é necessário sobrescrever o estilo (style) utilizando <code>.css('display', 'block !important')</code> para utilizar a função <code>.show()</code> corretamente.</p>
+<p>Quando a duração é fornecida, a função <code>.show()</code> se torna uma função de animação. A função <code>.show()</code> anima as propriedades width, height, e opacity dos elementos encontrados simultâneamentes.</p>
+<p>O valor da duração são fornecidos utilizando milisegundos; valores maiores indicam animação mais lentas e não mais rápidas. As strings <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar a duração de <code>200</code> e <code>600</code> milisegundos respectivamente.</p>
+<p>Com a versão do jQuery 1.4.3, uma string opcional (função_de_efeito) pode ser utilizada. Estas funções de efeitos especificam a velocidade que a animação procede em diferentes pontos da animação. A função padrão implementada no jQuery é a <code>swing</code>, e outra que progride constantemente chamada <code>linear</code>. Mais funções de animações podem ser utilizadas através de plug-ins como o <a href="http://jqueryui.com">jQuery UI</a>.</p>
+<p>Se fornecida, a função de retorno é ativada assim que a animação estiver completa. Isto pode ser útil para encadear diferentes animações em sequência. A função de retorno não utiliza nenhum parâmetro, porém pode ser utilizado a referência <code>this</code> para obter o elemento DOM que está sendo animado. Se múltiplos elementos estão sendo animados, é importante ressaltar que a função de retorno será chamada para cada elemento animado, e não uma vez para a animação com um todo.</p>
+<p>Nós podemos animar qualquer elemento asism como uma simples imagem:</p>
 <pre>&lt;div id="clickme"&gt;
   Click here
 &lt;/div&gt;
@@ -62,12 +62,12 @@ $('#clickme').click(function() {
 <p class="image four-across">
   <img src="/images/0042_06_01.png" alt=""><img src="/images/0042_06_02.png" alt=""><img src="/images/0042_06_03.png" alt=""><img src="/images/0042_06_04.png" alt=""></p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.show()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Notas Adicionais:</h3>
+<div class="longdesc"><ul><li>Todos os efeitos do jQuery, incluindo <code>.show()</code>, podem ser desativados configurando o valor globalmente utilizando o código: <code>jQuery.fx.off = true</code>, o qual efetivamente muda a duração do efeito para 0. Para maiores informações, veja <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Animates all hidden paragraphs to show slowly, completing the animation within 600 milliseconds.</span>
+<h4>Exemplo: <span class="desc">Anima todos os parágrafos mostrando-os lentamente (slow), completando a animação em 600 milisegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -93,7 +93,7 @@ $('#clickme').click(function() {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Animates all hidden divs to show fastly in order, completing each animation within 200 milliseconds. Once each animation is done, it starts the next one.</span>
+<h4>Exemplo: <span class="desc">Anima todos as DIVs ocultas mostrando-as rapidamente em ordem, completando cada animação em 200 milisegundos. Assim que cada animação estiver completa, ele inicia a próxima.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -132,7 +132,7 @@ $("#hidr").click(function () {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Shows all span and input elements with an animation. Once the animation is done, it changes the text.</span>
+<h4>Exemplo: <span class="desc">Mostra todos os elementos SPAN e INPUT utilizando uma animação. Assim que uma animação estiver completa, ele muda para a próxima.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

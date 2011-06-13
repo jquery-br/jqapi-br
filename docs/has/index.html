@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.has()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/traversing/" title="View all posts in Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/filtering/" title="View all posts in Filtering">Filtering</a></span>
   
 
@@ -14,45 +14,45 @@
 </div>
 <div id="has1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.has( selector )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.has( selector )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.</p>
+<p class="desc"><strong>Descrição: </strong>Reduz o conjunto de elementos encontrados para um novo conjunto em que seus elementos possuem descendentes que coincidem com o selector ou elemento DOM.</p>
 <ul class="signatures">
 <li class="signature" id="has-selector">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.has( selector )</h4>
-<p class="arguement"><strong>selector</strong>A string containing a selector expression to match elements against.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.has( selector )</h4>
+<p class="arguement"><strong>selector</strong>String contendo uma expressão de seleção para filtrar os elementos do conjunto..</p>
 </li>
 <li class="signature" id="has-contained">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.has( contained )</h4>
-<p class="arguement"><strong>contained</strong>A DOM element to match elements against.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.has( contained )</h4>
+<p class="arguement"><strong>contained</strong>Elemento DOM para filtrar os elementos do conjunto.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Given a jQuery object that represents a set of DOM elements, the <code>.has()</code> method constructs a new jQuery object from a subset of the matching elements. The supplied selector is tested against the descendants of the matching elements; the element will be included in the result if any of its descendant elements matches the selector.</p>
-<p>Consider a page with a nested list as follows:</p>
+<p>Dado um objeto jQuery que representa um conjunto de elementos DOM, o método <code>.has()</code> constrói um novo objeto jQuery com um sub-conjunto dos elementos pesquisados. O selector fornecido é testado nos descendentes dos elementos pesquisados; o elemento será incluído no resultado se algum dos seus elementos descendentes combinar com o selector.</p>
+<p>Considere a seguinte página com uma lista básica aninhada:</p>
 <pre>
  &lt;ul&gt;
-  &lt;li&gt;list item 1&lt;/li&gt;
-  &lt;li&gt;list item 2
+  &lt;li&gt;item da lista 1&lt;/li&gt;
+  &lt;li&gt;item da lista 2
     &lt;ul&gt;
-      &lt;li&gt;list item 2-a&lt;/li&gt;
-      &lt;li&gt;list item 2-b&lt;/li&gt;
+      &lt;li&gt;item da lista 2-a&lt;/li&gt;
+      &lt;li&gt;item da lista 2-b&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;list item 3&lt;/li&gt;
-  &lt;li&gt;list item 4&lt;/li&gt;
+  &lt;li&gt;item da lista 3&lt;/li&gt;
+  &lt;li&gt;item da lista 4&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>We can apply this method to the set of list items as follows:</p>
+<p>Podemos aplicar esse método para o conjunto de itens a seguir:</p>
 <pre>$('li').has('ul').css('background-color', 'red');</pre>
-<p>The result of this call is a red background for item 2, as it is the only <code>&lt;li&gt;</code> that has a <code>&lt;ul&gt;</code> among its descendants.</p>
+<p>O resultado dessa chamada aplica um fundo vermelho para o item 2, pois ele é o único <code>&lt;li&gt;</code> que possui um <code>&lt;ul&gt;</code> em seus descendentes.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Check if an element is inside another.</span></h4>
+<h4><span class="desc">Verificar se um elemento está dentro de outro.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -63,16 +63,16 @@
 &lt;/head&gt;
 &lt;body&gt;
   
-&lt;ul&gt;&lt;li&gt;Does the UL contain an LI?&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;Será que a UL contém uma LI?&lt;/li&gt;&lt;/ul&gt;
 
 &lt;script&gt;
-  $("ul").append("&lt;li&gt;" + ($("ul").has("li").length ? "Yes" : "No") + "&lt;/li&gt;");
+  $("ul").append("&lt;li&gt;" + ($("ul").has("li").length ? "Sim" : "Não") + "&lt;/li&gt;");
   $("ul").has("li").addClass("full");
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div></div>
 </div>

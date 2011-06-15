@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.find()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/traversing/" title="View all posts in Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/tree-traversal/" title="View all posts in Tree Traversal">Tree Traversal</a></span>
   
 
@@ -14,31 +14,31 @@
 </div>
 <div id="find1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.find( selector )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.find( selector )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.</p>
+<p class="desc"><strong>Descrição: </strong>Obtém os descendentes de cada elemento do conjunto atual de elementos encontrados, filtrados por um selector, objeto jQuery ou elemento.</p>
 <ul class="signatures">
 <li class="signature" id="find-selector">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.find( selector )</h4>
-<p class="arguement"><strong>selector</strong>A string containing a selector expression to match elements against.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a> </span>.find( selector )</h4>
+<p class="arguement"><strong>selector</strong> String contendo uma expressão de seleção para filtrar os elementos do conjunto.</p>
 </li>
 <li class="signature" id="find-jQuery object">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.6/">1.6</a></span>.find( jQuery object )</h4>
-<p class="arguement"><strong>jQuery object</strong>A jQuery object to match elements against.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.6/">1.6</a> </span>.find( jQuery object )</h4>
+<p class="arguement"><strong>jQuery object</strong> Objeto jQuery para filtrar os elementos do conjunto.</p>
 </li>
 <li class="signature" id="find-element">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.6/">1.6</a></span>.find( element )</h4>
-<p class="arguement"><strong>element</strong>An element to match elements against.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.6/">1.6</a> </span>.find( element )</h4>
+<p class="arguement"><strong>element</strong> Elemento para filtrar os elementos do conjunto.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Given a jQuery object that represents a set of DOM elements, the <code>.find()</code> method allows us to search through the descendants of these elements in the DOM tree and construct a new jQuery object from the matching elements. The <code>.find()</code> and <code>.children()</code> methods are similar, except that the latter only travels a single level down the DOM tree.</p>
-<p>The first signature for the <code>.find()</code>method accepts a selector expression of the same type that we can pass to the <code>$()</code> function. The elements will be filtered by testing whether they match this selector.</p>
-<p>Consider a page with a basic nested list on it:</p>
+<p>Dado um objeto jQuery que representa um conjunto de elementos DOM, o método <code>.find()</code> permite a busca através dos descendentes desses elementos na árvore DOM e constrói um novo objeto jQuery combinando os elementos resultantes. Os métodos <code>.find()</code> e <code>.children()</code> são similares, exceto pelo último percorrer em um único nível para baixo na árvore DOM.</p>
+<p>A primeira assinatura do método <code>.find()</code> aceita uma expressão de seleção (selector) do mesmo tipo que pode ser aplicado a função <code>$()</code>. Os elementos serão filtrados através de testes de correspondência com esse selector.</p>
+<p>Considere a seguinte página com uma lista básica aninhada:</p>
 <pre>
 &lt;ul class="level-1"&gt;
   &lt;li class="item-i"&gt;I&lt;/li&gt;
@@ -58,27 +58,27 @@
   &lt;li class="item-iii"&gt;III&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>If we begin at item II, we can find list items within it:</p>
+<p>Se começarmos com o item II, podemos encontrar os itens da lista dentro dele:</p>
 <pre>$('li.item-ii').find('li').css('background-color', 'red');</pre>
-<p>The result of this call is a red background on items A, B, 1, 2, 3, and C. Even though item II matches the selector expression, it is not included in the results; only descendants are considered candidates for the match.</p>
-<blockquote><p>Unlike in the rest of the tree traversal methods, the selector expression is required in a call to <code>.find()</code>. If we need to retrieve all of the descendant elements, we can pass in the universal selector <code>'*'</code> to accomplish this.</p></blockquote>
-<p><a href="http://api.jquery.com/jquery/#selector-context">Selector context</a> is implemented with the <code>.find()</code> <code>method;</code> therefore, <code>$('li.item-ii').find('li')</code> is equivalent to <code>$('li', 'li.item-ii')</code>.</p>
-<p><strong>As of jQuery 1.6</strong>, we can also filter the selection with a given jQuery collection or element. With the same nested list as above, if we start with:</p>
+<p>O resultado dessa chamada é um fundo vermelho para os itens A, B, 1, 2, 3 e C. Embora o item II corresponda a expressão de seleção (selector), ele não é incluído no resultado; apenas descendentes são considerados candidatos para busca.</p>
+<blockquote><p>Ao contrário dos outros métodos de percorrer a árvore, a expressão de seleção (selector) é requirida na chamada de <code>.find()</code>. Se precisarmos recuperar todos os elementos descendentes podemos passar o selector universal <code>'*'</code> para fazer isso.</p></blockquote>
+<p>O <a href="http://api.jquery.com/jquery/#selector-context">selector contexto</a> é implementado com o <code>método</code> <code>.find()</code>; portanto, <code>$('li.item-ii').find('li')</code> é equivalente a <code>$('li', 'li.item-ii')</code>.</p>
+<p><strong>A partir do jQuery 1.6</strong> também é possível filtrar a seleção através de uma coleção jQuery ou elemento. Com a mesma lista aninhada acima, se começarmos com:</p>
 <pre>var $allListElements = $('li');</pre>
-<p>And then pass this jQuery object to find:</p>
+<p>E então passar esse objeto jQuery para find:</p>
 <pre>$('li.item-ii').find( $allListElements );</pre>
-<p>This will return a jQuery collection which contains only the list elements that are descendants of item II.</p>
-<p>Similarly, an element may also be passed to find:</p>
+<p>Retornará uma coleção jQuery que contém apenas a lista de elementos que são descendentes do item II.</p>
+<p>Da mesma forma, um elemento também pode ser passado para find:</p>
 <pre>
 var item1 = $('li.item-1')[0];
 $('li.item-ii').find( item1 ).css('background-color', 'red');
 </pre>
-<p>The result of this call would be a red background on item 1.</p>
+<p>O resultado dessa chamada seria um fundo vermelho no item 1</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Starts with all paragraphs and searches for descendant span elements, same as $("p span")</span>
+<h4>Exemplo: <span class="desc">Selecionar todos parágrafos e buscar por elementos span descendentes, similar a $("p span")</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -86,19 +86,19 @@ $('li.item-ii').find( item1 ).css('background-color', 'red');
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;, how are you?&lt;/p&gt;
-&lt;p&gt;Me? I'm &lt;span&gt;good&lt;/span&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Olá&lt;/span&gt;, como vai?&lt;/p&gt;
+&lt;p&gt;Eu? Estou &lt;span&gt;bem&lt;/span&gt;.&lt;/p&gt;
 &lt;script&gt;
   $("p").find("span").css('color','red');
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">A selection using a jQuery collection of all span tags. Only spans within p tags are changed to red while others are left blue.</span>
+<h4>Exemplo: <span class="desc">Obter uma coleção jQuery com todas as tags span. Spans dentro de tags p são alteradas para vermelho, o restante é deixado em azul.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -109,9 +109,9 @@ $('li.item-ii').find( item1 ).css('background-color', 'red');
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;, how are you?&lt;/p&gt;
-  &lt;p&gt;Me? I'm &lt;span&gt;good&lt;/span&gt;.&lt;/p&gt;
-  &lt;div&gt;Did you &lt;span&gt;eat&lt;/span&gt; yet?&lt;/div&gt;
+  &lt;p&gt;&lt;span&gt;Olá&lt;/span&gt;, como vai?&lt;/p&gt;
+  &lt;p&gt;Eu? Estou &lt;span&gt;bem&lt;/span&gt;.&lt;/p&gt;
+  &lt;div&gt;Você &lt;span&gt;já&lt;/span&gt; comeu?&lt;/div&gt;
 &lt;script&gt;
   var $spans = $('span');
   $("p").find( $spans ).css('color','red');
@@ -119,11 +119,11 @@ $('li.item-ii').find( item1 ).css('background-color', 'red');
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Add spans around each word then add a hover and italicize words with the letter t.</span>
+<h4>Exemplo: <span class="desc">Adiciona tags spans em torno de cada palavra e em seguida adiciona um hover que troca a cor de fundo da palavavra quando o ponteiro do mouse passa por cima dela. Também coloca itálico nas palavras que contém a letra t</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -137,9 +137,9 @@ $('li.item-ii').find( item1 ).css('background-color', 'red');
 &lt;/head&gt;
 &lt;body&gt;
   &lt;p&gt;
-  When the day is short
-  find that which matters to you
-  or stop believing
+  Quando o dia é curto
+  descubra o que é importante para você
+  ou pare de acreditar
   &lt;/p&gt;
 &lt;script&gt;
   var newText = $("p").text().split(" ").join("&lt;/span&gt; &lt;span&gt;");
@@ -160,7 +160,7 @@ $('li.item-ii').find( item1 ).css('background-color', 'red');
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div>
 </div>

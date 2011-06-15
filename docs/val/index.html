@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Índice:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#val1">val() </a><ul><li>.val()
@@ -32,24 +32,24 @@
 </div>
 <div id="val1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.val()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#String,%20Array">String, Array</a></span>
+<span class="name">.val()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#String,%20Array">String, Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the current value of the first element in the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Retorna o valor do primeiro elemento do conjunto de elementos alvo do seletor jQuery.</p>
 <ul class="signatures"><li class="signature" id="val"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.val()</h4></li></ul>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .val()</h4></li></ul>
 <div class="longdesc">
-<p>The <code>.val()</code> method is primarily used to get the values of form elements. In the case of <code>&lt;select multiple="multiple"&gt;</code> elements, the <code>.val()</code> method returns an array containing each selected option.</p>
-<p>For selects and checkboxes, you can also use the <a href="/selected">:selected</a> and <a href="/checked">:checked</a> selectors to get at values, for example:</p>
-<pre>$('select.foo option:selected').val();    // get the value from a dropdown select
-$('select.foo').val();                    // get the value from a dropdown select even easier
-$('input:checkbox:checked').val();        // get the value from a checked checkbox
-$('input:radio[name=bar]:checked').val(); // get the value from a set of radio buttons</pre>
+<p>O método <code>.val()</code> destina-se, a princípio, a investigar o valor de elementos de formulários. Para o elemento <code>&lt;select multiple="multiple"&gt;</code> o método <code>.val()</code> retorna um array contendo todos os valores das opções selecionadas.</p>
+<p>Para selects e checkboxes pode-se, também, usar os seletores <a href="/selected">:selected</a> e <a href="/checked">:checked</a> para inspecionar os valores:</p>
+<pre>$('select.foo option:selected').val();    // retorna o valor de um select dropdown
+$('select.foo').val();                    // forma mais fácil que também retorna o valor de um select dropdown
+$('input:checkbox:checked').val();        // retorna o valor de um checkbox marcado
+$('input:radio[name=bar]:checked').val(); // retorna o valor de um radio button marcado</pre>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Get the single value from a single select and an array of values from a multiple select and display their values.</span>
+<h4>Exemplo: <span class="desc">O código a seguir retorna o valor de um select simples e um array de valores de um select múltiplo a seguir mostra os valores retornados.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -63,44 +63,39 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 &lt;body&gt;
   &lt;p&gt;&lt;/p&gt;
   &lt;select id="single"&gt;
-    &lt;option&gt;Single&lt;/option&gt;
-    &lt;option&gt;Single2&lt;/option&gt;
-
+    &lt;option&gt;Simples&lt;/option&gt;
+    &lt;option&gt;Simples2&lt;/option&gt;
   &lt;/select&gt;
   &lt;select id="multiple" multiple="multiple"&gt;
-    &lt;option selected="selected"&gt;Multiple&lt;/option&gt;
-    &lt;option&gt;Multiple2&lt;/option&gt;
-
-    &lt;option selected="selected"&gt;Multiple3&lt;/option&gt;
+    &lt;option selected="selected"&gt;Múltiplo&lt;/option&gt;
+    &lt;option&gt;Múltiplo&lt;/option&gt;
+    &lt;option selected="selected"&gt;Múltiplo&lt;/option&gt;
   &lt;/select&gt;
 &lt;script&gt;
     function displayVals() {
       var singleValues = $("#single").val();
       var multipleValues = $("#multiple").val() || [];
-      $("p").html("&lt;b&gt;Single:&lt;/b&gt; " + 
+      $("p").html("&lt;b&gt;Simples:&lt;/b&gt; " + 
                   singleValues +
-                  " &lt;b&gt;Multiple:&lt;/b&gt; " + 
+                  " &lt;b&gt;Múltiplo:&lt;/b&gt; " + 
                   multipleValues.join(", "));
     }
 
     $("select").change(displayVals);
     displayVals();
-
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Find the value of an input box.</span>
+<h4>Exemplo: <span class="desc">Encontrar o valor de um campo input.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
-
   p { color:blue; margin:8px; }
   &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
@@ -114,7 +109,6 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
       $("p").text(value);
     }).keyup();
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -125,36 +119,36 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 </div>
 <div id="val2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.val( value )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.val( value )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Set the value of each element in the set of matched elements.</p>
+<p class="desc"><strong>Descrição:</strong> Define o valor de cada elemento de um conjunto alvo do seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="val-value">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.val( value )</h4>
-<p class="arguement"><strong>value</strong>A string of text or an array of strings corresponding to the value of each matched element to set as selected/checked.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .val( value )</h4>
+<p class="arguement"><strong>value</strong> Uma string de texto ou um array de strings a ser definida como valor de um conjunto de elementos a serem configurados como selecionados ou marcados (selected/checked).</p>
 </li>
 <li class="signature" id="val-functionindex- value">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.val( function(index, value) )</h4>
-<p class="arguement"><strong>function(index, value)</strong>A function returning the value to set.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4/">1.4</a></span> .val( function(index, value) )</h4>
+<p class="arguement"><strong>function(index, value)</strong> Função retornando o valor a ser definido.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>This method is typically used to set the values of form fields. </p>
-<p>Passing an array of element values allows matching  <code>&lt;input type="checkbox"&gt;</code>, <code>&lt;input type="radio"&gt;</code> and <code>&lt;option&gt;</code>s inside of n <code>&lt;select multiple="multiple"&gt;</code> to be selected. In the case of <code>&lt;input type="radio"&gt;</code>s that are part of a radio group and <code>&lt;select multiple="multiple"&gt;</code> the other elements will be deselected.</p>
-<p>The <code>.val()</code> method allows us to set the value by passing in a function. As of jQuery 1.4, the function is passed two arguments, the current element's index and its current value: </p>
+<p>Este método destina-se, a princípio, a definir um valor para elementos de formulários.</p>
+<p>Passando um array de valores permite marcar  <code>&lt;input type="checkbox"&gt;</code>, <code>&lt;input type="radio"&gt;</code> e <code>&lt;option&gt;</code> em n <code>&lt;select multiple="multiple"&gt;</code>. Quando se trata de <code>&lt;input type="radio"&gt;</code> em um grupo de radio button ou de <code>&lt;select multiple="multiple"&gt;</code> as demais opções serão desmarcadas.</p>
+<p>O método <code>.val()</code> permite definir um valor passando-o com uma função. A partir da versão jQuery 1.4 a função admite dois parâmetros: índice do elemento e seu valor corrente: </p>
 <pre>$('input:text.items').val(function(index, value) {
   return value + ' ' + this.className;
 });
 </pre>
-<p>This example appends the string " items" to the text inputs' values.</p>
+<p>O exemplo mostrado incorpora a string " items" ao valor textual dos inputs.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples-1">
 <div id="example-1-0">
-<h4>Example: <span class="desc">Set the value of an input box.</span>
+<h4>Example: <span class="desc">O código a seguir define o valor de um input.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -169,7 +163,6 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
   &lt;div&gt;
     &lt;button&gt;Feed&lt;/button&gt;
     &lt;button&gt;the&lt;/button&gt;
-
     &lt;button&gt;Input&lt;/button&gt;
   &lt;/div&gt;
   &lt;input type="text" value="click a button" /&gt;
@@ -179,14 +172,13 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
       $("input").val(text);
     });
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1-1">
-<h4>Example: <span class="desc">Use the function argument to modify the value of an input box.</span>
+<h4>Exemplo: <span class="desc">Usar o argumento de uma função para modificar o valor de um input.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -194,27 +186,22 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  
-  &lt;p&gt;Type something and then click or tab out of the input.&lt;/p&gt;
-  &lt;input type="text" value="type something" /&gt;
-
+  &lt;p&gt;Digite qualquer texto e clique ou tabule para fora do campo.&lt;/p&gt;
+  &lt;input type="text" value="Digite algo" /&gt;
 &lt;script&gt;
   $('input').bind('blur', function() {
-      
     $(this).val(function(i, val) {
       return val.toUpperCase();
     });
-    
   });
   &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1-2">
-<h4>Example: <span class="desc">Set a single select, a multiple select, checkboxes and a radio button .</span>
+<h4>Exemplo: <span class="desc">Definir valor para select simples, múltiplo, checkbox e radio button .</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -226,28 +213,23 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 &lt;/head&gt;
 &lt;body&gt;
   &lt;select id="single"&gt;
-    &lt;option&gt;Single&lt;/option&gt;
-    &lt;option&gt;Single2&lt;/option&gt;
+    &lt;option&gt;Simples&lt;/option&gt;
+    &lt;option&gt;Simples2&lt;/option&gt;
   &lt;/select&gt;
-
   &lt;select id="multiple" multiple="multiple"&gt;
-    &lt;option selected="selected"&gt;Multiple&lt;/option&gt;
-    &lt;option&gt;Multiple2&lt;/option&gt;
-
-    &lt;option selected="selected"&gt;Multiple3&lt;/option&gt;
+    &lt;option selected="selected"&gt;Múltiplo&lt;/option&gt;
+    &lt;option&gt;Múltiplo2&lt;/option&gt;
+    &lt;option selected="selected"&gt;Múltiplo3&lt;/option&gt;
   &lt;/select&gt;&lt;br/&gt;
   &lt;input type="checkbox" name="checkboxname" value="check1"/&gt; check1
   &lt;input type="checkbox" name="checkboxname" value="check2"/&gt; check2
   &lt;input type="radio"  name="r" value="radio1"/&gt; radio1
   &lt;input type="radio"  name="r" value="radio2"/&gt; radio2
 &lt;script&gt;
-    
-    $("#single").val("Single2");
-    $("#multiple").val(["Multiple2", "Multiple3"]); 
+    $("#single").val("Simples2");
+    $("#multiple").val(["Múltiplo2", "Múltiplo3"]); 
     $("input").val(["check1","check2", "radio1" ]);
-
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

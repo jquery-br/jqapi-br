@@ -14,62 +14,61 @@
 </div>
 <div id="submit1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.submit( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.submit( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição:</strong> Atrela um manipulador de evento ao evento JavaScript "submit", ou dispara o evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="submit-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.submit( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .submit( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="submit-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.submit( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span> .submit( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong> Mapa de dados a serem passados ao manipulador do evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong> Função a ser executada toda vez que o evento ocorre.</p>
 </li>
 <li class="signature" id="submit"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.submit()</h4></li>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .submit()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('submit', handler)</code> in the first variation, and <code>.trigger('submit')</code> in the third.</p>
-<p>The <code>submit</code> event is sent to an element when the user is attempting to submit a form. It can only be attached to <code>&lt;form&gt;</code> elements. Forms can be submitted either by clicking an explicit <code>&lt;input type="submit"&gt;</code>, <code>&lt;input type="image"&gt;</code>, or <code>&lt;button type="submit"&gt;</code>, or by pressing <kbd>Enter</kbd> when certain form elements have focus.</p>
-<blockquote><p>Depending on the browser, the Enter key may only cause a form submission if the form has exactly one text field, or only when there is a submit button present. The interface should not rely on a particular behavior for this key unless the issue is forced by observing the keypress event for presses of the Enter key.</p></blockquote>
-<p>For example, consider the HTML:</p>
+<p>Nos dois primeiros casos mostrados anteriormente este método é uma forma abreviada para o método <code>.bind('submit', handler)</code> e no terceiro  para o método <code>.trigger('submit')</code>.</p>
+<p>O evento <code>submit</code> ocorre quando o usuário envia um formulário. Este evento destina-se a ser atrelado a elementos <code>&lt;form&gt;</code>. Formulários são enviados por um clique em um elemento <code>&lt;input type="submit"&gt;</code>, <code>&lt;input type="image"&gt;</code> ou <code>&lt;button type="submit"&gt;</code> ou ainda, por acionamento da tecla <kbd>Enter</kbd> quando determinados elementos do formulário têm o foco.</p>
+<blockquote><p>Dependendo do navegador, acionar a tecla Enter, envia o formulário somente se ele tiver apenas um campo de texto ou quando há um botão de envio.</p></blockquote>
+<p>Considere a seguinte marcação HTML:</p>
 <pre>&lt;form id="target" action="destination.html"&gt;
-  &lt;input type="text" value="Hello there" /&gt;
+  &lt;input type="text" value="Ei você" /&gt;
   &lt;input type="submit" value="Go" /&gt;
 &lt;/form&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o evento
 &lt;/div&gt;</pre>
-<p>The event handler can be bound to the form:</p>
+<p>O evento pode ser atrelado ao formulário:</p>
 <pre>$('#target').submit(function() {
-  alert('Handler for .submit() called.');
+  alert('Chamado o manipulador do evento .submit()');
   return false;
 });</pre>
-<p>Now when the form is submitted, the message is alerted. This happens prior to the actual submission, so we can cancel the submit action by calling <code>.preventDefault()</code> on the event object or by returning <code>false</code> from our handler. We can trigger the event manually when another element is clicked:</p>
+<p>Quando o formulário for enviado o alerta é mostrado. O alerta acontece antes do envio do formulário. É possível cancelar o envio com uso do método jQuery <code>.preventDefault()</code> ou retornando <code>false</code> na função manipuladora do evento. Podemos ainda, disparar o evento quando um outro elemento for clicado:</p>
 <pre>$('#other').click(function() {
   $('#target').submit();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also display the message. In addition, the default <code>submit</code> action on the form will be fired, so the form will be submitted.</p>
-<p>The JavaScript <code>submit</code> event does not bubble in Internet Explorer. However, scripts that rely on event delegation with the <code>submit</code> event will work consistently across browsers as of jQuery 1.4, which has normalized the event's behavior. </p>
+<p>Segundo este código <span class="output">disparando o evento</span> o alerta é mostrado. Ainda mais, a ação <code>submit</code> será disparada e o formulário será enviado.</p>
+<p>A partir da jQuery 1.4 o evento <code>submit</code> se propaga pelo efeito bolha (bubble) no Internet Explorer e é consistente nos navegadores modernos.</p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>Forms and their child elements should not use input names or ids that conflict with properties of a form, such as <code>submit</code>, <code>length</code>, or <code>method</code>. Name conflicts can cause confusing failures. For a complete list of rules and to check your markup for these problems, see <a href="http://yura.thinkweb2.com/domlint/">DOMLint</a>. 
+<h3 id="notes-0">Notas adicionais:</h3>
+<div class="longdesc"><ul><li>Formulários e seus elementos não devem usar nomes ou ids iguais aos das propriedades do formulário, tais como <code>submit</code>, <code>length</code> ou <code>method</code>. Conflitos de nomes podem causar falha no funcionamento dos formulários. Para uma lista completa dos nomes a evitar bem como para verificar sua marcação consulte <a href="http://yura.thinkweb2.com/domlint/">DOMLint</a>. 
 </li></ul></div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">If you'd like to prevent forms from being submitted unless a flag variable is set, try:</span>
+<h4>Example: <span class="desc">Código para permitir o envio de um formulário somente se uma condição for satisfeita:</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
-
   p { margin:0; color:blue; }
   div,p { margin-left:10px; }
   span { color:red; }
@@ -77,41 +76,38 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;Type 'correct' to validate.&lt;/p&gt;
+  &lt;p&gt;Digite 'correto' para validar a entrada.&lt;/p&gt;
   &lt;form action="javascript:alert('success!');"&gt;
     &lt;div&gt;
       &lt;input type="text" /&gt;
-
       &lt;input type="submit" /&gt;
     &lt;/div&gt;
   &lt;/form&gt;
   &lt;span&gt;&lt;/span&gt;
 &lt;script&gt;
-
     $("form").submit(function() {
-      if ($("input:first").val() == "correct") {
-        $("span").text("Validated...").show();
+      if ($("input:first").val() == "correto") {
+        $("span").text("OK, entrada válida...").show();
         return true;
       }
-      $("span").text("Not valid!").show().fadeOut(1000);
+      $("span").text("Entrada inválida!").show().fadeOut(1000);
       return false;
     });
 &lt;/script&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">If you'd like to prevent forms from being submitted unless a flag variable is set, try:</span>
+<h4>Exemplo: <span class="desc">Código para permitir o envio de um formulário somente se uma variável flag for definida:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("form").submit( function () {
-  return this.some_flag_variable;
+  return this.variavel_flag;
 } );</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">To trigger the submit event on the first form on the page, try:</span>
+<h4>Exemplo: <span class="desc">Código para disparar o evento submit para o primeiro formulário da página:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("form:first").submit();</code></pre>
 </div>

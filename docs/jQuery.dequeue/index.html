@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.dequeue()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
   
 
@@ -14,23 +14,23 @@
 </div>
 <div id="jQuery-dequeue1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.dequeue( element, [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">jQuery.dequeue( element, [ queueName ] )</span> <span class="returns">Returna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Execute the next function on the queue for the matched element.</p>
+<p class="desc"><strong>Descrição: </strong>Executa a próxima função na queue para o grupo de elementos.</p>
 <ul class="signatures"><li class="signature" id="jQuery-dequeue-element-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>jQuery.dequeue( element, [ queueName ] )</h4>
-<p class="arguement"><strong>element</strong>A DOM element from which to remove and execute a queued function.</p>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>jQuery.dequeue( element, [ queueName ] )</h4>
+<p class="arguement"><strong>element</strong>Um elemento DOM do qual vai remover e executar a função da fila.</p>
+<p class="arguement"><strong>queueName</strong>Uma string contendo o nome da queue. Padrão<code>fx</code>, o padrao para queue de efeitos.</p>
 </li></ul>
 <div class="longdesc">
-<p><strong>Note:</strong> This is a low-level method, you should probably use <code><a href="/dequeue">.dequeue()</a></code> instead.</p>
-<p>When <code>jQuery.dequeue()</code> is called, the next function on the queue is removed from the queue, and then executed. This function should in turn (directly or indirectly) cause <code>jQuery.dequeue()</code> to be called, so that the sequence can continue.</p>
+<p><strong>Nota:</strong> Esse é um método de baixo nível, você deve provavelmente usar <code><a href="/dequeue">.dequeue()</a></code> ao invés.</p>
+<p>Quando <code>jQuery.dequeue()</code> é chamado, a próxima função na queue é removida e executada. Essa função por sua vez, deve (direta ou indiretamente) causar a chamada da função <code>jQuery.dequeue()</code>, então a sequencia pode continuar.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Use dequeue to end a custom queue function which allows the queue to keep going.</span></h4>
+<h4><span class="desc">Use dequeue para finalizar uma função queue personalizada que permite a queue continuar.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -41,7 +41,7 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button&gt;Start&lt;/button&gt;  &lt;div&gt;&lt;/div&gt;
+  &lt;button&gt;Iniciar&lt;/button&gt;  &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;$("button").click(function () {
       $("div").animate({left:'+=200px'}, 2000);
       $("div").animate({top:'0px'}, 600);

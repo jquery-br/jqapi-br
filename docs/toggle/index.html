@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
+
         <div class="entry-title roundTop">
+
           
+
           <h1 class="jq-clearfix">.toggle()</h1>
+
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/basics/" title="View all posts in Basics">Basics</a></span>
+
+                        Categoria:
+
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/basics/" title="Ver todos os posts em Básicos">Básicos</a></span>
+
   
+
+
 
           </div>
 
+
+
 </div>
+
 <div id="toggle1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.toggle( [ duration ], [ callback ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.toggle( [ duration ], [ callback ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Display or hide the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Mostra ou oculta os elementos alvo.</p>
 <ul class="signatures">
 <li class="signature" id="toggle-duration-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.toggle( [ duration ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.toggle( [ duration ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando durante quanto tempo a animação será executada.</p>
+<p class="arguement"><strong>callback</strong>Função a ser chamada ao completar a animação.</p>
 </li>
 <li class="signature" id="toggle-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.toggle( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>easing</strong>A string indicating which easing function to use for the transition.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionada na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.toggle( [ duration ], [ easing ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número determinando durante quanto tempo a animação será executada</p>
+<p class="arguement"><strong>easing</strong>Uma string indicando qual função easing usar para a transição.</p>
+<p class="arguement"><strong>callback</strong>Função a ser chamada ao completar a animação.</p>
 </li>
 <li class="signature" id="toggle-showOrHide">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>.toggle( showOrHide )</h4>
-<p class="arguement"><strong>showOrHide</strong>A Boolean indicating whether to show or hide the elements.</p>
+<span class="versionAdded">adicionada na versão: <a href="/category/version/1.3/">1.3</a></span>.toggle( showOrHide )</h4>
+<p class="arguement"><strong>showOrHide</strong>Um Boolean indicando quando mostrar ou ocultar os elementos.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>With no parameters, the <code>.toggle()</code> method simply toggles the visibility of elements:</p>
+<p>Sem nenhum parâmetro, a função <code>.toggle()</code> simplesmente alterna a visibilidade dos elementos:</p>
 <pre>$('.target').toggle();
 </pre>
-<p>The matched elements will be revealed or hidden immediately, with no animation, by changing the CSS <code>display</code> property. If the element is initially displayed, it will be hidden; if hidden, it will be shown. The <code>display</code> property is saved and restored as needed. If an element has a <code>display</code> value of <code>inline</code>, then is hidden and shown, it will once again be displayed <code>inline</code>.</p>
-<p>When a duration is provided, <code>.toggle()</code> becomes an animation method. The <code>.toggle()</code> method animates the width, height, and opacity of the matched elements simultaneously. When these properties reach 0 after a hiding animation, the <code>display</code> style property is set to <code>none</code> to ensure that the element no longer affects the layout of the page.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively.</p>
-<blockquote><p>Note: The event handling suite also has a method named <a href="http://api.jquery.com/toggle-event/">.toggle()</a>. Which one is fired depends on the set of arguments passed.</p></blockquote>
-<p>As of jQuery 1.4.3, an optional string naming an easing function may be used. Easing functions specify the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
-<p>We can animate any element, such as a simple image:</p>
+<p>Os elementos alvos serão mostrados ou ocultos imediatamente, sem nenhuma animação, mudando a propriedade CSS <code>display</code>. Se o elemento é inicialmente mostrado, ele será oculto; se oculto será apresentado. A propriedade <code>display</code> é salva e restaurada quando necessário. Se um elemento tem <code>display</code> com valor <code>inline</code>, então ele será oculto e mostrado novamente de forma <code>inline</code>.</p>
+<p>Quando é informada uma duração, <code>.toggle()</code> se torna um método de animação. O método <code>.toggle()</code> animates the width, height, and opacity of the matched elements simultaneously. When these properties reach 0 after a hiding animation, the <code>display</code> style property is set to <code>none</code> to ensure that the element no longer affects the layout of the page.</p>
+<p>A duração é informada em milisegundos; Valores altos indicam animações mais lentas e não mais rápidas. Textos como <code>'fast'</code> e <code>'slow'</code> podem ser informados para indicar durações de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
+<blockquote><p>Nota: A suíte de manipulação de eventos também possui um método chamado <a href="http://api.jquery.com/toggle-event/">.toggle()</a>. Qual será disparado dependerá dos argumentos informados.</p></blockquote>
+<p>A partir do jQuery 1.4.3, uma opção chamada de função easing passou a poder ser usada. Funções easing determinam a velocidade que a animação irá progredir em diferentes momentos dentro da mesma. A única implementação da easing no jQuery são somente as padrões, chamada <code>swing</code>, e outra que vem progredindo em constante ritmo, chamada <code>linear</code>. Mais funções easing estão disponíveis com o uso de plugins, mais notavelmente a <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>Se for informado o callback é chamado assim que a animação é finalizada. Isto pode ser útil para unir animações diferentes em uma sequência. O callback não envia nenhum argumento, porém <code>this</code> é definido como o elemento DOM sendo animado. Se vários elementos estão sendo animados, é importante notar que o callback é executado uma vez por elemento correspondente e não para a animação como um todo.</p>
+<p>Podemos animar qualquer elemento, por exemplo uma simples imagem:</p>
 <pre>&lt;div id="clickme"&gt;
-  Click here
+  Clique aqui
 &lt;/div&gt;
 &lt;img id="book" src="book.png" alt="" width="100" height="123" /&gt;
 </pre>
-<p>We will cause <code>.toggle()</code> to be called when another element is clicked:</p>
+<p>Vamos chamar <code>.toggle()</code> quando outro elemento for clicado:</p>
 <pre>$('#clickme').click(function() {
   $('#book').toggle('slow', function() {
-    // Animation complete.
+    // Animação completa.
   });
 });
 </pre>
-<p>With the element initially shown, we can hide it slowly with the first click:
+<p>Com o elemento inicialmente sendo mostrado, podemos ocultá-lo lentamente com um primeiro clicque:
 </p>
 <p class="image four-across"> 
 <img src="/images/0042_06_09.png" alt=""><img src="/images/0042_06_10.png" alt=""><img src="/images/0042_06_11.png" alt=""><img src="/images/0042_06_12.png" alt=""></p>
-<p>A second click will show the element once again:</p>
+<p>Um segundo clique irá mostrar o elemento novamente:</p>
 <p class="image four-across"><img src="/images/0042_06_13.png" alt=""><img src="/images/0042_06_14.png" alt=""><img src="/images/0042_06_15.png" alt=""><img src="/images/0042_06_16.png" alt=""></p>
-<p>The second version of the method accepts a Boolean parameter. If this parameter is <code>true</code>, then the matched elements are shown; if <code>false</code>, the elements are hidden. In essence, the statement:
+<p>Uma segunda versão do método aceita um parâmetro Boolean. Se o parâmetro é <code>true</code>, então os elementos alvos são apresentados; se <code>false</code>, os elementos são ocultados. Em essência seria a declaração:
 </p>
 <pre>$('#foo').toggle(showOrHide);</pre>
-<p>is equivalent to:</p>
+<p>que é equivalente a:</p>
 <pre>if ( showOrHide == true ) {
   $('#foo').show();
 } else if ( showOrHide == false ) {
@@ -78,12 +90,12 @@
 }
 </pre>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.toggle()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Notas Adicionais:</h3>
+<div class="longdesc"><ul><li>Todos os efeitos da jQuery, incluíndo <code>.toggle()</code>, odem ser globalmente desativados pela configuração <code>jQuery.fx.off = true</code>, que efetivamente determina a duração como 0. Para mais informações, veja <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Toggles all paragraphs.</span>
+<h4>Exemplo: <span class="desc">Alterna todos os parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -91,9 +103,9 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button&gt;Toggle&lt;/button&gt;
-&lt;p&gt;Hello&lt;/p&gt;
-&lt;p style="display: none"&gt;Good Bye&lt;/p&gt;
+  &lt;button&gt;Alternar&lt;/button&gt;
+&lt;p&gt;Olá&lt;/p&gt;
+&lt;p style="display: none"&gt;Adeus&lt;/p&gt;
 &lt;script&gt;
 
 $("button").click(function () {
@@ -107,7 +119,7 @@ $("p").toggle();
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Animates all paragraphs to be shown if they are hidden and hidden if they are visible, completing the animation within 600 milliseconds.</span>
+<h4>Exemplo: <span class="desc">Anima todos os parágrafos para mostrar se eles estão ocultos e ocultá-los se eles estão visíveis, completando a animação em 600 milisegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -120,10 +132,10 @@ font-size:16px; }
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button&gt;Toggle 'em&lt;/button&gt;
+  &lt;button&gt;Alterná-los&lt;/button&gt;
 
-&lt;p&gt;Hiya&lt;/p&gt;
-&lt;p&gt;Such interesting text, eh?&lt;/p&gt;
+&lt;p&gt;Olá&lt;/p&gt;
+&lt;p&gt;Texto muito interessante, hein?&lt;/p&gt;
 &lt;script&gt;
 $("button").click(function () {
 $("p").toggle("slow");
@@ -136,7 +148,7 @@ $("p").toggle("slow");
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Shows all paragraphs, then hides them all, back and forth.</span>
+<h4>Exemplo: <span class="desc">Mostra todos os parágrafos, em seguida esconde todos, indo e voltando.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -145,8 +157,8 @@ $("p").toggle("slow");
 &lt;/head&gt;
 &lt;body&gt;
   &lt;button&gt;Toggle&lt;/button&gt;
-&lt;p&gt;Hello&lt;/p&gt;
-&lt;p style="display: none"&gt;Good Bye&lt;/p&gt;
+&lt;p&gt;Olá&lt;/p&gt;
+&lt;p style="display: none"&gt;Adeus&lt;/p&gt;
 &lt;script&gt;
 
 var flip = 0;
@@ -163,6 +175,7 @@ $("p").toggle( flip++ % 2 == 0 );
 </div>
 </div>
 </div>
+
 
         </div>
 

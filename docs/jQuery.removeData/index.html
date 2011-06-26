@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.removeData()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
   
 
@@ -14,23 +14,24 @@
 </div>
 <div id="jQuery-removeData1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.removeData( element, [ name ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">jQuery.removeData( element, [ name ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Remove a previously-stored piece of data.</p>
+<p class="desc"><strong>Descrição: </strong>Remove um pedaço de dados previamente guardado.</p>
 <ul class="signatures"><li class="signature" id="jQuery-removeData-element-name">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.removeData( element, [ name ] )</h4>
-<p class="arguement"><strong>element</strong>A DOM element from which to remove data.</p>
-<p class="arguement"><strong>name</strong>A string naming the piece of data to remove.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.removeData( element, [ name ] )</h4>
+<p class="arguement"><strong>element</strong>Um elemento DOM do qual o dado vai ser removido.</p>
+<p class="arguement"><strong>name</strong>Uma string nomeando o pedaço dos dados para deletar.</p>
 </li></ul>
 <div class="longdesc">
-<p><strong>Note:</strong> This is a low-level method, you should probably use <code><a href="/removeData">.removeData()</a></code> instead.</p>
-<p>The <code>jQuery.removeData()</code> method allows us to remove values that were previously set using <code><a href="/jQuery.data">jQuery.data()</a></code>. When called with the name of a key, <code>jQuery.removeData()</code> deletes that particular value; when called with no arguments, all values are removed.</p>
+<p><strong>Nota:</strong> Esse é um método de baixo nível, você provavelmente deveria usar <code><a href="/removeData">.removeData()</a></code> ao invés.</p>
+<p>O método <code>.removeData()</code> nos permite remover valores que foram previamente setados usando <code>.data()</code>. Quando chamamos com o nome da chave, o <code>.removeData()</code> deleta esse valor em particular; quando chamamos sem argumentos, todos os valores são removidos.</p>
+
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Set a data store for 2 names then remove one of them.</span></h4>
+<h4><span class="desc">Definir dados armazenados para 2 nomes e após remover um deles.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -42,9 +43,9 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div&gt;value1 before creation: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-		&lt;div&gt;value1 after creation: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-		&lt;div&gt;value1 after removal: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-		&lt;div&gt;value2 after removal: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div&gt;value1 depois da criação: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div&gt;value1 depois de remover: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div&gt;value2 depois de remover: &lt;span&gt;&lt;/span&gt;&lt;/div&gt;
 &lt;script&gt;
 var div = $("div")[0];
 $("span:eq(0)").text("" + $("div").data("test1"));

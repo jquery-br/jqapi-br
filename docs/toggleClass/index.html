@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
+<!-- saved from url=(0087)file:///C:/Users/Enoc/Documents/JoabMendes-jqapi-br-325736f/docs/toggleClass/index.html -->
+<html lang="en" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./indextradu_files/translateelement.css">
+<script type="text/javascript" charset="UTF-8" src="./indextradu_files/main_pt-BR.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./indextradu_files/element_main.js"></script>
+</head>
+<body>
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">.toggleClass()</h1>
+          <h1 class="jq-clearfix">. ToggleClass ()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/attributes/" title="View all posts in Attributes">Attributes</a></span> | <span class="category"><a href="http://api.jquery.com/category/manipulation/" title="View all posts in Manipulation">Manipulation</a> &gt; <a href="http://api.jquery.com/category/manipulation/class-attribute/" title="View all posts in Class Attribute">Class Attribute</a></span> | <span class="category"><a href="http://api.jquery.com/category/css/" title="View all posts in CSS">CSS</a></span>
+                        Categorias:
+          <span class="category"><a href="http://api.jquery.com/category/attributes/" title="Ver todos os posts em Atributos">Atributos</a></span> | <span class="category"><a href="http://api.jquery.com/category/manipulation/" title="Ver todos os posts em Manipulação">Manipulação</a> &gt; <a href="http://api.jquery.com/category/manipulation/class-attribute/" title="Ver todos os posts em atributo Class">Atributo Classe</a></span> | <span class="category"><a href="http://api.jquery.com/category/css/" title="Ver todos os posts em CSS">CSS</a></span>
   
 
           </div>
@@ -14,50 +20,48 @@
 </div>
 <div id="toggleClass1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.toggleClass( className )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">. ToggleClass (className)</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</p>
+<p class="desc"><strong>Descrição:</strong> Adiciona ou remove uma ou mais classes de cada elemento no conjunto dos elementos combinados para serem usados, dependendo de cada presença da classe ou do valor do switch(true ou false)<br/>(como uma chave que liga e desliga a classe).</p>
 <ul class="signatures">
 <li class="signature" id="toggleClass-className">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.toggleClass( className )</h4>
-<p class="arguement"><strong>className</strong>One or more class names (separated by spaces) to be toggled for each element in the matched set.</p>
+<span class="versionAdded">Atualização na Versão: <a href="file:///C:/category/version/1.0/">1,0</a></span> toggleClass (NomedaClasse).</h4>
+<p class="arguement"><strong><font><font>NomedaClasse</font></font></strong><font><font> Um ou mais nomes de classe (separados por espaços) para ser alternado para cada elemento no conjunto a ser usado.</font></font></p>
 </li>
 <li class="signature" id="toggleClass-className-switch">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>.toggleClass( className, switch )</h4>
-<p class="arguement"><strong>className</strong>One or more class names (separated by spaces) to be toggled for each element in the matched set.</p>
-<p class="arguement"><strong>switch</strong>A boolean value to determine whether the class should be added or removed.</p>
+<span class="versionAdded">Atualização na Versão: <a href="file:///C:/category/version/1.3/">1,3</a></span> toggleClass (switch NomedaClasse).</h4>
+<p class="arguement"><strong>NomedaClasse</strong> Um ou mais nomes de classe (separados por espaços) para ser alternado para cada elemento no conjunto a ser usado.</p>
+<p class="arguement"><strong>switch</strong> Um valor booleano do switch para determinar se a classe deve ser adicionadas ou removidas(true para adicionar e false para remover).</p>
 </li>
 <li class="signature" id="toggleClass-functionindex- class-switch">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.toggleClass( function(index, class), [ switch ] )</h4>
-<p class="arguement"><strong>function(index, class)</strong>A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set and the old class value as arguments.</p>
-<p class="arguement"><strong>switch</strong>A boolean value to determine whether the class should be added or removed.</p>
+
+<span class="versionAdded">Atualização na Versão: <a href="file:///C:/category/version/1.4/">1,4</a></span> . toggleClass (função(índice, classe), [switch])</h4>
+<p class="arguement"><strong>função (índice, classe)</strong> Uma função que retorna nomes de classe a ser alternado no atributo classe de cada elemento no conjunto combinado. Recebe a posição de índice do elemento no conjunto e o valor da classe como argumentos.</p>
+<p class="arguement"><strong>switch</strong> Um valor booleano para determinar se a classe deve ser adicionadas ou removidas.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>This method takes one or more class names as its parameter. In the first version, if an element in the matched set of elements already has the class, then it is removed; if an element does not have the class, then it is added. For example, we can apply <code>.toggleClass()</code> to a simple <code>&lt;div&gt;</code>: </p>
-<pre>&lt;div class="tumble"&gt;Some text.&lt;/div&gt;
-      </pre>
-<p>The first time we apply <code>$('div.tumble').toggleClass('bounce')</code>, we get the following:</p>
-<pre>&lt;div class="tumble bounce"&gt;Some text.&lt;/div&gt;
-      </pre>
-<p>The second time we apply <code>$('div.tumble').toggleClass('bounce')</code>, the <code>&lt;div&gt;</code> class is returned to the single <code>tumble</code> value:</p>
-<pre>&lt;div class="tumble"&gt;Some text.&lt;/div&gt;</pre>
-<p>Applying <code>.toggleClass('bounce spin')</code> to the same <code>&lt;div&gt;</code> alternates between <code>&lt;div class="tumble bounce spin"&gt;</code> and <code>&lt;div class="tumble"&gt;</code>.</p>
-<p>The second version of <code>.toggleClass()</code> uses the second parameter for determining whether the class should be added or removed. If this parameter's value is <code>true</code>, then the class is added; if <code>false</code>, the class is removed. In essence, the statement:</p>
-<pre>$('#foo').toggleClass(className, addOrRemove);</pre>
-<p>is equivalent to:</p>
-<pre>if (addOrRemove) {
-    $('#foo').addClass(className);
-  }
-  else {
-    $('#foo').removeClass(className);
-  }
-  </pre>
-<p>As of jQuery 1.4, the <code>.toggleClass()</code> method allows us to indicate the class name to be toggled by passing in a function.</p>
+<p>Este método usa um ou mais nomes de classes como seu parâmetro. Na primeira versão, se um elemento do conjunto combinado de elementos já tem a classe, então a classe é removida; se um elemento não tem a classe, então ela é adicionada. Por exemplo, podemos aplicar <code>toggleClass ().</code> a uma simples <code>&lt;div&gt;</code> :</p>
+<pre>&lt;div class="tumble"&gt;Algum Texto.&lt;/div&gt;</pre>
+<p>A primeira vez que se aplica <code>. $ ('div.tumble') toggleClass ('bounce')</code> ,a definição da classe 'bounce' é removida da classe <code>div.tumble</code>, obtendo o seguinte:</p>
+<pre>&lt;div class="tumble 'bounce'"&gt;Algum texto.&lt;/div&gt;</pre>
+<p>A segunda vez que se aplica<code>. $ ('div.tumble') toggleClass ('bounce')</code> , a <code>&lt;div&gt;</code> da classe  <code>tumble</code>  retorma seu valor <code>bounce</code>:</p>
+<pre>&lt;div class="tumble"&gt;Algum Texto.&lt;/div&gt;</pre>
+<p>Aplicar <code>. toggleClass ('bounce spin')</code> para o mesmo <code>&lt;div&gt;</code> alterna entre <code>&lt;div bounce class="tumble spin"&gt;</code> e <code>class="tumble"&gt; &lt;div&gt;</code> .</p>
+<p>A segunda versão <code>. toggleClass ()</code> usa um segundo parâmetro para determinar se a classe deve ser adicionadas ou removidas. Se o valor deste parâmetro é <code>verdadeiro(true)</code>, então a classe é adicionada, se o valor for<code>falso(false)</code> , a classe é removida. Em essência, a declaração fica asssim:</p>
+<pre>$ ('# Foo') toggleClass (NomedaClasse, True_ou_False).;</pre>
+<p>é equivalente a:</p>
+<pre>if (True_ou_False) {
+$ ('# foo') addClass (NomedaClasse);.
+} else {
+$ ('# foo') removeClass (NomedaClasse);.
+}
+ </pre>
+<p>A partir de jQuery 1.4, a <code>toggleClass()</code> usa um método que permite indicar o nome da classe para ser alternada por passar em uma função.</p>
 <pre>$('div.foo').toggleClass(function() {
   if ($(this).parent().is('.bar')) {
     return 'happy';
@@ -65,14 +69,15 @@
     return 'sad';
   }
 });</pre>
-<p>This example will toggle the <code>happy</code> class for <code>&lt;div class="foo"&gt;</code> elements if their parent element has a class of <code>bar</code>; otherwise, it will toggle the <code>sad</code> class.</p>
+<p>Este exemplo irá alternar a classe<code> happy </code>para <code>&lt;div class="foo"&gt;</code> se seu elemento <code>parent()</code> tem uma classe <code>bar</code> , caso contrário, ele irá alternar para a classe<code> sad</code>.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Toggle the class 'highlight' when a paragraph is clicked.</span>
+<h4>Exemplo: <span class="desc">Altere para a classe 'highlight' quando o parágrafo for clicado.</span>
 </h4>
-<pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
+<pre class="prettyprint"><code class="example demo-code">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
@@ -85,10 +90,10 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p class="blue"&gt;Click to toggle&lt;/p&gt;
+  &lt;p class="blue"&gt;Clique para mudar o&lt;/p&gt;
   &lt;p class="blue highlight"&gt;highlight&lt;/p&gt;
-  &lt;p class="blue"&gt;on these&lt;/p&gt;
-  &lt;p class="blue"&gt;paragraphs&lt;/p&gt;
+  &lt;p class="blue"&gt;desses&lt;/p&gt;
+  &lt;p class="blue"&gt;parágrafos&lt;/p&gt;
 &lt;script&gt;
     $("p").click(function () {
       $(this).toggleClass("highlight");
@@ -101,7 +106,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Add the "highlight" class to the clicked paragraph on every third click of that paragraph, remove it every first and second click.</span>
+<h4>Exemplo: <span class="desc">Adicione a classe "highlight" e altere confome a quantidade de cliques, retire-a cada primeiro clique e adicione com o segundo.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -115,11 +120,10 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p class="blue"&gt;Click to toggle (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
+  &lt;p class="blue"&gt;Clique para mudar o (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
   &lt;p class="blue highlight"&gt;highlight (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
-  &lt;p class="blue"&gt;on these (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
-
-  &lt;p class="blue"&gt;paragraphs (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
+  &lt;p class="blue"&gt;desses (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
+  &lt;p class="blue"&gt;parágrafos (&lt;span&gt;clicks: 0&lt;/span&gt;)&lt;/p&gt;
 &lt;script&gt;
 var count = 0;
 $("p").each(function() {
@@ -145,5 +149,4 @@ $("p").each(function() {
 
         </div>
 
-</body>
-</html>
+<div style="position: absolute; z-index: 1073741824; width: 666px; height: 72px; left: 8px; top: -9999em; box-sizing: content-box; display: none; " id=":0.balloonContainer"><iframe id=":0.container" class="goog-te-balloon-frame skiptranslate" frameborder="0" src="javascript:''" style="visibility: visible; width: 666px; height: 72px; box-sizing: content-box; "></iframe></div></body></html>

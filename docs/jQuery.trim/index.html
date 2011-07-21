@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">jQuery.trim()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/utilities/" title="Ver todos os posts em Utilit&aacute;rios">Utilit&aacute;rios</a></span>
   
 
           </div>
@@ -14,20 +14,20 @@
 </div>
 <div id="jQuery-trim1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.trim( str )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#String">String</a></span>
+<span class="name">jQuery.trim( str )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#String">String</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Remove the whitespace from the beginning and end of a string.</p>
+<p class="desc"><strong>Descri&ccedil;&atilde;o: </strong>Remover o espa&ccedil;o em branco do in&iacute;cio e no final de uma string.</p>
 <ul class="signatures"><li class="signature" id="jQuery-trim-str">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.trim( str )</h4>
-<p class="arguement"><strong>str</strong>The string to trim.</p>
+<span class="versionAdded">vers&atilde;o adicionada: <a href="/category/version/1.0/">1.0</a></span>jQuery.trim( str )</h4>
+<p class="arguement"><strong>str</strong>A string para usar o trim.</p>
 </li></ul>
-<div class="longdesc"><p>The <code>$.trim()</code> function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.</p></div>
-<h3>Examples:</h3>
+<div class="longdesc"><p>A fun&ccedil;&atilde;o <code>$.trim()</code> remove todas as quebras de linha, espa&ccedil;os (incluindo espa&ccedil;os sem quebras de linha), e abas desde o in&iacute;cio ao final de uma string fornecida. Se esses caracteres em branco estiverem no meio da string, eles permanecerão.</p></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Remove the two white spaces at the start and at the end of the string.</span>
+<h4>Exemplo: <span class="desc">Remover os dois espa&ccedil;os em branco no in&iacute;cio e no final da string.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -35,30 +35,30 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button&gt;Show Trim Example&lt;/button&gt;
+  &lt;button&gt;Exibir o exemplo do Trim&lt;/button&gt;
 &lt;script&gt;
 
 $("button").click(function () {
-var str = "     lots of spaces before and after     ";
+var str = "     v&aacute;rios espa&ccedil;os antes e depois     ";
 alert("'" + str + "'");
 
 str = jQuery.trim(str);
-alert("'" + str + "' - no longer");
+alert("'" + str + "' - n&atilde;o h&aacute; mais espa&ccedil;os");
 });
 
 &lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstra&ccedil;&atilde;o:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Remove the two white spaces at the start and at the end of the string.</span>
+<h4>Exemplo: <span class="desc">Remover os dois espa&ccedil;os em branco no in&iacute;cio e no final da string.</span>
 </h4>
-<pre class="prettyprint"><code class="example">$.trim("  hello, how are you?  ");</code></pre>
-<h4>Result:</h4>
-<pre><code class="results">"hello, how are you?"</code></pre>
+<pre class="prettyprint"><code class="example">$.trim("  Oi, como vai voc&ecirc;?  ");</code></pre>
+<h4>Resultado:</h4>
+<pre><code class="results">"Oi, como vai voc&ecirc;?"</code></pre>
 </div>
 </div>
 </div>

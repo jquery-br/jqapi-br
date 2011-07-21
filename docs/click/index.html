@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
+
         <div class="entry-title roundTop">
+
           
+
           <h1 class="jq-clearfix">.click()</h1>
+
           <div class="entry-meta jq-clearfix">
-                        Categories:
+
+                        Categoria:
+
             <span class="category"><a href="http://api.jquery.com/category/events/" title="View all posts in Events">Events</a> &gt; <a href="http://api.jquery.com/category/events/mouse-events/" title="View all posts in Mouse Events">Mouse Events</a></span>
+
   
+
+
 
           </div>
 
+
+
 </div>
+
 <div id="click1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.click( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.click( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Adiciona um manipulador de eventos ao evento "click" do JavaScript, ou disparar este evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="click-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.click( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.click( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong>Função que será executada toda vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="click-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.click( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.click( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong>Mapa de dados a ser passado para o manipulador de eventos.</p>
+<p class="arguement"><strong>handler(eventObject)</strong>Função que será executada toda vez que o evento é disparado</p>
 </li>
 <li class="signature" id="click"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.click()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.click()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('click', handler)</code> in the first two variations, and <code>.trigger('click')</code> in the third.</p>
-<p>The <code>click</code> event is sent to an element when the mouse pointer is over the element, and the mouse button is pressed and released. Any HTML element can receive this event.</p>
-<pre>For example, consider the HTML:
+<p>Este evento é um atalho para <code>.bind('click', handler)</code> nas primeiras duas variações, e <code>.trigger('click')</code> para a terceira.</p>
+<p>O evento <code>click</code> é enviado a um elemento quando o ponteiro do mouse está sobre o elemento, e o botão do mouse é pressionado e liberado. Qualquer elemento HTML pode receber este evento.</p>
+<pre>Por exemplo, considere esse HTML:
 &lt;div id="target"&gt;
-  Click here
+  Clique aqui
 &lt;/div&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Acionar o manipulador
 &lt;/div&gt;</pre>
 <p class="image"><img src="/images/0042_05_03.png" alt=""></p>
-<p>The event handler can be bound to any <code>&lt;div&gt;</code>:</p>
+<p>O manipulador de evento pode ser agregado a qualquer <code>&lt;div&gt;</code>:</p>
 <pre>$('#target').click(function() {
-  alert('Handler for .click() called.');
+  alert('Manipulador para a chamada .click()');
 });</pre>
-<p>Now if we click on this element, the alert is displayed:</p>
-<p><span class="output">Handler for .click() called.</span></p>
-<p>We can also trigger the event when a different element is clicked:</p>
+<p>Agora se clicarmos neste elemento, o alerta será apresentado:</p>
+<p><span class="output">Manipulador para a chamada .click()</span></p>
+<p>Podemos também disparar o evento quando um diferente elemento é clicado:</p>
 <pre>$('#other').click(function() {
   $('#target').click();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also alert the message.</p>
-<p>The <code>click</code> event is only triggered after this exact series of events:</p>
+<p>Após este código executar, clique em <span class="output">Acionar o manipulador</span> também irá apresentar a mensagem.</p>
+<p>O evento <code>click</code> somente é disparado depois da exata série de eventos:</p>
 <ul>
-<li>The mouse button is depressed while the pointer is inside the element.</li>
-  <li>The mouse button is released while the pointer is inside the element.</li>
+<li>O botão do mouse é pressionado enquanto o ponteiro está dentro do elemento.</li>
+  <li>O botão do mouse é liberado enquanto o ponteiro está dentro do elemento.</li>
 </ul>
-<p>This is usually the desired sequence before taking an action. If this is not required, the <code>mousedown</code> or <code>mouseup</code> event may be more suitable.</p>
+<p>Isso é geralmente a sequência desejada antes de realizar uma ação. Se isso não é obrigatório, o evento <code>mousedown</code> ou <code>mouseup</code>pode ser mais adequado.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">To hide paragraphs on a page when they are clicked:</span>
+<h4>Exemplo: <span class="desc">Para ocultar parágrafos em uma página quando forem clicados:</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -77,10 +89,10 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;First Paragraph&lt;/p&gt;
+  &lt;p&gt;Primeiro parágrafo&lt;/p&gt;
 
-  &lt;p&gt;Second Paragraph&lt;/p&gt;
-  &lt;p&gt;Yet one more Paragraph&lt;/p&gt;
+  &lt;p&gt;Segundo parágrafo&lt;/p&gt;
+  &lt;p&gt;Mais um parágrafo&lt;/p&gt;
 &lt;script&gt;
     $("p").click(function () { 
       $(this).slideUp(); 
@@ -98,13 +110,14 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">To trigger the click event on all of the paragraphs on the page:</span>
+<h4>Exemplo: <span class="desc">Para disparar o event click em todos os parágrafos na página:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("p").click();</code></pre>
 </div>
 </div>
 </div>
 </div>
+
 
         </div>
 

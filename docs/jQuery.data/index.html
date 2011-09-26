@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.data()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
   
 
@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Conteúdo:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#jQuery-data1">jQuery.data( element, key, value ) </a><ul><li>jQuery.data( element, key, value )
@@ -32,29 +32,32 @@
 </div>
 <div id="jQuery-data1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.data( element, key, value )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
+<span class="name">jQuery.data( element, key, value )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Store arbitrary data associated with the specified element. Returns the value that was set.</p>
+<p class="desc"><strong>Descrição: </strong>Armazena dados arbitrários associados a um grupo de elementos. Retorna o valor que estava setado.</p>
 <ul class="signatures"><li class="signature" id="jQuery-data-element-key-value">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.data( element, key, value )</h4>
-<p class="arguement"><strong>element</strong>The DOM element to associate with the data.</p>
-<p class="arguement"><strong>key</strong>A string naming the piece of data to set.</p>
-<p class="arguement"><strong>value</strong>The new data value.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.data( element, key, value )</h4>
+<p class="arguement"><strong>element</strong>O elemento DOM que irá se associar com os dados.</p>
+<p class="arguement"><strong>key</strong>Uma string nomeando um pedaço de dados a ser armazenado.</p>
+<p class="arguement"><strong>value</strong>O novo valor.</p>
 </li></ul>
 <div class="longdesc">
-<p><strong>Note:</strong> This is a low-level method; a more convenient <code><a href="/data">.data()</a></code> is also available.</p>
-<p>The <code>jQuery.data()</code> method allows us to attach data of any type to DOM elements in a way that is safe from circular references and therefore free from memory leaks. jQuery ensures that the data is removed when DOM elements are removed via jQuery methods, and when the user leaves the page. We can set several distinct values for a single element and retrieve them later:</p>
+<p><strong>Note:</strong>Esse é um méotodo low-level; um mais conveniente <code><a href="/data">.data()</a></code> tabém está disponível.</p>
+<p>O método <code>.data()</code> permite anexar dados a qualquer tipo de elementos DOM de uma maneira segura a referências circulares e consequentemente a leaks de memória.
+O jQuerys assegura que os dados são removidos quando os elementos DOM são removidos via métodos jQuery, e quando o usuário sai da página. Podemos inserir diversos valores distintos para um único elemento e retorná-los depois:</p>
 <pre>
 jQuery.data(document.body, 'foo', 52);
 jQuery.data(document.body, 'bar', 'test');
 </pre>
-<p><em>Note:</em> this method currently does not provide cross-platform support for setting data on XML documents, as Internet Explorer does not allow data to be attached via expando properties.</p>
+<p>
+  <em>Note</em> que esse método atualmente não provê suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.
+</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Store then retrieve a value from the div element.</span></h4>
+<h4><span class="desc">Armazenar e retornar um valor de um elemento div.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -66,9 +69,9 @@ jQuery.data(document.body, 'bar', 'test');
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div&gt;
-    The values stored were 
+    O valor armazenado era
     &lt;span&gt;&lt;/span&gt;
-    and
+    e
     &lt;span&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;script&gt;var div = $("div")[0];
@@ -85,36 +88,38 @@ jQuery.data(document.body, 'bar', 'test');
 </div>
 <div id="jQuery-data2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.data( element, key )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
+<span class="name">jQuery.data( element, key )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.</p>
+<p class="desc"><strong>Descrição: </strong>Retorna o valor armazenado para o elemento que foi setado por <code>jQuery.data(element, name, value)</code>, ou todos os dados armazenados para o elemento.</p>
 <ul class="signatures">
 <li class="signature" id="jQuery-data-element-key">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.data( element, key )</h4>
-<p class="arguement"><strong>element</strong>The DOM element to query for the data.</p>
-<p class="arguement"><strong>key</strong>Name of the data stored.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2.3/">1.2.3</a></span>jQuery.data( element, key )</h4>
+<p class="arguement"><strong>element</strong>O elemento DOM que ira buscar os dados.</p>
+<p class="arguement"><strong>key</strong>Nome do dado armazenado.</p>
 </li>
 <li class="signature" id="jQuery-data-element">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>jQuery.data( element )</h4>
-<p class="arguement"><strong>element</strong>The DOM element to query for the data.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>jQuery.data( element )</h4>
+<p class="arguement"><strong>element</strong>O elemento DOM que ira buscar os dados.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p><strong>Note:</strong> This is a low-level method; a more convenient <code><a href="/data">.data()</a></code> is also available.</p>
-<p><strong>Regarding HTML5 data-* attributes:</strong> This low-level method does NOT retrieve the <code>data-*</code> attributes unless the more convenient <code><a href="/data">.data()</a></code> method has already retrieved them.</p>
-<p>The <code>jQuery.data()</code> method allows us to attach data of any type to DOM elements in a way that is safe from circular references and therefore from memory leaks. We can retrieve several distinct values for a single element one at a time, or as a set:</p>
+<p><strong>Note:</strong>Esse é um méotodo low-level; um mais conveniente <code><a href="/data">.data()</a></code> tabém está disponível.</p>
+<p><strong>Preposição data-* do atributo HTML5:</strong> Esse método low-level não retorna o atributo <code>data-*</code> caso o método <code><a href="/data">.data()</a></code> já não o tenha retornado.</p>
+<p>O método <code>jQuery.data()</code> permite anexar dados a qualquer tipo de elementos DOM de uma maneira segura a referências circulares e consequentemente a leaks de memória. Podemos recuperar diversos valores distintos para um elemento de cada vez, assim como setar.</p>
 <pre>alert(jQuery.data( document.body, 'foo' ));
 alert(jQuery.data( document.body ));</pre>
-<p>The above lines alert the data values that were set on the <code>body</code> element. If nothing was set on that element, an empty string is returned.</p>
-<p>Calling <code>jQuery.data(element)</code> retrieves all of the element's associated values as a JavaScript object. Note that jQuery itself uses this method to store data for internal use, such as event handlers, so do not assume that it contains only data that your own code has stored.</p>
-<p><em>Note:</em> this method currently does not provide cross-platform support for setting data on XML documents, as Internet Explorer does not allow data to be attached via expando properties.</p>
+<p>As linhas acima da um alert com o valor que foi setado no elemento <code>body</code>. Se nada foi setado, uma string vazia é retornada.</p>
+<p>Chamando <code>jQuery.data(element)</code> retorna todos os valores como um objeto JavaScript. Note que o jQuery usa esse método para gurdar dados para uso interno, como manipuladores de eventos, então, não assuma que isso contém apenas dados que seu código armazenou.</p>
+<p>
+  <em>Note</em> que esse método atualmente não provê suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.
+</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
-<h4><span class="desc">Get the data named "blah" stored at for an element.</span></h4>
+<h4><span class="desc">Pega o dado nomeado "blah" armazenado em um elemento.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -128,12 +133,12 @@ span { color:red; }
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div&gt;A div&lt;/div&gt;
-&lt;button&gt;Get "blah" from the div&lt;/button&gt;
-&lt;button&gt;Set "blah" to "hello"&lt;/button&gt;
+&lt;button&gt;Pega "blah" da div&lt;/button&gt;
+&lt;button&gt;Coloca "Olá" em "blah"&lt;/button&gt;
 
-&lt;button&gt;Set "blah" to 86&lt;/button&gt;
-&lt;button&gt;Remove "blah" from the div&lt;/button&gt;
-&lt;p&gt;The "blah" value of this div is &lt;span&gt;?&lt;/span&gt;&lt;/p&gt;
+&lt;button&gt;Coloca 86 em "blah"&lt;/button&gt;
+&lt;button&gt;Remove "blah"  da div&lt;/button&gt;
+&lt;p&gt;O valor "blah" na div é &lt;span&gt;?&lt;/span&gt;&lt;/p&gt;
 &lt;script&gt;
 $("button").click(function(e) {
   var value, div = $("div")[0];

@@ -77,7 +77,9 @@ $("div").data("options").name === "John";</pre>
 <p>Toda esforço é feito para converter a string a um valor do JavaScript (isso inclui, booleans, números, objeto, arrays, e null) caso contrário é deixado como string. Para retornar o valor do atributo como uma string sem nenhuma tentativa de converter, use o método <code><a href="/attr/">attr()</a></code>. Quando o atributo data é um objeto (começado com '{') ou um array (começado com '[') então  <code>jQuery.parseJSON</code> é usado para fazer o parse da string; isso deve seguir a <a href="http://en.wikipedia.org/wiki/JSON#Data_types.2C_syntax_and_example">sintaxe válida do JSON</a> <em> incluindo aspas no nome das propriedades</em>. Os atributos data- são pegos na primeira vez que a propriedade é acessada e depois não estao mais acessíveis ou transformadas (todos os valores são então armazenados internamente no jQuery).</p>
 </div>
 <h3 id="notes-0">Notas adicionais:</h3>
-<div class="longdesc"><ul><li>Note que esse método atualmente não provê suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.</li></ul></div>
+<p>
+  <em>Note</em> que esse método atualmente não provê suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.
+</p>
 <h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Armazenar e retornar um valor de um elemento div.</span></h4>
@@ -126,7 +128,7 @@ $("span:last").text($("div").data("test").last);
 <span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.data()</h4></li>
 </ul>
 <div class="longdesc">
-<p>O método <code>.data()</code> permite anexar dados a qualquer tipo de elementos DOM de uma maneira segura a referências circulares e consequentemente a leaks de memória. Podemos recuperar diversos valores distintos para um elemento de cada vez, assim como setar</p>
+<p>O método <code>.data()</code> permite anexar dados a qualquer tipo de elementos DOM de uma maneira segura a referências circulares e consequentemente a leaks de memória. Podemos recuperar diversos valores distintos para um elemento de cada vez, assim como setar.</p>
 
 <pre>
 alert($('body').data('foo'));
@@ -143,7 +145,9 @@ if ( mydata.count &lt; 9 ) {
 </pre>
 </div>
 <h3 id="notes-1">Nota adicionais:</h3>
-<div class="longdesc"><ul><li>Note que esse método método atualmente não prove suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.</li></ul></div>
+<p>
+  <em>Note</em> que esse método atualmente não provê suporte cross-platform para setar dados em documentos XML, como o Internet Explorer nao premite adicionar dados via propriedades expando.
+</p>
 <h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
 <h4><span class="desc">Pega o dado nomeado "blah" armazenado em um elemento.</span></h4>

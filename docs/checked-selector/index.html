@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">:checked Selector</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
   
 
@@ -17,12 +17,12 @@
 <span class="name">checked</span>  selector</h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':checked')</h4>
-<p class="desc"><strong>Description: </strong>Matches all elements that are checked.</p>
-<div class="longdesc"><p>The <code>:checked</code> selector works for checkboxes and radio buttons. For select elements, use the <code>:selected</code> selector.</p></div>
+<span class="versionAdded">Adicionado na versão: <a href="/category/version/1.0/">1.0</a> </span>jQuery(':checked')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos com a propriedade checked.</p>
+<div class="longdesc"><p>O <code>:checked selector</code> só funciona com <code>checkboxes</code> e <code>radio buttons</code>. Para os elementos <code>select</code>, utilize o <code>:selected selector</code>.</p></div>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all input elements that are checked.</span></h4>
+<h4><span class="desc">Procura todos os inputs que estão selecionados.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -47,7 +47,7 @@
 
     function countChecked() {
       var n = $("input:checked").length;
-      $("div").text(n + (n &lt;= 1 ? " is" : " are") + " checked!");
+      $("div").text(n + (n &lt;= 1 ? " está selecionado" : "estão selecionados") );
     }
     countChecked();
     $(":checkbox").click(countChecked);

@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.ajaxPrefilter()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/low-level-interface/" title="View all posts in Low-Level Interface">Low-Level Interface</a></span>
   
 
@@ -14,34 +14,34 @@
 </div>
 <div id="jQuery-ajaxPrefilter1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.ajaxPrefilter( [ dataTypes ], handler(options, originalOptions, jqXHR) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#undefined">undefined</a></span>
+<span class="name">jQuery.ajaxPrefilter( [ dataTypes ], handler(options, originalOptions, jqXHR) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#undefined">undefined</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().</p>
+  <p class="desc"><strong>Descrição: </strong>Manuseia opções personalizadas do Ajax ou modifica opções já existentes antes de cada requisição ser enviada e antes de serem processadas por <code>$.ajax()</code>.</p>
 <ul class="signatures"><li class="signature" id="jQuery-ajaxPrefilter-dataTypes-handleroptions- originalOptions- jqXHR">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.5/">1.5</a></span>jQuery.ajaxPrefilter( [ dataTypes ], handler(options, originalOptions, jqXHR) )</h4>
-<p class="arguement"><strong>dataTypes</strong>An optional string containing one or more space-separated dataTypes</p>
-<p class="arguement"><strong>handler(options, originalOptions, jqXHR)</strong>A handler to set default values for future Ajax requests.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.5/">1.5</a></span>jQuery.ajaxPrefilter( [ dataTypes ], handler(options, originalOptions, jqXHR) )</h4>
+<p class="arguement"><strong>dataTypes</strong>Um string opicional contendo um ou mais dataTypes separados por espaço</p>
+<p class="arguement"><strong>handler(options, originalOptions, jqXHR)</strong>Um manipulador para setar valores padrão para futuras requisições.</p>
 </li></ul>
 <div class="longdesc">
-<p>A typical prefilter registration using <code>$.ajaxPrefilter()</code> looks like this:</p>
+<p>O registro tipico de um prefilter usando <code>$.ajaxPrefilter()</code> parece com isso:</p>
 <pre>
 $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
   // Modify options, control originalOptions, store jqXHR, etc
 });
 </pre>
-<p>where:</p>
+<p>Quando:</p>
 <ul>
 <li>
-<code>options</code> are the request options</li>
+<code>options</code> são as opções da requisição</li>
 <li>
-<code>originalOptions</code> are the options as provided to the ajax method, unmodified and, thus, without defaults from <code>ajaxSettings</code>
+<code>originalOptions</code> são as opções conforme fornecidas aos métodos ajax, sem modificações e assim, sem padrão do <code>ajaxSettings</code>
 </li>
 <li>
-<code>jqXHR</code> is the jqXHR object of the request</li>
+<code>jqXHR</code> é o objeto jqXHR da requisição</li>
 </ul>
-<p>Prefilters are a perfect fit when custom options need to be handled.  Given the following code, for example, a call to <code>$.ajax()</code> would automatically abort a request to the same URL if the custom <code>abortOnRetry</code> option is set to <code>true</code>:</p>
+<p>Prefilters são o ajuste perfeito quando opções customizadas precisam ser manipuladas. Dado o seguinte código, como exemplo, uma chamada ao <code>$.ajax()</code> deveria automaticamente abortar uma requisição para a mesma URL se a opção customizada <code>abortOnRetry</code> for setada para <code>true</code>:</p>
 <pre>
 var currentRequests = {};
 
@@ -54,7 +54,7 @@ $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
   }
 });
 </pre>
-<p>Prefilters can also be used to modify existing options. For example, the following proxies cross-domain requests through http://mydomain.net/proxy/:</p>
+<p>Prefilters também podem ser usados para modificar opções já existentes. Por exemplo, as requisições cross-domain a proxies através do http://mydomain.net/proxy/:</p>
 <pre>
 $.ajaxPrefilter( function( options ) {
   if ( options.crossDomain ) {
@@ -63,13 +63,13 @@ $.ajaxPrefilter( function( options ) {
   }
 });
 </pre>
-<p>If the optional <code>dataTypes</code> argument is supplied, the prefilter will be only be applied to requests with the indicated dataTypes. For example, the following only applies the given prefilter to JSON and script requests:</p>
+<p>Se o argumento opcional <code>dataTypes</code> for fornecido, o prefilter só será aplicado a requisições com o dataType indicado. Exemplo, é apenas aplicado nas requisições JSON e script:</p>
 <pre>
 $.ajaxPrefilter( "json script", function( options, originalOptions, jqXHR ) {
   // Modify options, control originalOptions, store jqXHR, etc
 });
 </pre>
-<p>The <code>$.ajaxPrefilter()</code> method can also redirect a request to another dataType by returning that dataType. For example, the following sets a request as "script" if the URL has some specific properties defined in a custom <code>isActuallyScript()</code> function:</p>
+<p>O método <code>$.ajaxPrefilter()</code> também pode redirecionar uma requisição para outro dataType retornando o dataType. Por exemplo, seta uma requisição para "script" se a URL tiver alguma propriedade especifica definida na função customizada <code>isActuallyScript()</code>:</p>
 <pre>
 $.ajaxPrefilter(function( options ) {
   if ( isActuallyScript( options.url ) ) {
@@ -77,7 +77,7 @@ $.ajaxPrefilter(function( options ) {
   }
 });
 </pre>
-<p>This would ensure not only that the request is considered "script" but also that all the prefilters specifically attached to the script dataType would be applied to it.</p>
+<p>Isso deve assegurar que não apenas essa requisição é considerada "script" mas também a todas que tenham o prefilter ligado ao dataType script.</p>
 </div>
 </div>
 </div>

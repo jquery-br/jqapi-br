@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">:button Selector</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
   
 
@@ -17,11 +17,11 @@
 <span class="name">button</span>  selector</h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':button')</h4>
-<p class="desc"><strong>Description: </strong>Selects all button elements and elements of type button.</p>
-<h3>Example:</h3>
+<span class="versionAdded">Adicionado na versão: <a href="/category/version/1.0/">1.0</a> </span>jQuery(':button')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos <code>button</code> e os elementos do tipo <code>button</code>.</p>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all button inputs.</span></h4>
+<h4><span class="desc">Procura todos os inputs button.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -55,9 +55,9 @@
 &lt;script&gt;
 
     var input = $(":button").css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
+    $("div").text("O jQuery achou " + input.length + " elementos deste tipo.")
             .css("color", "red");
-    $("form").submit(function () { return false; }); // so it won't submit
+    $("form").submit(function () { return false; }); // o evento submit não será invocado
 
 &lt;/script&gt;
 

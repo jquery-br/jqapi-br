@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.queue()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/data/" title="View all posts in Data">Data</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
   
 
@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Conteúdo:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#jQuery-queue1">jQuery.queue( element, [ queueName ] ) </a><ul><li>jQuery.queue( element, [ queueName ] )
@@ -32,37 +32,37 @@
 </div>
 <div id="jQuery-queue1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.queue( element, [ queueName ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
+<span class="name">jQuery.queue( element, [ queueName ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Show the queue of functions to be executed on the matched element.</p>
+<p class="desc"><strong>Descrição: </strong>Mostra a fila de funções a serem executadas para os elementos selecionados.</p>
 <ul class="signatures"><li class="signature" id="jQuery-queue-element-queueName">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, [ queueName ] )</h4>
-<p class="arguement"><strong>element</strong>A DOM element to inspect for an attached queue.</p>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, [ queueName ] )</h4>
+<p class="arguement"><strong>element</strong>Um elemento do DOM para inspecionar uma fila.</p>
+<p class="arguement"><strong>queueName</strong>Uma string contendo o nome da fila. Padrão para <code>fx</code>, a fila padrão para efeitos.</p>
 </li></ul>
-<div class="longdesc"><p><strong>Note:</strong> This is a low-level method, you should probably use <code><a href="/queue">.queue()</a></code> instead.</p></div>
-<h3>Example:</h3>
+<div class="longdesc"><p><strong>Nota:</strong> Este é um método low-level, você deveria provavelmente usar <code><a href="/queue">.queue()</a></code> ao invés.</p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show the length of the queue.</span></h4>
+<h4><span class="desc">Mostra o tamanho da fila.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { margin:3px; width:40px; height:40px;
-        position:absolute; left:0px; top:30px; 
+        position:absolute; left:0px; top:30px;
         background:green; display:none; }
   div.newcolor { background:blue; }
   span { color:red; }  &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;button id="show"&gt;Show Length of Queue&lt;/button&gt;
+  &lt;button id="show"&gt;Mostra o tamanho da fila&lt;/button&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;$("#show").click(function () {
       var n = jQuery.queue( $("div")[0], "fx" );
-      $("span").text("Queue length is: " + n.length);
+      $("span").text("O tamanho é: " + n.length);
     });
     function runIt() {
       $("div").show("slow");
@@ -85,50 +85,50 @@
 </div>
 <div id="jQuery-queue2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.queue( element, queueName, newQueue )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">jQuery.queue( element, queueName, newQueue )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Manipulate the queue of functions to be executed on the matched element.</p>
+<p class="desc"><strong>Descrição: </strong>Manipula a fila de funções a ser executada para os elementos selecionados.</p>
 <ul class="signatures">
 <li class="signature" id="jQuery-queue-element-queueName-newQueue">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, queueName, newQueue )</h4>
-<p class="arguement"><strong>element</strong>A DOM element where the array of queued functions is attached.</p>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
-<p class="arguement"><strong>newQueue</strong>An array of functions to replace the current queue contents.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, queueName, newQueue )</h4>
+<p class="arguement"><strong>element</strong>Um elemento DOM onde o array de funções de fila é anexado.</p>
+<p class="arguement"><strong>queueName</strong>Uma string contendo o nome da fila. Padrão para <code>fx</code>, a fila padrão para efeitos.</p>
+<p class="arguement"><strong>newQueue</strong>Um array de funções para substituir o atual conteúdo da fila.</p>
 </li>
 <li class="signature" id="jQuery-queue-element-queueName-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, queueName, callback() )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>jQuery.queue( element, queueName, callback() )</h4>
 <p class="arguement"><strong>element</strong>A DOM element on which to add a queued function.</p>
-<p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
-<p class="arguement"><strong>callback()</strong>The new function to add to the queue.</p>
+<p class="arguement"><strong>queueName</strong>Uma string contendo o nome da fila. Padrão para <code>fx</code>, a fila padrão para efeitos.</p>
+<p class="arguement"><strong>callback()</strong>A nova função a ser adicionada na fila.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p><strong>Note:</strong> This is a low-level method, you should probably use <code><a href="/queue">.queue()</a></code> instead.</p>
-<p>Every element can have one or more queues of functions attached to it by jQuery. In most applications, only one queue (called <code>fx</code>) is used. Queues allow a sequence of actions to be called on an element asynchronously, without halting program execution.</p>
-<p>The <code>jQuery.queue()</code> method allows us to directly manipulate this queue of functions. Calling <code>jQuery.queue()</code> with a callback is particularly useful; it allows us to place a new function at the end of the queue.</p>
-<p>Note that when adding a function with <code>jQuery.queue()</code>, we should ensure that <code>jQuery.dequeue()</code> is eventually called so that the next function in line executes.</p>
+<p><strong>Nota:</strong> Este é um método low-level, você deveria provavelmente usar <code><a href="/queue">.queue()</a></code> ao invés.</p>
+<p>Todo elemento pode ter um ou mais filas de funções anexadas pelo jQuery. Na maioria das aplicações, apenas uma fila (chamada <code>fx</code>) é usada.  Filas permitem uma sequencia de ações a serem chamada em um elemento assincronamente, sem interromper a execução do programa.</p>
+<p>O método <code>jQuery.queue()</code> permite manipular diretamente essa fila de funções. Chamando <code>jQuery.queue()</code> om um callback é particularmente útil; Isso nos permite colocar uma nova função no fim da fila.</p>
+<p>Note que adicionando uma função com <code>jQuery.queue()</code>, devemos garantir que o <code>jQuery.dequeue()</code> é eventualmente chamado, assim a próxima função na linha é executada.</p>
 </div>
 <h3>Examples:</h3>
 <div class="entry-examples" id="entry-examples-1">
 <div id="example-1-0">
-<h4>Example: <span class="desc">Queue a custom function.</span>
+<h4>Exemplos: <span class="desc">Enfileira uma função personalizada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
   div { margin:3px; width:40px; height:40px;
-        position:absolute; left:0px; top:30px; 
+        position:absolute; left:0px; top:30px;
         background:green; display:none; }
   div.newcolor { background:blue; }
   &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  Click here...
+  Clique aqui...
   &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
    $(document.body).click(function () {
@@ -152,23 +152,23 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1-1">
-<h4>Example: <span class="desc">Set a queue array to delete the queue.</span>
+<h4>Exemplo: <span class="desc">Seta um array para deletar a fila.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;
   div { margin:3px; width:40px; height:40px;
-        position:absolute; left:0px; top:30px; 
+        position:absolute; left:0px; top:30px;
         background:green; display:none; }
   div.newcolor { background:blue; }
   &lt;/style&gt;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  
-  &lt;button id="start"&gt;Start&lt;/button&gt;
-  &lt;button id="stop"&gt;Stop&lt;/button&gt;
+
+  &lt;button id="start"&gt;Iniciar&lt;/button&gt;
+  &lt;button id="stop"&gt;Parar&lt;/button&gt;
   &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
    $("#start").click(function () {

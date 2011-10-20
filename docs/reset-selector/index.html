@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">:reset Selector</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
   
 
@@ -17,11 +17,11 @@
 <span class="name">reset</span>  selector</h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':reset')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements of type reset.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':reset')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos do tipo reset.</p>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all reset inputs.</span></h4>
+<h4><span class="desc">Procura por todos os inputs reset.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -55,9 +55,8 @@
 &lt;script&gt;
 
     var input = $("input:reset").css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
-            .css("color", "red");
-    $("form").submit(function () { return false; }); // so it won't submit
+    $("div").text("Para esse tipo o jQuery encontrou" + input.length + ".").css("color", "red");
+    $("form").submit(function () { return false; }); // não submeta
 
 &lt;/script&gt;
 

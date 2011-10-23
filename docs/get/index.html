@@ -14,42 +14,42 @@
 </div>
 <div id="get1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.get( [ index ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Element,%20Array">Element, Array</a></span>
+<span class="name">.get( [ index ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Element,%20Array">Element, Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Retrieve the DOM elements matched by the jQuery object.</p>
+<p class="desc"><strong>Description: </strong>Obtém os elementos DOM encontrados pelo objeto jQuery.</p>
 <ul class="signatures"><li class="signature" id="get-index">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.get( [ index ] )</h4>
-<p class="arguement"><strong>index</strong>A zero-based integer indicating which element to retrieve.</p>
+<span class="versionAdded">versão incluída: <a href="/category/version/1.0/">1.0</a></span>.get( [ index ] )</h4>
+<p class="arguement"><strong>index</strong>Um valor inteiro baseado no zedo indicando qual elemento obter.</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>.get()</code> method grants us access to the DOM nodes underlying each jQuery object. Suppose we had a simple unordered list on the page:</p>
+<p>O método <code>.get()</code> nos garante acesso aos nós DOM sob cada objeto jQuery. Suponha que nós tenhamos uma simples lista não-ordenada na página:</p>
 <pre>
 &lt;ul&gt;
   &lt;li id="foo"&gt;foo&lt;/li&gt;
   &lt;li id="bar"&gt;bar&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>Without a parameter, <code>.get()</code> returns all of the elements:</p>
+<p>Sem um parâmetro, <code>.get()</code> retorna todos os elementos:</p>
 <pre>alert($('li').get());</pre>
-<p>All of the matched DOM nodes are returned by this call, contained in a standard array:</p>
+<p>Todos os nós DOM retornados por esta chamada, contidas numa array padrão:</p>
 <p><span class="result">[&lt;li id="foo"&gt;, &lt;li id="bar"&gt;]</span></p>
-<p>With an index specified, .get() will retrieve a single element:</p>
+<p>Com um índice especificado, .get() vai obter um único elemento:</p>
 <pre>($('li').get(0));</pre>
-<p>Since the index is zero-based, the first list item is returned:</p>
+<p>Desde que o índice seja baseado em zero, o primeiro elemento da lista é retornado:</p>
 <p><span class="output">&lt;li id="foo"&gt;</span></p>
-<p>Each jQuery object also masquerades as an array, so we can use the array dereferencing operator to get at the list item instead:</p>
+<p>Cada objeto jQuery também é mascarado como uma array, então podemos usar o operador de deferência para pegar, ao invés disso, ao menos um item da list:</p>
 <pre>alert($('li')[0]);</pre>
-<p>However, this syntax lacks some of the additional capabilities of .get(), such as specifying a negative index:</p>
+<p>Entretanto, esta intaxe falta uma das capacitades adicionais de .get(), como o índice de especificação negativa:</p>
 <pre>alert($('li').get(-1));</pre>
-<p>A negative index is counted from the end of the matched set, so this example will return the last item in the list:</p>
+<p>Um índice negativo é contato do final da série encontrada, assim este exemplo retornará o último item na lista:</p>
 <p><span class="output">&lt;li id="bar"&gt;</span></p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Selects all divs in the document and returns the DOM Elements as an Array, then uses the built-in reverse-method to reverse that array.</span>
+<h4>Exemplo: <span class="desc">Seleciona todas as divs no documento e retorna os Elementos DOM como uma Array, então usa o método-reverso embutido para reverter essa array.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -84,7 +84,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Gives the tag name of the element clicked on.</span>
+<h4>Exemplo: <span class="desc">Dá o nome da tag do elemento clicado.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -97,7 +97,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;span&gt;&amp;nbsp;&lt;/span&gt;
-  &lt;p&gt;In this paragraph is an &lt;span&gt;important&lt;/span&gt; section&lt;/p&gt;
+  &lt;p&gt;Neste parágrafo está umm &lt;span&gt;importante&lt;/span&gt; seleção&lt;/p&gt;
 
   &lt;div&gt;&lt;input type="text" /&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -105,7 +105,7 @@
     $("*", document.body).click(function (e) {
       e.stopPropagation();
       var domEl = $(this).get(0);
-      $("span:first").text("Clicked on - " + domEl.tagName);
+      $("span:first").text("Clicado em - " + domEl.tagName);
     });
 &lt;/script&gt;
 

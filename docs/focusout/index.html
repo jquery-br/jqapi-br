@@ -14,31 +14,31 @@
 </div>
 <div id="focusout1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.focusout( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.focusout( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "focusout" JavaScript event.</p>
+<p class="desc"><strong>Descrição: </strong>Trata um manipulador de evento para o evento Javascript "focusout".</p>
 <ul class="signatures">
 <li class="signature" id="focusout-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.focusout( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.4/">1.4</a></span>.focusout( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="focusout-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.focusout( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.4.3/">1.4.3</a></span>.focusout( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong>Um mapa de dados que passará ao manipulador de evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento é disparado.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('focusout', handler)</code>.</p>
-<p>The <code>focusout</code> event is sent to an element when it, or any element inside of it, loses focus. This is distinct from the <a href="/blur">blur</a> event in that it supports detecting the loss of focus from parent elements (in other words, it supports event bubbling).</p>
+<p>Este método é um atalho para <code>.bind('focusout', handler)</code>.</p>
+<p>O evento <code>focusout</code> é enviado a um elemento quando ele, ou algum elemento dentro dele, perder o foco. Isto é diferente do evento <a href="/blur">blur</a> na qual ele suporta a detecção da perda de foco dos elementos pais (em outras palavras, ele suporta a bolha de eventos).</p>
 <p>This event will likely be used together with the <a href="/focusin">focusin</a> event.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Watch for a loss of focus to occur inside paragraphs and note the difference between the focusout count and the blur count.</span></h4>
+<h4><span class="desc">Observe uma perda de foco para ocorrer dentro dos parágrafos e note a diferença entre o contador focusout e o blur.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

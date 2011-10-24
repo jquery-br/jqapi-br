@@ -17,20 +17,20 @@
 <span class="name">gt</span>  selector</h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':gt(index)')</h4>
+<span class="versionAdded">versão incluída: <a href="/category/version/1.0/">1.0</a></span>jQuery(':gt(index)')</h4>
 <ul class="signatures"><li><dl class="arguments">
 <dt>index</dt>
-<dd>Zero-based index.</dd>
+<dd>Índice baseado em zero.</dd>
 </dl></li></ul>
-<p class="desc"><strong>Description: </strong>Select all elements at an index greater than index within the matched set.</p>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos em um índice maior que o dentro da série configurada.</p>
 <div class="longdesc">
 <p><strong>index-related selectors</strong></p>
-<p>The index-related selector expressions (including this "greater than" selector) filter the set of elements that have matched the expressions that precede them. They narrow the set down based on the order of the elements within this matched set. For example, if elements are first selected with a class selector (<code>.myclass</code>) and four elements are returned, these elements are given indices 0 through 3 for the purposes of these selectors.</p>
-<p>Note that since JavaScript arrays use <em>0-based indexing</em>, these selectors reflect that fact. This is why <code>$('.myclass:gt(1)')</code> selects elements after the second element in the document with the class <code>myclass</code>, rather than after the first. In contrast, <code>:nth-child(n)</code> uses <em>1-based indexing</em> to conform to the CSS specification.</p>
+<p>As expressões de seletores relacionados ao índice (incluindo este seletor "maior que") filtra a série de elementos que batem com as expressões que os precedem. Eles afunilam a série na ordem dos elementos dentro desta série encontrada. Por exemplo, se os elementos são primeiramente selecionados com uma classe seletora (<code>.myclass</code>) e quatro elementos são retornados, esses elementos são atribuídos índices entre 0 e 3 para o propósito desses seletores.</p>
+<p>Note que desde que as arrays Javascript usam <em>indexação baseada em zero</em>, esses seletores refletem esse fato. Isso é porque <code>$('.myclass:gt(1)')</code> seleciona elementos depois do segundo elemento no documento com a classe <code>myclass</code>, ao invés de depois do primeiro. Em contraste, <code>:nth-child(n)</code> usa <em>indexação baseada em 1</em> para entrar em conformidade to conform com a especificação CSS.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds TD #5 and higher. Reminder: the indexing starts at 0.</span></h4>
+<h4><span class="desc">Encontra o TD #5 e acima. Lembre-se: o índice começa em 0.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

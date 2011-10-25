@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Conteúdo:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#hover1">hover( handlerIn(eventObject), handlerOut(eventObject) ) </a><ul><li>.hover( handlerIn(eventObject), handlerOut(eventObject) )
@@ -28,26 +28,26 @@
 </div>
 <div id="hover1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.hover( handlerIn(eventObject), handlerOut(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.hover( handlerIn(eventObject), handlerOut(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.</p>
+<p class="desc"><strong>Descrição: </strong>Atribui dois manipuladores para os elementos encontrados, para serem executados quando o ponteiro do mouse aponta ou sai de cima do elemento.</p>
 <ul class="signatures"><li class="signature" id="hover-handlerIneventObject-handlerOuteventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.hover( handlerIn(eventObject), handlerOut(eventObject) )</h4>
-<p class="arguement"><strong>handlerIn(eventObject)</strong>A function to execute when the mouse pointer enters the element.</p>
-<p class="arguement"><strong>handlerOut(eventObject)</strong>A function to execute when the mouse pointer leaves the element.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.hover( handlerIn(eventObject), handlerOut(eventObject) )</h4>
+<p class="arguement"><strong>handlerIn(eventObject)</strong>Uma função para executar quando o ponteiro do mouse aponta o elemento.</p>
+<p class="arguement"><strong>handlerOut(eventObject)</strong>Uma função para executar quando o ponteiro do mouse sai de cima do elemento.</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>.hover()</code> method binds handlers for both <code>mouseenter</code> and <code>mouseleave</code> events. You can use it to simply apply behavior to an element during the time the mouse is within the element.</p>
-<p>Calling <code>$(selector).hover(handlerIn, handlerOut)</code> is shorthand for:</p>
+<p>O método <code>.hover()</code> atribui manipuladores para ambos os eventos <code>mouseenter</code> e <code>mouseleave</code>. Você pode usá-lo para simplesmente aplicar comportamento a um elemento durante o tempo que o mouse está sobre o elemento.</p>
+<p>Chamando <code>$(selector).hover(handlerIn, handlerOut)</code> é um atalho para:</p>
 <pre>$(selector).mouseenter(handlerIn).mouseleave(handlerOut);</pre>
-<p>See the discussions for <code><a href="/mouseenter">.mouseenter()</a></code> and <code><a href="/mouseleave">.mouseleave()</a></code> for more details.</p>
+<p>Veja as discussões para <code><a href="/mouseenter">.mouseenter()</a></code> e <code><a href="/mouseleave">.mouseleave()</a></code> para mais detalhes.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">To add a special style to list items that are being hovered over, try:</span>
+<h4>Exemplo: <span class="desc">Para adicionar um estilo especial para a lista de itens que estão sendo pairados sobre eles, tente:</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -90,7 +90,7 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">To add a special style to table cells that are being hovered over, try:</span>
+<h4>Exemplo: <span class="desc">Para adicionar um estilo especial para células de tabela que estao sendo pairados sobre, tente:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("td").hover(
   function () {
@@ -102,7 +102,7 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 );</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">To unbind the above example use:</span>
+<h4>Exemplo: <span class="desc">Para desatribuir o exemplo acima, use:</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("td").unbind('mouseenter mouseleave');</code></pre>
 </div>
@@ -111,24 +111,24 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 </div>
 <div id="hover2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.hover( handlerInOut(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.hover( handlerInOut(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind a single handler to the matched elements, to be executed when the mouse pointer enters or leaves the elements.</p>
+<p class="desc"><strong>Descrição: </strong>Atribui um único manipulador para os elementos encotrados, para executarem quando o ponteiro do mouse aponta ou sai de cima dos elementos.</p>
 <ul class="signatures"><li class="signature" id="hover-handlerInOuteventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.hover( handlerInOut(eventObject) )</h4>
-<p class="arguement"><strong>handlerInOut(eventObject)</strong>A function to execute when the mouse pointer enters or leaves the element.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.hover( handlerInOut(eventObject) )</h4>
+<p class="arguement"><strong>handlerInOut(eventObject)</strong>Uma função para executar quando o ponteiro do mouse aponta ou sai do elemento.</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>.hover()</code> method, when passed a single function, will execute that handler for both <code>mouseenter</code> and <code>mouseleave</code> events. This allows the user to use jQuery's various toggle methods within the handler or to respond differently within the handler depending on the <code>event.type</code>.</p>
-<p>Calling <code>$(selector).hover(handlerInOut)</code> is shorthand for:</p>
+<p>O método <code>.hover()</code>, quando passado para uma única função, executará esse manipulador para ambos os eventos <code>mouseenter</code> e <code>mouseleave</code>. Isso permite ao usuário usar os vários métodos de alternância dentro do manipulador ou para responder diferentemente nele dependendo do <code>event.type</code>.</p>
+<p>Chamando <code>$(selector).hover(handlerInOut)</code> é um atalho para:</p>
 <pre>$(selector).bind("mouseenter mouseleave", handlerInOut);</pre>
-<p>See the discussions for <code><a href="/mouseenter">.mouseenter()</a></code> and <code><a href="/mouseleave">.mouseleave()</a></code> for more details.</p>
+<p>Veja as discussões para <code><a href="/mouseenter">.mouseenter()</a></code> e <code><a href="/mouseleave">.mouseleave()</a></code> para mais detalhes.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
-<h4><span class="desc">Slide the next sibling LI up or down on hover, and toggle a class.</span></h4>
+<h4><span class="desc">Deslize o próximo irmão LI para cima ou para baixo no hover, e alterne uma classe.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -142,12 +142,12 @@ $("li.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 &lt;/head&gt;
 &lt;body&gt;
   &lt;ul&gt;
-    &lt;li&gt;Milk&lt;/li&gt;
-    &lt;li&gt;White&lt;/li&gt;
-    &lt;li&gt;Carrots&lt;/li&gt;
-    &lt;li&gt;Orange&lt;/li&gt;
-    &lt;li&gt;Broccoli&lt;/li&gt;
-    &lt;li&gt;Green&lt;/li&gt;
+    &lt;li&gt;Leite&lt;/li&gt;
+    &lt;li&gt;Branco&lt;/li&gt;
+    &lt;li&gt;Cenouras&lt;/li&gt;
+    &lt;li&gt;Laranja&lt;/li&gt;
+    &lt;li&gt;Brócoli&lt;/li&gt;
+    &lt;li&gt;Verde&lt;/li&gt;
   &lt;/ul&gt;
 &lt;script&gt;
 $("li")

@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">:even Selector</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/basic-filter-selectors/" title="View all posts in Basic Filter">Basic Filter</a></span>
   
 
@@ -17,12 +17,12 @@
 <span class="name">even</span>  selector</h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':even')</h4>
-<p class="desc"><strong>Description: </strong>Selects even elements, zero-indexed.  See also odd.</p>
-<div class="longdesc"><p>In particular, note that the <em>0-based indexing</em> means that, counter-intuitively, <code>:even</code> selects the first element, third element, and so on within the matched set.</p></div>
-<h3>Example:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':even')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona os elementos par, baseado no index 0, Veja também odd.</p>
+<div class="longdesc"><p>Em particular, note que <em>baseado no inxex 0</em> significa, que o<code>:even</code> seleciona o primeiro elemento, terceiro e assim por diante.</p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds even table rows, matching the first, third and so on (index 0, 2, 4 etc.).</span></h4>
+<h4><span class="desc">Procura por linhas pares na tabela, marcando o primeiro, terceiro e assim por diante (index 0, 2, 4 etc.).</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -36,11 +36,11 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;table border="1"&gt;
-    &lt;tr&gt;&lt;td&gt;Row with Index #0&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row with Index #1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Linha com index #0&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Linha com index #1&lt;/td&gt;&lt;/tr&gt;
 
-    &lt;tr&gt;&lt;td&gt;Row with Index #2&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row with Index #3&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Linha com index #2&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Linha com index #3&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
 &lt;script&gt;$("tr:even").css("background-color", "#bbbbff");&lt;/script&gt;
 

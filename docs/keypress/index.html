@@ -14,57 +14,57 @@
 </div>
 <div id="keypress1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.keypress( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.keypress( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "keypress" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Acopla um manipulador de evento para o evento JavaScript "keypress", ou dispara esse evento a um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="keypress-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.keypress( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.keypress( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="keypress-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.keypress( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versãao: <a href="/category/version/1.4.3/">1.4.3</a></span>.keypress( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong>Um mapa de dados que será passado ao manipulador de evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma funçãao a ser executada a cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="keypress"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.keypress()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.keypress()</h4></li>
 </ul>
 <div class="longdesc">
-<p><strong>Note:</strong> as the <code>keypress</code> event isn't covered by any official specification, the actual behavior encountered when using it may differ across browsers, browser versions, and platforms.</p>
-<p>This method is a shortcut for <code>.bind('keypress', handler)</code> in the first two variations, and <code>.trigger('keypress')</code> in the third.</p>
-<p>The <code>keypress</code> event is sent to an element when the browser registers keyboard input. This is similar to the <code>keydown</code> event, except in the case of key repeats. If the user presses and holds a key, a <code>keydown </code>event is triggered once, but separate <code>keypress</code> events are triggered for each inserted character. In addition, modifier keys (such as Shift) trigger <code>keydown</code> events but not <code>keypress</code> events.</p>
-<p>A <code>keypress</code> event handler can be attached to any element, but the event is only sent to the element that has the focus. Focusable elements can vary between browsers, but form elements can always get focus so are reasonable candidates for this event type.</p>
-<p>For example, consider the HTML:</p>
+<p><strong>Note:</strong> como o evento <code>keypress</code> não cobre especificação oficial, o comportamento real encontrado quando o usa pode ser diferente conforme os browsers, versão de browsers e plataformas.</p>
+<p>Este método é um atalho para <code>.bind('keypress', handler)</code> nas duas primeiras variações, e <code>.trigger('keypress')</code> no terceiro.</p>
+<p>O evento <code>keypress</code> é enviado a um elemento quando o browser registra a entrada via teclado. Isto é similar ao evento <code>keydown</code> , exceto no caso de emq ue a tecla se repete. Se o usuário pressiona e segura uma tecla, um evento <code>keydown </code> é disparado uma vez, mas eventos <code>keypress</code> separados são disparados para cada caractere inserido. Em adição, os eventos modificadores de teclas (como Shift) disparam <code>keydown</code> eventos exceto <code>keypress</code>.</p>
+<p>Um manipulador de evento <code>keypress</code> pode ser acoplado a qualquer elemento, mas o evento é enviado apenas para o elemento que tem foco. Elementos focáveis podem variar entre os browsers, mas elementos de formulário podem sempre receber foco, então são candidatos para este tipo de evento.</p>
+<p>Por exemplo, considere o HTML:</p>
 <pre>&lt;form&gt;
 	&lt;fieldset&gt;
   	&lt;input id="target" type="text" value="Hello there" /&gt;
 	&lt;/fieldset&gt;
 &lt;/form&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o evento
 &lt;/div&gt;</pre>
-<p>The event handler can be bound to the input field:</p>
+<p>O manipulador de evento pode ser acoplado ao seguinte campo input:</p>
 <pre>$('#target').keypress(function() {
-  alert('Handler for .keypress() called.');
+  alert('Manipulador para .keypress() chamado.');
 });</pre>
-<p>Now when the insertion point is inside the field, pressing a key displays the alert:</p>
-<p><span class="output">Handler for .keypress() called.</span></p>
-<p>The message repeats if the key is held down. To trigger the event manually, apply <code>.keypress()</code> without an argument::</p>
+<p>Agora quando o ponto de inserção está dentro do campo, pressionando uma tecla irá mostrar o alerta:</p>
+<p><span class="output">Manipulador para .keypress() chamado.</span></p>
+<p>A mensagem se repete se a tecla é segurada. Para disparar o evento manualmente, aplique <code>.keypress()</code> sem um argumento:</p>
 <pre>$('#other').click(function() {
   $('#target').keypress();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also alert the message.</p>
-<p>If key presses anywhere need to be caught (for example, to implement global shortcut keys on a page), it is useful to attach this behavior to the <code>document</code> object. Because of event bubbling, all key presses will make their way up the DOM to the <code>document</code> object unless explicitly stopped.</p>
-<p>To determine which character was entered, examine the <code>event</code> object that is passed to the handler function. While browsers use differing properties to store this information, jQuery normalizes the <code>.which</code> property so you can reliably use it to retrieve the character code.</p>
-<p>Note that <code>keydown</code> and <code>keyup</code> provide a code indicating which key is pressed, while <code>keypress</code> indicates which character was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events. Because of this distinction, when catching special keystrokes such as arrow keys, <code>.keydown()</code> or <code>.keyup()</code> is a better choice.</p>
+<p>Depois que este código executa, clica em <span class="output">Dispara o evento</span> sempre alertará a mensagem.</p>
+<p>Se a tecla pressiona qualquer lugar precisar ser capturada (por exemplo, para implementar teclas de atalho global em uma página), é útil anexar este comportamento para o objeto <code>document</code>. Causa da bolha de eventos, toda tecla pressionada fará seu caminho por todo o DOM até o objeto <code>document</code> a menos que seja explícitamente parada.</p>
+<p>Para determinar qual caracter é entrado, examine o objeto <code>event</code> que é passado para a função do manipulador. Enquato browsers usam diferentes propriedades para armazenar esta informação, o jQuery normaliza a propriedade <code>.which</code>, então seguramente você pode usá-lo para receber o código do caractere.</p>
+<p>Note que <code>keydown</code> e <code>keyup</code> promovem um indicativo de qual tecla é pressionada, enquando <code>keypress</code> indica qual caractere foi digitado. Por exemplo, um "a" minúsculo será reportado como 65 por <code>keydown</code> e <code>keyup</code>, mas como 97 por <code>keypress</code>. Um "A" maiúsulo é reportado como 65 para todos os eventos. Por causa desta distinção, quando capturado pulsações de tecla como setas, <code>.keydown()</code> ou <code>.keyup()</code> é uma melhor escolha.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show the event object for the keypress handler when a key is pressed in the input.</span></h4>
+<h4><span class="desc">Mostra o objeto de evento para o manipulador keypress quando uma tecla é pressionada no input.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -92,7 +92,7 @@ input { display: block; margin-bottom: .25em; }
   &lt;/fieldset&gt;
 &lt;/form&gt;
 &lt;button id="other"&gt;
-  Trigger the handler
+  Dispara o evento
 &lt;/button&gt;
 &lt;script type="text/javascript" src="/scripts/events.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -102,7 +102,7 @@ $('#target').keypress(function(event) {
      event.preventDefault();
    }
    xTriggered++;
-   var msg = 'Handler for .keypress() called ' + xTriggered + ' time(s).';
+   var msg = 'Manipulador para .keypress() chamado ' + xTriggered + ' vez(es).';
   $.print(msg, 'html');
   $.print(event);
 });

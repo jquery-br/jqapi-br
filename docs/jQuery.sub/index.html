@@ -14,22 +14,22 @@
 </div>
 <div id="jQuery-sub1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.sub()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">jQuery.sub()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object.</p>
+<p class="desc"><strong>Descrição: </strong>Cria uma nova cópia do jQuery, cujas propriedades e métodos podem ser modificados sem afetar o objeto jQuery original.</p>
 <ul class="signatures"><li class="signature" id="jQuery-sub"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.5/">1.5</a></span>jQuery.sub()</h4></li></ul>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.5/">1.5</a></span>jQuery.sub()</h4></li></ul>
 <div class="longdesc">
-<p>There are two specific use cases for which jQuery.sub() was created. The first was for providing a painless way of overriding jQuery methods without completely destroying the original methods and another was for helping to do encapsulation and basic namespacing for jQuery plugins.</p>
-<p>Note that jQuery.sub() doesn't attempt to do any sort of isolation - that's not its intention. All the methods on the sub'd version of jQuery will still point to the original jQuery (events bound and triggered will still be through the main jQuery, data will be bound to elements through the main jQuery, Ajax queries and events will run through the main jQuery, etc.).</p>
-<p>Note that if you're looking to use this for plugin development you should first <i>strongly</i> consider using something like the jQuery UI widget factory which manages both state and plugin sub-methods. <a href="http://blog.nemikor.com/2010/05/15/building-stateful-jquery-plugins/">Some examples of using the jQuery UI widget factory</a> to build a plugin.</p>
-<p>The particular use cases of this method can be best described through some examples.</p>
+<p>Há dois casos de uso específico para o qual jQuery.sub() foi criado. O primeiro foi para fornecer uma maneira indolor de substituir métodos jQuery sem destruir completamente os métodos originais e outro foi para ajudar a fazer encapsulamento e namespacing básicas para plugins jQuery.</p>
+<p>Note que jQuery.sub () não tenta fazer qualquer tipo de isolamento - isso não é sua intenção. Todos os métodos pertencentes ao sub na versão do jQuery ainda apontam para o jQuery original (eventos vinculados e ainda será desencadeada através do jQuery principal, os dados serão obrigados a elementos através do jQuery principal, consultas Ajax e eventos será executado através da jQuery principal, etc.).</p>
+<p>Note que se você pretende usar esta para o desenvolvimento do plugin você deve primeiro <i> fortemente </i> considerar o uso de algo como a fábrica jQuery UI widget que gerencia tanto o estado e plugin sub-métodos.<a href="http://blog.nemikor.com/2010/05/15/building-stateful-jquery-plugins/">Alguns exemplos do uso da fábrica do jQuery UI widget</a> para construir plugins.</p>
+<p>Os casos de uso particulares deste método podem ser melhor descritos através de alguns exemplos.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Adding a method to a jQuery sub so that it isn't exposed externally:</span>
+<h4>Exemplo: <span class="desc">Adicionando um método a um sub jQuery de modo que não é exposto externamente:</span>
 </h4>
 <pre class="prettyprint"><code class="example">  (function(){
     var sub$ = jQuery.sub();
@@ -46,7 +46,7 @@
   typeof jQuery('body').myCustomMethod // undefined</code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Override some jQuery methods to provide new functionality.</span>
+<h4>Exemplo: <span class="desc">Substituir alguns métodos jQuery para fornecer nova funcionalidade.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 (function() {
@@ -76,7 +76,7 @@
 // This functionality is only contained within the modified 'myjQuery'.</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Create a plugin that returns plugin-specific methods.</span>
+<h4>Exemplo: <span class="desc">Cria um plugin que retorna métodos específicos do plugin.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 (function() {

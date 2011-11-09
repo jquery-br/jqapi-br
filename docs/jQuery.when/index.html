@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.when()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/core/" title="View all posts in Core">Core</a></span>
   
 
@@ -14,31 +14,31 @@
 </div>
 <div id="jQuery-when1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.when( deferreds )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Promise">Promise</a></span>
+<span class="name">jQuery.when( deferreds )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Promise">Promise</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events.</p>
+<p class="desc"><strong>Descrição: </strong>Fornece uma maneira de executar funções de retorno de chamada com base em um ou mais objetos, objetos geralmente deferido que representam eventos assíncronos.</p>
 <ul class="signatures"><li class="signature" id="jQuery-when-deferreds">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.5/">1.5</a></span>jQuery.when( deferreds )</h4>
-<p class="arguement"><strong>deferreds</strong>One or more Deferred objects, or plain JavaScript objects.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.5/">1.5</a></span>jQuery.when( deferreds )</h4>
+<p class="arguement"><strong>deferidos</strong>Um ou mais objetos deferidos, ou objetos JavaScript puro.</p>
 </li></ul>
 <div class="longdesc">
-<p>If a single Deferred is passed to <code>jQuery.when</code>, its Promise object (a subset of the Deferred methods) is returned by the method. Additional methods of the Promise object can be called to attach callbacks, such as <a href="/deferred.then"><code>deferred.then</code></a>. When the Deferred is resolved or rejected, usually by the code that created the Deferred originally, the appropriate callbacks will be called. For example, the jqXHR object returned by <code>jQuery.ajax</code> is a Deferred and can be used this way:</p>
+<p>Se um único deferido é passado para <code> jQuery.when </code>, seu objeto Promise (um subconjunto dos métodos deferido) é retornado pelo método. Métodos adicionais do objeto Promise podem ser chamados para anexar callbacks, como <a href="/deferred.then"> <code> deferred.then </code> </a>. Quando o deferido é resolvido ou rejeitado, geralmente o código que criou o deferidos originalmente, as chamadas adequadas serão chamadas. Por exemplo, o objeto retornado por jqXHR <code> jQuery.ajax </code> é um deferido e pode ser usado da seguinte maneira:</p>
 <pre>$.when( $.ajax("test.aspx") ).then(function(ajaxArgs){ 
      alert(ajaxArgs[1]); /* ajaxArgs is [ "success", statusText, jqXHR ] */
 });</pre>
-<p>If a single argument is passed to <code>jQuery.when</code> and it is not a Deferred, it will be treated as a resolved Deferred and any doneCallbacks attached will be executed immediately. The doneCallbacks are passed the original argument. In this case any failCallbacks you might set are never called since the Deferred is never rejected. For example:</p>
+<p>Se um único argumento é passado para <code> jQuery.when </code> e não é um deferido, será tratado como um deferidos resolvido e qualquer doneCallbacks anexado será executado imediatamente. O doneCallbacks são passados ​​o argumento original. Neste caso, qualquer failCallbacks você pode definir nunca são chamados desde o deferidos nunca é rejeitada. Por exemplo:</p>
 <pre>$.when( { testing: 123 } ).done(
    function(x){ alert(x.testing); } /* alerts "123" */
 );</pre>
-<p>In the case where multiple Deferred objects are passed to <code>jQuery.when</code>, the method returns the Promise from a new "master" Deferred object that tracks the aggregate state of all the Deferreds it has been passed. The method will resolve its master Deferred as soon as all the Deferreds resolve, or reject the master Deferred as soon as one of the Deferreds is rejected. If the master Deferred is resolved, it is passed the resolved values of all the Deferreds that were passed to <code>jQuery.when</code>. For example, when the Deferreds are <code>jQuery.ajax()</code> requests, the arguments will be the jqXHR objects for the requests, in the order they were given in the argument list.</p>
-<p>In the multiple-Deferreds case where one of the Deferreds is rejected, <code>jQuery.when</code> immediately fires the failCallbacks for its master Deferred. Note that some of the Deferreds may still be unresolved at that point. If you need to perform additional processing for this case, such as canceling any unfinished ajax requests, you can keep references to the underlying jqXHR objects in a closure and inspect/cancel them in the failCallback.</p>
+<p>No caso em que vários objetos deferidos são passados​para <code> jQuery.when </code>, o método retorna a promessa de um objeto "master", novos deferidos que acompanham o estado de agregação de todos os Deferreds que foi aprovada. O método vai resolver o master Deferreds, logo que todos os Deferreds resolverem, ou rejeitarem o master Deferreds, logo que um dos Deferreds é rejeitada. Se o mestre deferido for resolvido, ele é passado os valores resolvidos de todos os Deferreds que foram passadas para <code> jQuery.when </code>. Por exemplo, quando o Deferreds são pedidos <code> jQuery.ajax () </code>, os argumentos serão os objetos jqXHR para os pedidos, na ordem em que foram dadas na lista de argumentos.</p>
+<p>No caso de múltipla Deferreds onde um dos Deferreds é rejeitada, <code> jQuery.when </code> imediatamente aciona os Callbacks de falha para o master Deferreds. Note que alguns dos Deferreds ainda podem ser resolvidos naquele momento. Se você precisa executar processamento adicional para este caso, como cancelar todos os pedidos inacabados ajax, você pode manter referências aos objetos subjacentes jqXHR em um fechamento e inspecionar / cancelá-las na Callback de falha.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Execute a function after two ajax requests are successful. (See the jQuery.ajax() documentation for a complete description of success and error cases for an ajax request).</span>
+<h4>Exemplo: <span class="desc">Executar uma função depois que duas chamadas ajax são bem sucedidos. (Veja a documentação jQuery.ajax () para uma descrição completa de sucesso e casos de erro para um pedido de ajax).</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.when($.ajax("/page1.php"), $.ajax("/page2.php")).done(function(a1,  a2){
     /* a1 and a2 are arguments resolved for the 
@@ -51,7 +51,7 @@
 </code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Execute the function myFunc when both ajax requests are successful, or myFailure if either one has an error.</span>
+<h4>Exemplo: <span class="desc">Executar o myFunc função quando ambos os pedidos ajax forem bem sucedidos, ou myFailure se qualquer um tem um erro.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.when($.ajax("/page1.php"), $.ajax("/page2.php"))
   .then(myFunc, myFailure);

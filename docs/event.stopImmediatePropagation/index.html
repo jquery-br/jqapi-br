@@ -17,12 +17,12 @@
 <span class="name">event.stopImmediatePropagation()</span> <span class="returns"></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Descrição: </strong> Mantém o resto dos manipuladores sendo executados e impede que o evento borbulhe através a árvore DOM.
+<p class="desc"><strong>Descrição: </strong> Mantém o resto dos manipuladores sendo executados e impede que o evento interfira através a árvore DOM.
   </p>
 <ul class="signatures"><li class="signature" id="event-stopImmediatePropagation"><h4 class="name">
 <span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>event.stopImmediatePropagation()</h4></li></ul>
 <div class="longdesc">
-<p>Além de manter todos os manipuladores adicionais sobre um elemento de serem executados, este método também impede que borbulhe implicitamente chamando <code>event.stopPropagation()</code>. Para simplesmente prevenir o evento da chamada aos elementos antecessores mas permitir outros manipuladores de eventos de executar no mesmo elemento, nós podemos utilizar <code><a href="http://api.jquery.com/event.stopPropagation">event.stopPropagation()</a></code>.</p>
+<p>Além de manter todos os manipuladores adicionais sobre um elemento de serem executados, este método também impede que interfira implicitamente chamando <code>event.stopPropagation()</code>. Para simplesmente prevenir o evento da chamada aos elementos antecessores mas permitir outros manipuladores de eventos de executar no mesmo elemento, nós podemos utilizar <code><a href="http://api.jquery.com/event.stopPropagation">event.stopPropagation()</a></code>.</p>
 <p>Use <code><a href="http://api.jquery.com/event.isImmediatePropagationStopped">event.isImmediatePropagationStopped()</a></code> para saber se o métodos foi chamado alguma vez (neste objeto de evento).</p>
 </div>
 <h3 id="notes-0">Additional Notes:</h3>

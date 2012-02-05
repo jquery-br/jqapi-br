@@ -14,55 +14,55 @@
 </div>
 <div id="mouseleave1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.mouseleave( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.mouseleave( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Acopla um manipulador de evento a ser disparados quando o mouse deixa um elemeneot ou dispara aquele manipulador em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="mouseleave-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseleave( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseleave( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento for disparado.</p>
 </li>
 <li class="signature" id="mouseleave-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseleave( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseleave( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong>Um mapa de dados que será passado ao manipulador de evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento for disparado.</p>
 </li>
 <li class="signature" id="mouseleave"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseleave()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseleave()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('mouseleave', handler)</code> in the first two variations, and <code>.trigger('mouseleave')</code> in the third.</p>
-<p>The <code>mouseleave</code> JavaScript event is proprietary to Internet Explorer. Because of the event's general utility, jQuery simulates this event so that it can be used regardless of browser. This event is sent to an element when the mouse pointer leaves the element. Any HTML element can receive this event.</p>
-<p>For example, consider the HTML:</p>
+<p>Este método é um atalho para <code>.bind('mouseleave', handler)</code> nas duas primeiras variações, e <code>.trigger('mouseleave')</code> na terceira.</p>
+<p>O evento JavaScript <code>mouseleave</code> é proprietário ao Internet Explorer. Por causa da utilidade geral de evento, jQuery simula este evento, então ele pode usado independentemente do browser. Este evento é enviado a um elemento quando o ponteiro do mouse sai do elemento. Qualquer elemento elemento pode receber este evento.</p>
+<p>Por exemplo, considere o HTML:</p>
 <pre>&lt;div id="outer"&gt;
-  Outer
+  Fora
   &lt;div id="inner"&gt;
-    Inner
+    Dentro
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o manipulador
 &lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 <p class="image"><img src="/images/0042_05_09.png" alt=""></p>
-<p>The event handler can be bound to any element:</p>
+<p>O manipulador de evento pode ser ligado a qualquer elemento:</p>
 <pre>$('#outer').mouseleave(function() {
-  $('#log').append('&lt;div&gt;Handler for .mouseleave() called.&lt;/div&gt;');
+  $('#log').append('&lt;div&gt;Manipulador para .mouseleave() chamado.&lt;/div&gt;');
 });</pre>
-<p>Now when the mouse pointer moves out of the <span class="output">Outer</span> <code>&lt;div&gt;</code>, the message is appended to <code>&lt;div id="log"&gt;</code>. You can also trigger the event when another element is clicked:</p>
+<p>Agora quando o ponteiro do mouse é movido para fora da <code>&lt;div&gt;</code> <span class="output">Fora</span>, a mensagem é colocada no final de <code>&lt;div id="log"&gt;</code>. Você também pode disparar o evento quando um outro elemento é clicado:</p>
 <pre>$('#other').click(function() {
   $('#outer').mouseleave();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also append the message.</p>
-<p>The <code>mouseleave</code> event differs from <code>mouseout</code> in the way it handles event bubbling. If <code>mouseout</code> were used in this example, then when the mouse pointer moved out of the <span class="output">Inner</span> element, the handler would be triggered. This is usually undesirable behavior. The <code>mouseleave</code> event, on the other hand, only triggers its handler when the mouse leaves the element it is bound to, not a descendant. So in this example, the handler is triggered when the mouse leaves the <span class="output">Outer</span> element, but not the <span class="output">Inner</span> element.</p>
+<p>Depois que este código executa, cliques sobre <span class="output">Dispara o manipulador</span> também ficarão no final da mensage.</p>
+<p>O evento <code>mouseleave</code> se difere de <code>mouseout</code> na maneira em que ele manipula o bubbling de eventos. Se <code>mouseout</code> fosse usado neste exemplo, quando o mouse movesse para fora do elemento <span class="output">Dentro</span>, o manipulador seria disparado. Isto é normalmente um comportamento indesejável. O evento <code>mouseleave</code>, por outro lado, apenas dispara o seu manipulador quando o mouse deixa o elemento ao qual ele está ligado, não a um descendente. Então neste exemplo, o manipulador é disparado quando o mouse deixa o elemento <span class="output">Fora</span>, mas não o <span class="output">Dentro</span>.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show number of times mouseout and mouseleave events are triggered.
-mouseout fires when the pointer moves out of child element as well, while mouseleave fires only when the pointer moves out of the bound element.</span></h4>
+<h4><span class="desc">Mostra o número de vezes que os eventos mouseout e mouseleave são disparados.
+mouseout também dispara dispara quando o ponteiro do mouse sai do elemento filho, enquanto mouseleave dispara apenas quando o ponteiro do mouse sai do elemento ligado.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -90,9 +90,9 @@ padding:0;
 &lt;/head&gt;
 &lt;body&gt;
   
-&lt;div class="out overout"&gt;&lt;p&gt;move your mouse&lt;/p&gt;&lt;div class="in overout"&gt;&lt;p&gt;move your mouse&lt;/p&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;
+&lt;div class="out overout"&gt;&lt;p&gt;mova seu mouse&lt;/p&gt;&lt;div class="in overout"&gt;&lt;p&gt;mova seu mouse&lt;/p&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;
 
-&lt;div class="out enterleave"&gt;&lt;p&gt;move your mouse&lt;/p&gt;&lt;div class="in enterleave"&gt;&lt;p&gt;move your mouse&lt;/p&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;
+&lt;div class="out enterleave"&gt;&lt;p&gt;mova seu mouse&lt;/p&gt;&lt;div class="in enterleave"&gt;&lt;p&gt;mova seu mouse&lt;/p&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;&lt;p&gt;0&lt;/p&gt;&lt;/div&gt;
 
 
 &lt;script&gt;

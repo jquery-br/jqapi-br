@@ -47,7 +47,7 @@
 <h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Carrega o rodapé da página principal dentro de uma lista ordenada.</span>
+<h4>Exemplo: <span class="desc">Carrega o rodapé da página principal dentro de uma lista ordenada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -59,7 +59,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   
-&lt;b&gt;Footer navigation:&lt;/b&gt;
+&lt;b&gt;Navegação do Rodapé:&lt;/b&gt;
 &lt;ol id="new-nav"&gt;&lt;/ol&gt;
 
 &lt;script&gt;
@@ -72,7 +72,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Exemplo: <span class="desc">Mostrar um aviso se a requisição Ajax encontra um erro.</span>
+<h4>Exemplo: <span class="desc">Mostra um aviso se a requisição Ajax encontra um erro.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -84,15 +84,15 @@
 &lt;/head&gt;
 &lt;body&gt;
   
-&lt;b&gt;Successful Response (should be blank):&lt;/b&gt;
+&lt;b&gt;Resposta com sucesso (deveria estar em branco):&lt;/b&gt;
 &lt;div id="success"&gt;&lt;/div&gt;
-&lt;b&gt;Error Response:&lt;/b&gt;
+&lt;b&gt;Erro de Resposta:&lt;/b&gt;
 &lt;div id="error"&gt;&lt;/div&gt;
   
 &lt;script&gt;
 $("#success").load("/not-here.php", function(response, status, xhr) {
   if (status == "error") {
-    var msg = "Sorry but there was an error: ";
+    var msg = "Desculpe, mas houve um erro: ";
     $("#error").html(msg + xhr.status + " " + xhr.statusText);
   }
 });
@@ -104,10 +104,10 @@ $("#success").load("/not-here.php", function(response, status, xhr) {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Carrega o arquivo feed.html dentro de uma div com a ID feeds.</span>
+<h4>Exemplo: <span class="desc">Carrega o arquivo feed.html dentro de uma div com a ID feeds.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("#feeds").load("feeds.html");</code></pre>
-<h4>Result:</h4>
+<h4>Resultado:</h4>
 <pre><code class="results">&lt;div id="feeds"&gt;&lt;b&gt;45&lt;/b&gt; feeds found.&lt;/div&gt;</code></pre>
 </div>
 <div id="example-3">
@@ -116,10 +116,10 @@ $("#success").load("/not-here.php", function(response, status, xhr) {
 <pre class="prettyprint"><code class="example">$("#objectID").load("test.php", { 'choices[]': ["Jon", "Susan"] } );</code></pre>
 </div>
 <div id="example-4">
-<h4>Example: <span class="desc">Same as above, but will POST the additional parameters to the server and a callback that is executed when the server is finished responding.</span>
+<h4>Exemplo: <span class="desc">Mesmo de cima, mas fará um POST de parâmetros adicionais para o servidor e um callback que é executado quando o servidor terminar de responder.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("#feeds").load("feeds.php", {limit: 25}, function(){
-alert("The last 25 entries in the feed have been loaded");
+alert("As últumas 25 entradas no feed foram carregadas");
 });</code></pre>
 </div>
 </div>

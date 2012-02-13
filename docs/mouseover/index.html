@@ -14,55 +14,55 @@
 </div>
 <div id="mouseover1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.mouseover( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.mouseover( handler(eventObject) )</span> <span class="returns">Returna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Acopla um manipulador de evento para o evento JavaScript "mouseover" JavaScript, ou dispara aquele evento a um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="mouseover-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseover( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseover( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong> Uma função para executar cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="mouseover-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseover( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseover( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong> Um mapa de dados que será passado a um manipulador de evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong> Uma função para executar cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="mouseover"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseover()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseover()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('mouseover', handler)</code> in the first two variations, and <code>.trigger('mouseover')</code> in the third.</p>
-<p>The <code>mouseover</code> event is sent to an element when the mouse pointer enters the element. Any HTML element can receive this event.</p>
-<p>For example, consider the HTML:</p>
+<p>Este método é um atalho para <code>.bind('mouseover', handler)</code> nas duas primeiras variações, e and <code>.trigger('mouseover')</code> na terceira.</p>
+<p>O evento <code>mouseover</code> é enviado a um elemento quando o ponteiro do mouse passa por cima do elemento. Qualquer elemento HTML pode receber este evento.</p>
+<p>Por exemplo, considere o HTML:</p>
 <pre>&lt;div id="outer"&gt;
-  Outer
+  Fora
   &lt;div id="inner"&gt;
-    Inner
+    Dentro
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o manipulador
 &lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 <p class="image"><img src="/images/0042_05_06.png" alt=""></p>
-<p>The event handler can be bound to any element:</p>
+<p>O manipulador de evento pode ser ligado a qualquer elemento:</p>
 <pre>$('#outer').mouseover(function() {
-  $('#log').append('&lt;div&gt;Handler for .mouseover() called.&lt;/div&gt;');
+  $('#log').append('&lt;div&gt;Manipulador para .mouseover() chamado.&lt;/div&gt;');
 });</pre>
-<p>Now when the mouse pointer moves over the <span class="output">Outer</span> <code>&lt;div&gt;</code>, the message is appended to <code>&lt;div id="log"&gt;</code>. We can also trigger the event when another element is clicked:</p>
+<p>Agora quando o ponteiro do mouse move sobre a <code>&lt;div&gt;</code> <span class="output">Fora</span>, a mensagem é colocada no final de <code>&lt;div id="log"&gt;</code>. Nós podemos também disparar o evento quando um outro elemento é clicado:</p>
 <pre>$('#other').click(function() {
   $('#outer').mouseover();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also append the message.</p>
-<p>This event type can cause many headaches due to event bubbling. For instance, when the mouse pointer moves over the <span class="output">Inner</span> element in this example, a <code>mouseover</code> event will be sent to that, then trickle up to <span class="output">Outer</span>. This can trigger our bound <code>mouseover</code> handler at inopportune times. See the discussion for <code>.mouseenter()</code> for a useful alternative.</p>
+<p>Depois que este código executa, cliques sobre <span class="output">Disparar o manipulador </span> também colocarão a mensagem no final.</p>
+<p>Este tipo de evento pode causar muitas dores de cabeça devido ao bubbluing de evento. Por exemplo, quando o ponteiro do mouse se move sobre o elemento <span class="output">Dentro</span> neste exemplo, um evento <code>mouseover</code> será mandado para ele, entao chega até o <span class="output">Fora</span>. Isto pode duisparar nosso manipulador acoplado <code>mouseover</code> em horas inoportunas. Veja a discussão para <code>.mouseenter()</code> para uma anternativa útil.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show the number of times mouseover and mouseenter events are triggered.
-mouseover fires when the pointer moves into the child element as well, while mouseenter fires only when the pointer moves into the bound element.</span></h4>
+<h4><span class="desc">Mostra o número de vezes que os eventos mouseover e mouseenter são disparados.
+mouseover dispara quando o ponteiro se move sobre um elemento filho também, enquanto mouseenter dispara apenas quando o ponteiro se move sobre o elemento acoplado.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -78,13 +78,13 @@ p { line-height:1em; margin:0; padding:0; }
 &lt;body&gt;
   
 &lt;div class="out overout"&gt;
-  &lt;span&gt;move your mouse&lt;/span&gt;
+  &lt;span&gt;mova seu mouse&lt;/span&gt;
   &lt;div class="in"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="out enterleave"&gt;
-  &lt;span&gt;move your mouse&lt;/span&gt;
+  &lt;span&gt;mova seu mouse&lt;/span&gt;
   &lt;div class="in"&gt;
   &lt;/div&gt;
 &lt;/div&gt;

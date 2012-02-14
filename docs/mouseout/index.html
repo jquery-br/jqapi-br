@@ -14,55 +14,55 @@
 </div>
 <div id="mouseout1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.mouseout( handler(eventObject) )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.mouseout( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Bind an event handler to the "mouseout" JavaScript event, or trigger that event on an element.</p>
+<p class="desc"><strong>Descrição: </strong>Acopla um elemento para o evento JavaScript "mouseout" ou dispara esse evento a um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="mouseout-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseout( handler(eventObject) )</h4>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseout( handler(eventObject) )</h4>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="mouseout-eventData-handlereventObject">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseout( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>A map of data that will be passed to the event handler.</p>
-<p class="arguement"><strong>handler(eventObject)</strong>A function to execute each time the event is triggered.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.mouseout( [ eventData ], handler(eventObject) )</h4>
+<p class="arguement"><strong>eventData</strong>Um mapa de dados que será passado ao manipulador de evento.</p>
+<p class="arguement"><strong>handler(eventObject)</strong>Uma função para executar a cada vez que o método é disparado.</p>
 </li>
 <li class="signature" id="mouseout"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.mouseout()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.mouseout()</h4></li>
 </ul>
 <div class="longdesc">
-<p>This method is a shortcut for <code>.bind('mouseout', handler)</code> in the first two variation, and <code>.trigger('mouseout')</code> in the third.</p>
-<p>The <code>mouseout</code> event is sent to an element when the mouse pointer leaves the element. Any HTML element can receive this event.</p>
-<p>For example, consider the HTML:</p>
+<p>Este método é um atalho para <code>.bind('mouseout', handler)</code> nas duas primeiras variações, e <code>.trigger('mouseout')</code> na terceira.</p>
+<p>O evento <code>mouseout</code> é enviado a um elemento quando o ponteiro do mouse deixa o elemento. Qualquer elemento HTML pode receber este evento.</p>
+<p>Por exemplo, considere o HTML:</p>
 <pre>&lt;div id="outer"&gt;
-  Outer
+  Fora
   &lt;div id="inner"&gt;
-    Inner
+    Dentro
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id="other"&gt;
-  Trigger the handler
+  Dispara o manipulador
 &lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 <p class="image"><img src="/images/0042_05_07.png" alt=""></p>
-<p>The event handler can be bound to any element:</p>
+<p>O manipulador pode ser ligado a qualquer elemento:</p>
 <pre>$('#outer').mouseout(function() {
-  $('#log').append('Handler for .mouseout() called.');
+  $('#log').append('Manipulador para .mouseout() chamado.');
 });</pre>
-<p>Now when the mouse pointer moves out of the <span class="output">Outer</span> <code>&lt;div&gt;</code>, the message is appended to <code>&lt;div id="log"&gt;</code>. To trigger the event manually, apply <code>.mouseout()</code> without an argument::</p>
+<p>Agora quando o ponteiro do mouse move para fora da <code>&lt;div&gt;</code> <span class="output">Fora</span>, a mensagem é colocada no final de <code>&lt;div id="log"&gt;</code>. Para disparar o evento manualmente, aplique <code>.mouseout()</code> sem um argumento:</p>
 <pre>$('#other').click(function() {
   $('#outer').mouseout();
 });</pre>
-<p>After this code executes, clicks on <span class="output">Trigger the handler</span> will also append the message.</p>
-<p>This event type can cause many headaches due to event bubbling. For instance, when the mouse pointer moves out of the <span class="output">Inner</span> element in this example, a <code>mouseout</code> event will be sent to that, then trickle up to <span class="output">Outer</span>. This can trigger the bound <code>mouseout</code> handler at inopportune times. See the discussion for <code>.<a href="/mouseleave">mouseleave</a>()</code> for a useful alternative.</p>
+<p>Depois que este código executa, cliques sobre <span class="output">Disparar o manipulador</span> também colocarão no final da mensagem.</p>
+<p>O tipo de evento pode causar muitas dores de cabeça devido ao bubbling de evento. Por exemplo, quando o ponteiro do mouse move para fora do elemento <span class="output">Dentro</span> neste exemplo, um evento <code>mouseout</code> será enviado para ele, então chegar até o <span class="output">Fora</span>. Isto pode disparar a o manipulador ligado <code>mouseout</code> em horas inoportunas. Veja a discussão oara <code>.<a href="/mouseleave">mouseleave</a>()</code> para uma alternativa útil.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show the number of times mouseout and mouseleave events are triggered.
-mouseout fires when the pointer moves out of the child element as well, while mouseleave fires only when the pointer moves out of the bound element.</span></h4>
+<h4><span class="desc">Mostra o número de vezes que os eventos mouseout e mouseleave são disparados.
+mouseout dispara quando o ponteiro sai do elemento filho também, enquanto mouseleave dispara apenas quando o ponteiro sai do elemento acoplado.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

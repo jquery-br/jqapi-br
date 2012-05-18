@@ -2,36 +2,36 @@
 <html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
         <div class="entry-title roundTop">
-          
+
           <h1 class="jq-clearfix">deferred.always()</h1>
           <div class="entry-meta jq-clearfix">
                         Categories:
             <span class="category"><a href="http://api.jquery.com/category/deferred-object/" title="View all posts in Deferred Object">Deferred Object</a></span>
-  
+
 
           </div>
 
 </div>
 <div id="deferred-always1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">deferred.always( alwaysCallbacks )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Deferred">Deferred</a></span>
+<span class="name">deferred.always( alwaysCallbacks )</span> <span class="returns">Returna: <a class="return" href="http://api.jquery.com/Types/#Deferred">Deferred</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong> Add handlers to be called when the Deferred object is either resolved or rejected. </p>
+<p class="desc"><strong>Descrição: </strong> Adiciona manipuladores a serem chamados quando o objeto Deferred é tanto resolvido quanto rejeitado. </p>
 <ul class="signatures"><li class="signature" id="deferred-always-alwaysCallbacks">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.6/">1.6</a></span>deferred.always( alwaysCallbacks )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.6/">1.6</a></span>deferred.always( alwaysCallbacks )</h4>
 <p class="arguement"><strong>alwaysCallbacks</strong>
-        A function, or array of functions, that is called when the Deferred is resolved or rejected.
+        Uma função ou array de funções, que é chamado quando o Deferred é tanto resolvido quanto rejeitado.
       </p>
 </li></ul>
-<div class="longdesc"><p>The argument can be either a single function or an array of functions. When the Deferred is resolved or rejected, the <code>alwaysCallbacks</code> are called. Since <code>deferred.always()</code> returns the Deferred object, other methods of the Deferred object can be chained to this one, including additional <code>.always()</code> methods. When the Deferred is resolved or rejected, callbacks are executed in the order they were added, using the arguments provided to the <a href="/deferred.resolve/"><code>resolve</code></a>, <a href="/deferred.reject/"><code>reject</code></a>, <a href="/deferred.resolveWith/"><code>resolveWith</code></a> or <a href="/deferred.rejectWith/"><code>rejectWith</code></a> method calls. For more information, see the documentation for <a href="/category/deferred-object/">Deferred object</a>.</p></div>
-<h3>Example:</h3>
+<div class="longdesc"><p>O argumento pode ser uma função simples ou uma array de funções. Quando o Deferred é resolvido ou rejeitado, o <code>alwaysCallbacks</code> é chamado. Quando  <code>deferred.always()</code> retorna o objeto Deferred, outros métodos do objeto Deferred pode ser encadeado para este, incluindo adicionais métodos <code>.always()</code>. Quando o Deferred é resolvido ou rejeitado, os callbacks são executados na ordem em que eles são adicionados, usando os argumentos providos para chamadas de métodos <a href="/deferred.resolve/"><code>resolve</code></a>, <a href="/deferred.reject/"><code>reject</code></a>, <a href="/deferred.resolveWith/"><code>resolveWith</code></a> ou <a href="/deferred.rejectWith/"><code>rejectWith</code></a>. Para mais informação, veja a documentaçãao para <a href="/category/deferred-object/">objeto Deferred</a>.</p></div>
+<h3>Exemplo</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Since the jQuery.get() method returns a jqXHR object, which is derived from a Deferred object, we can attach a callback for both success and error using the deferred.always() method.</span></h4>
+<h4><span class="desc">Quando o método jQuery.get() retorna um objeto jqXHR, o qual é derivado de um objeto Deferred, podemos acoplar um callback para ambos sucesso e erro usando o método deferred.always().</span></h4>
 <pre class="prettyprint"><code class="example">
-$.get("test.php").always( function() { 
-  alert("$.get completed with success or error callback arguments"); 
+$.get("test.php").always( function() {
+  alert("$.get completo com argumentos de callback de sucesso ou erro");
 } );
 </code></pre>
 </div></div>

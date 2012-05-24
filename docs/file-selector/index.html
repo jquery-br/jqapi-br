@@ -3,9 +3,9 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:file Selector</h1>
+          <h1 class="jq-clearfix">Seletor :file</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
   
 
@@ -13,16 +13,15 @@
 
 </div>
 <div id="file1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">file</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">file</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':file')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements of type file.</p>
-<div class="longdesc"><p>As with other pseudo-class selectors (those that begin with a ":") it is recommended to precede it with a tag name or some other selector; otherwise, the universal selector ("*") is implied. In other words, the bare <code>$(':file')</code> is equivalent to <code>$('*:file')</code>, so <code>$('input:file')</code> should be used instead. </p></div>
-<h3>Example:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':file')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elemento do tipo file.</p>
+<div class="longdesc"><p>Assim como outros seletores de pseudo-classe (os que começam com ":") é recomendado que seja procedido por alguma tag ou outro seletor; caso contrário o seletor universal ("*") esta implícito. Em outras palavras, <code>$(':file')</code> é equivalente a <code>$('*:file')</code>, então <code>$('input:file')</code> deve ser usado ao invés. </p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all file inputs.</span></h4>
+<h4><span class="desc">Localiza todos os inputs do tipo file.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -56,9 +55,9 @@
 &lt;script&gt;
 
     var input = $("input:file").css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
+    $("div").text("Para esse tipo o jQuery encontrou " + input.length + ".")
             .css("color", "red");
-    $("form").submit(function () { return false; }); // so it won't submit
+    $("form").submit(function () { return false; }); // nao da submit
 
 &lt;/script&gt;
 

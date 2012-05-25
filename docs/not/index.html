@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.not()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/traversing/" title="View all posts in Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/filtering/" title="View all posts in Filtering">Filtering</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/traversing/" title="Ver todos os posts em Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/filtering/" title="Ver todos os posts em Filtering">Filtering</a></span>
   
 
           </div>
@@ -14,30 +14,30 @@
 </div>
 <div id="not1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.not( selector )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.not( seletor )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Remove elements from the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Remove elementos do conjunto de elementos selecionados.</p>
 <ul class="signatures">
 <li class="signature" id="not-selector">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.not( selector )</h4>
-<p class="arguement"><strong>selector</strong>A string containing a selector expression to match elements against.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.0/">1.0</a></span> .not( seletor )</h4>
+<p class="arguement"><strong>seletor</strong> Uma string contendo uma expressão seletora para coincidir os elementos de acordo com ela.</p>
 </li>
 <li class="signature" id="not-elements">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.not( elements )</h4>
-<p class="arguement"><strong>elements</strong>One or more DOM elements to remove from the matched set.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.0/">1.0</a></span> .not( elementos )</h4>
+<p class="arguement"><strong>elementos</strong> Um ou mais elementos DOM para serem removidos do conjunto de elementos selecionados.</p>
 </li>
 <li class="signature" id="not-functionindex">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.not( function(index) )</h4>
-<p class="arguement"><strong>function(index)</strong>A function used as a test for each element in the set. <code>this</code> is the current DOM element.</p>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.4/">1.4</a></span> .not( function(index) )</h4>
+<p class="arguement"><strong>function(index)</strong> Uma função usada como um teste para cada elemento no conjunto. <code>this</code> é o elemento DOM atual.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Given a jQuery object that represents a set of DOM elements, the <code>.not()</code> method constructs a new jQuery object from a subset of the matching elements. The supplied selector is tested against each element; the elements that don't match the selector will be included in the result.</p>
-<p>Consider a page with a simple list on it:</p>
+<p>Dado um objeto jQuery que representa um conjunto de elementos DOM, o método <code>.not()</code> constroi um novo objeto jQuery a partir de um subconjunto dos elementos correspondentes. O seletor fornecido é testado em comparação a cada elemento; os elementos que não corresponderem com o seletor serão incluídos no resultado.</p>
+<p>Considere uma página com uma lista simples:</p>
 <pre>
 &lt;ul&gt;
   &lt;li&gt;list item 1&lt;/li&gt;
@@ -47,11 +47,11 @@
   &lt;li&gt;list item 5&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>We can apply this method to the set of list items:</p>
+<p>Podemos aplicar este método para o conjunto de itens da lista:</p>
 <pre>$('li').not(':even').css('background-color', 'red');</pre>
-<p>The result of this call is a red background for items 2 and 4, as they do not match the selector (recall that :even and :odd use 0-based indexing).</p>
-<h4>Removing Specific Elements</h4>
-<p>The second version of the <code>.not()</code> method allows us to remove elements from the matched set, assuming we have found those elements previously by some other means. For example, suppose our list had an id applied to one of its items:</p>
+<p>O resultado dessa chamada é um fundo vermelho para os itens 2 e 4, uma vez que não correspondem ao seletor (lembre-se que: :even e :odd usam indexação base 0).</p>
+<h4>Removendo Elementos Específicos</h4>
+<p>A segunda verão do método <code>.not()</code> nos permite remover elementos do conjunto correspondente, supondo que tenhamos encontrado os elementos anteriormente por outros meios. Por exemplo, suponha que a nossa lista tinha um ID aplicado em um de seus itens:</p>
 <pre>
 &lt;ul&gt;
   &lt;li&gt;list item 1&lt;/li&gt;
@@ -61,18 +61,18 @@
   &lt;li&gt;list item 5&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>We can fetch the third list item using the native JavaScript <code>getElementById()</code> function, then remove it from a jQuery object:</p>
+<p>Podemos buscar o terceiro item da lista usando a função <code>getElementById()</code> nativa do JavaScript, e então remove-lo do objeto jQuery:</p>
 <pre>
 $('li').not(document.getElementById('notli'))
   .css('background-color', 'red');
 </pre>
-<p>This statement changes the color of items 1, 2, 4, and 5. We could have accomplished the same thing with a simpler jQuery expression, but this technique can be useful when, for example, other libraries provide references to plain DOM nodes.</p>
-<p>As of jQuery 1.4, the <code>.not()</code> method can take a function as its argument in the same way that <code>.filter()</code> does. Elements for which the function returns <code>true</code> are excluded from the filtered set; all other elements are included.</p>
+<p>Esta instrução altera a cor dos itens 1, 2, 4 e 5. Poderíamos ter feito a mesma coisa com uma expressão jQuery mais simples, mas esta técnica pode ser útil quando, por exemplo, outras bibliotecas fornecerem referências para nós DOM simples.</p>
+<p>A partir do jQuery 1.4, o método <code>.not()</code> pode ter uma função como argumento da mesma maneira que o <code>.filter()</code> possui. Elementos para a qual a função retorna <code>true</code> são excluídos do conjunto filtrado; todos os outros elementos são incluídos.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Adds a border to divs that are not green or blue.</span>
+<h4>Exemplo: <span class="desc">Adiciona uma borda às divs que não estão verdes ou azuis.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -107,17 +107,17 @@ $('li').not(document.getElementById('notli'))
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Removes the element with the ID "selected" from the set of all paragraphs.</span>
+<h4>Exemplo: <span class="desc">Remove o elemento com o ID "selected" do conjunto de todos os parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("p").not( $("#selected")[0] )</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Removes the element with the ID "selected" from the set of all paragraphs.</span>
+<h4>Exemplo: <span class="desc">Remove o elemento com o ID "selected" do conjunto de todos os parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("p").not("#selected")</code></pre>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">Removes all elements that match "div p.selected" from the total set of all paragraphs.</span>
+<h4>Exemplo: <span class="desc">Remove todos os elementos que combinam com "div p.selected" a partir do conjunto total de todos os parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$("p").not($("div p.selected"))</code></pre>
 </div>

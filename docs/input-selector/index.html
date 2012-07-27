@@ -3,26 +3,25 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:input Selector</h1>
+          <h1 class="jq-clearfix">Seletor :input</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Formulários</a></span>
   
 
           </div>
 
 </div>
 <div id="input1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">input</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">input</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':input')</h4>
-<p class="desc"><strong>Description: </strong>Selects all input, textarea, select and button elements.</p>
-<div class="longdesc"><p>The <code>:input</code> selector basically selects all form controls.</p></div>
-<h3>Example:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':input')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos input, textarea, select e button.</p>
+<div class="longdesc"><p>O seletor <code>:input</code> basicamente seleciona todos os controles do formulário.</p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all input elements.</span></h4>
+<h4><span class="desc">Localiza todos os elementos input.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -57,10 +56,10 @@
 
     var allInputs = $(":input");
     var formChildren = $("form &gt; *");
-    $("#messages").text("Found " + allInputs.length + " inputs and the form has " +
-                             formChildren.length + " children.");
+    $("#messages").text("Encontrou " + allInputs.length + " inputs e o formulário têm " +
+                             formChildren.length + " filhos.");
             
-    // so it won't submit
+    // evita o submit
     $("form").submit(function () { return false; }); 
 
 &lt;/script&gt;

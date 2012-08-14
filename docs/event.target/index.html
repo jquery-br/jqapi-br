@@ -14,17 +14,17 @@
 </div>
 <div id="event-target1" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">event.target</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Element">Element</a></span>
+<span class="name">event.target</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Element">Element</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong> The DOM element that initiated the event.  </p>
+<p class="desc"><strong>Description: </strong> O elemento DOM que inicializou o evento.</p>
 <ul class="signatures"><li class="signature" id="event-target"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>event.target</h4></li></ul>
-<div class="longdesc"><p>The <code>target</code> property can be the element that registered for the event or a descendant of it.  It is often useful to compare <code>event.target</code> to <code>this</code> in order to determine if the event is being handled due to event bubbling. This property is very useful in event delegation, when events bubble.</p></div>
-<h3>Examples:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>event.target</h4></li></ul>
+<div class="longdesc"><p>A propriedade <code>target</code> pode ser o elemento que registrou ele ou algum descendente dele. Muitas vezes é útil comparar <code>event.target</code> com <code>this</code> em ordem para determinar se o evento está a ser tratado devido a subida do evento. Esta propriedade é muito utilizada em casos de delegações, quanto em diversos eventos.</p></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Display the tag's name on click</span>
+<h4>Exemplo: <span class="desc">Exibir o nome da tag no click</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -53,7 +53,8 @@ span, strong, p {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Implements a simple event delegation: The click handler is added to an unordered list, and the children of its li children are hidden. Clicking one of the li children toggles (see toggle()) their children.</span>
+<h4>Exemplo: <span class="desc">
+Implementar um simples evento de delegeção: O manipulador do click é adicionado a uma lista desordenada, e o filho desta li fica escondido. Clicando em um dos elementos li, seus herdeiros alternam (leia toggle()).</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

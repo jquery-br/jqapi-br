@@ -3,36 +3,35 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:hidden Selector</h1>
+          <h1 class="jq-clearfix">Seletor :hidden</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/visibility-filter-selectors/" title="View all posts in Visibility Filter">Visibility Filter</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/visibility-filter-selectors/" title="View all posts in Visibility Filter">Filtro de visibilidade</a></span>
   
 
           </div>
 
 </div>
 <div id="hidden1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">hidden</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">hidden</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':hidden')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements that are hidden.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':hidden')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos que estão escondidos.</p>
 <div class="longdesc">
-<p>Elements can be considered hidden for several reasons:</p>
+<p>Um elemento pode ser considerado escondido por várias razões:</p>
 <ul>
-<li>They have a CSS <code>display</code> value of <code>none</code>.</li>
-<li>They are form elements with <code>type="hidden"</code>.</li>
-<li>Their width and height are explicitly set to 0.</li>
-<li>An ancestor element is hidden, so the element is not shown on the page.</li>
+<li>Eles têm a propriedade do css <code>display</code> como <code>none</code>.</li>
+<li>São elementos de formulário do com<code>type="hidden"</code>.</li>
+<li>Sua altura e largura são explicitamente setados em 0.</li>
+<li>Um elemento antecessor é oculto, de modo que o elemento nõ é mostrado na página.</li>
 </ul>
-<p>Elements with <code>visibility: hidden</code> or <code>opacity: 0</code> are considered to be visible, since they still consume space in the layout. During animations that hide an element, the element is considered to be visible until the end of the animation. During animations to show an element, the element is considered to be visible at the start of the animation.</p>
-<p>How <code>:hidden</code> is determined was changed in jQuery 1.3.2. An element is assumed to be hidden if it or any of its parents consumes no space in the document. CSS visibility isn't taken into account (therefore <code>$(elem).css('visibility','hidden').is(':hidden') == false</code>). The <a href="http://docs.jquery.com/Release:jQuery_1.3.2#:visible.2F:hidden_Overhauled">release notes</a> outline the changes in more detail.</p>
+<p>Elementos com <code>visibility: hidden</code> ou <code>opacity: 0</code> são considerados visíveis, uma vez que eles continuam ocupando espaço no layout. Durante animações que esconde um elemento, o elemento é considerado visível até que a animação termine. Durante animações para mostrar um elemento, o elemento é considerado visível no início da animação.</p>
+<p>Como o <code>:hidden</code> é determinado foi mudado no jQuery 1.3.2. Um elemento que se presume ser escondido se esse ou qualquer um de seus pais não consume nenhum espaço no documento. A propriedade do CSS visibility não entra na conta (portanto <code>$(elem).css('visibility','hidden').is(':hidden') == false</code>). Para mais detalhes acesse <a href="http://docs.jquery.com/Release:jQuery_1.3.2#:visible.2F:hidden_Overhauled">notas da release</a>.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Shows all hidden divs and counts hidden inputs.</span></h4>
+<h4><span class="desc">Mostra todos as divs escondidas e conta os inputs escondidos.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -61,11 +60,11 @@
 
   &lt;/span&gt;
 &lt;script&gt;
-    // in some browsers :hidden includes head, title, script, etc... so limit to body
-    $("span:first").text("Found " + $(":hidden", document.body).length + 
-                         " hidden elements total.");
+    // em alguns navegadores :hidden incluem head, title, script, etc... então limite ao body
+    $("span:first").text("Encontrou no total " + $(":hidden", document.body).length + 
+                         " elementos escondidos.");
     $("div:hidden").show(3000);
-    $("span:last").text("Found " + $("input:hidden").length + " hidden inputs."); 
+    $("span:last").text("Encontrou " + $("input:hidden").length + " inputs escondidos."); 
 &lt;/script&gt;
 
 &lt;/body&gt;

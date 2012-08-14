@@ -2,37 +2,37 @@
 <html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
         <div class="entry-title roundTop">
-          
+
           <h1 class="jq-clearfix">deferred.pipe()</h1>
           <div class="entry-meta jq-clearfix">
                         Categories:
             <span class="category"><a href="http://api.jquery.com/category/deferred-object/" title="View all posts in Deferred Object">Deferred Object</a></span>
-  
+
 
           </div>
 
 </div>
 <div id="deferred-pipe1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">deferred.pipe( [ doneFilter ], [ failFilter ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Promise">Promise</a></span>
+<span class="name">deferred.pipe( [ doneFilter ], [ failFilter ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Promise">Promise</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong> Utility method to filter and/or chain Deferreds.  </p>
+<p class="desc"><strong>Descrição: </strong> Método utilitário para filtrar e/ou encadear objetos Deferreds.  </p>
 <ul class="signatures"><li class="signature" id="deferred-pipe-doneFilter-failFilter">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.6/">1.6</a></span>deferred.pipe( [ doneFilter ], [ failFilter ] )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.6/">1.6</a></span>deferred.pipe( [ doneFilter ], [ failFilter ] )</h4>
 <p class="arguement"><strong>doneFilter</strong>
-        An optional function that is called when the Deferred is resolved.
+        Uma função opcional que é chamada quando o objeto Deferred é resolvido.
       </p>
 <p class="arguement"><strong>failFilter</strong>
-        An optional function that is called when the Deferred is rejected.
+        Uma função opcional que é chamada quando o objeto Deferred é rejeitado.
       </p>
 </li></ul>
-<div class="longdesc"><p>The <code>deferred.pipe()</code> method returns a new promise that filters the status and values of a deferred through a function.  The <code>doneFilter</code> and <code>failFilter</code> functions filter the original deferred's resolved / rejected status and values.  These filter functions can return a new value to be passed along to the piped promise's <code>done()</code> or <code>fail()</code> callbacks, or they can return another observable object (Deferred, Promise, etc) which will pass its resolved / rejected status and values to the piped promise's callbacks. If the filter function used is <code>null</code>, or not specified, the piped promise will be resolved or rejected with the same values as the original.</p></div>
+<div class="longdesc"><p>O método <code>deferred.pipe()</code> retorna um novo objeto promise que filtra os status e valores de um objeto deferred por meio de uma função.  As funções  <code>doneFilter</code> e <code>failFilter</code> filtram os status e valores originais do objeto deferido dos objetos resolvidos / rejeitados.  Essas funções de filtro podem retornar um novo valor a ser passo por meio dos callbacks <code>done()</code> ou <code>fail()</code> ligados ao objeto promise ou eles podem retornar um outro objeto observável (Deferred, Promise, etc) que passará o seu status resolvido / rejeitado e valores para os calbacks dos objetos promise ligados. Se a função de filtro usada é <code>null</code> ou não especificada, o objeto promise ligado serv resolvido ou rejeitado com os mesmos valores que o original.</p></div>
 <h3>Examples:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Filter resolve value:</span>
+<h4>Exemplo: <span class="desc">Filtra o valor resolvido:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 var defer = $.Deferred(),
@@ -42,12 +42,12 @@ var defer = $.Deferred(),
 
 defer.resolve( 5 );
 filtered.done(function( value ) {
-  alert( "Value is ( 2*5 = ) 10: " + value );
+  alert( "O valor é ( 2*5 = ) 10: " + value );
 });
 </code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Filter reject value:</span>
+<h4>Example: <span class="desc">Filtra o valor rejeitado:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 var defer = $.Deferred(),
@@ -57,12 +57,12 @@ var defer = $.Deferred(),
 
 defer.reject( 6 );
 filtered.fail(function( value ) {
-  alert( "Value is ( 3*6 = ) 18: " + value );
+  alert( "O valor é ( 3*6 = ) 18: " + value );
 });
 </code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Chain tasks:</span>
+<h4>Exemplo: <span class="desc">Chain tasks:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 var request = $.ajax( url, { dataType: "json" } ),
@@ -71,7 +71,7 @@ var request = $.ajax( url, { dataType: "json" } ),
     });
 
 chained.done(function( data ) {
-  // data retrieved from url2 as provided by the first request
+  // a informação recebida de url2 como provida da primeira requisição
 });
 
 </code></pre>

@@ -3,26 +3,25 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:submit Selector</h1>
+          <h1 class="jq-clearfix">Seletor :submit</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Formulários</a></span>
   
 
           </div>
 
 </div>
 <div id="submit1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">submit</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">seletor <span class="name">submit</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':submit')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements of type submit.</p>
-<div class="longdesc"><p>The <code>:submit</code> selector typically applies to button or input elements. Note that some browsers treat <code>&lt;button&gt;</code> element as <code>type="default"</code> implicitly while others (such as Internet Explorer) do not.  </p></div>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':submit')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos do tipo submit.</p>
+<div class="longdesc"><p>O seletor <code>:submit</code> normalmente se aplica a botoões ou elementos do tipo input. Note que alguns navegadores tratam o elemento <code>&lt;button&gt;</code> como <code>type="default"</code> implicitamente enquanto outros (como o Internet Explorer) não.  </p></div>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all submit elements that are descendants of a td element.</span></h4>
+<h4><span class="desc">Seleciona todos os elementos submit que são descendentes de um elemento td.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -39,10 +38,10 @@
 
     &lt;tr&gt;
         &lt;th&gt;
-            Element Type
+            Tipo do elemento
         &lt;/th&gt;
         &lt;th&gt;
-            Element
+            Elemento
         &lt;/th&gt;
 
     &lt;/tr
@@ -120,12 +119,12 @@
 
     &lt;tr&gt;
         &lt;td&gt;
-            &lt;button&gt;Button&lt;/button&gt;
+            &lt;button&gt;Botão&lt;/button&gt;
         &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;
-            &lt;button type="submit"&gt;Button type="submit"&lt;/button&gt;
+            &lt;button type="submit"&gt;Botão com type="submit"&lt;/button&gt;
         &lt;/td&gt;
     &lt;/tr&gt;
 
@@ -139,12 +138,12 @@
       .css({background:"yellow", border:"3px red solid"})
     .end();
     
-    $('#result').text('jQuery matched ' + submitEl.length + ' elements.');
+    $('#result').text('o jQuery encontrou ' + submitEl.length + ' elementos.');
 
     // so it won't submit
     $("form").submit(function () { return false; });
     
-    // Extra JS to make the HTML easier to edit (None of this is relevant to the ':submit' selector
+    // Extra JS para deixar o HTML fácil de ser editado (Isso não tem nada de relevante)
     $('#exampleTable').find('td').each(function(i, el) {
         var inputEl = $(el).children(),
             inputType = inputEl.attr('type') ? ' type="' + inputEl.attr('type') + '"' : '';

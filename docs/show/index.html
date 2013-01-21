@@ -20,34 +20,34 @@
 <p class="desc"><strong>Descrição: </strong>Exibe os elementos correspondentes.</p>
 <ul class="signatures">
 <li class="signature" id="show"><h4 class="name">
-<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span>.show()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.show()</h4></li>
 <li class="signature" id="show-duration-callback">
 <h4 class="name">
-<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span>.show( duration, [ callback ] )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.show( duration, [ callback ] )</h4>
 <p class="arguement"><strong>duration</strong>Uma palavra ou número que determina por quanto tempo durará a animação.</p>
 <p class="arguement"><strong>callback</strong>Uma função para ser executada quando a animação finalizar.</p>
 </li>
 <li class="signature" id="show-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.show( [ duration ], [ easing ], [ callback ] )</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.show( [ duration ], [ easing ], [ callback ] )</h4>
 <p class="arguement"><strong>duration</strong>Uma palavra ou número que determina por quanto tempo durará a animação.</p>
 <p class="arguement"><strong>easing</strong>Uma palavra que determina qual função de suavização será usada para a transição.</p>
 <p class="arguement"><strong>callback</strong>Uma função para ser executada quando a animação finalizar.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Quando não houver parâmetros no método the <code>.show()</code>, simplesmente é mostrado o elemento na tela:
+<p>Quando não houver parâmetros no método <code>.show()</code>, simplesmente é mostrado o elemento na tela:
 </p>
 <pre>$('.target').show();
 </pre>
-<p>O elemento correspondente será revelado imediatamento, sem animação alguma. Isto é This is basicamente equivalente a chamar <code>.css('display', 'block')</code>, com a exceção que a propriedade <code>display</code> é restaurada para o que era inicialmente. Se um elemento tem a propriedade <code>display</code> com valor <code>inline</code>, então esconde e mostra o elemento, mais uma vez com o valor <code>inline</code>.</p>
+<p>O elemento correspondente será revelado imediatamento, sem animação alguma. Isto é basicamente equivalente a chamar <code>.css('display', 'block')</code>, com a exceção que a propriedade <code>display</code> é restaurada para o que era inicialmente. Se um elemento tem a propriedade <code>display</code> com valor <code>inline</code>, então esconde e mostra o elemento, mais uma vez com o valor <code>inline</code>.</p>
 <p><strong>Observação: </strong> Se estiver usando !important no seu CSS, como por exemplo:
 <code>display: none !important</code>,
 É necessário sobrescrever o CSS  usando <code>.css('display', 'block !important')</code>, se quizer que o método <code>.show()</code> funcione corretamente.</p>
-<p>Quando a duration está explicita, o método <code>.show()</code> se torna uma animação. O método <code>.show()</code> anima a largura(width), altura(height), e opacidade(opacity) do elemento correspondente simultaneamente.</p>
-<p>Durations são explicitas em milisegundos; Valores maiores indicam animações mais demoradas, não mais rápidas. As palavras <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar a duração de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
-<p>A partir do jQuery 1.4.3, uma palavra opcional nomeia uma função de easing(suavização) que pode ser usada. Funções easing especifica a velocidade que a animação transcorrerá nos disferentes pontos da animação. Há apenas implementações padrões na biblioteca jQuery, uma chamada <code>swing</code>, e outra que progride em um ritmo constante, chamada <code>linear</code>. Mais funções de easing estão disponíveis com o uso de plug-ins, o mais conhecido é <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>Se fornecido, o callback é disparado uma vez que a animação tenha finalizado. Isto pode ser útil para amarrar animações diferentes juntas em sequência. O callback não envia qualquer argumento, mas <code>this</code> é definido apenas para elementos DOM serem animados. Se vários elementos são animados, é importante observar que o callback é executado para cada elemento correspondente, não apenas para a animação como um todo.</p>
+<p>Quando a <code>duration</code>(duração) está explicita, o método <code>.show()</code> se torna uma animação. O método <code>.show()</code> anima a largura(width), altura(height), e opacidade(opacity) do elemento correspondente simultaneamente.</p>
+<p>A duração é explicita em milisegundos; Valores maiores indicam animações mais demoradas, não mais rápidas. As palavras <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar a duração de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
+<p>A partir do jQuery 1.4.3, uma palavra opcional nomeia uma função de easing(suavização) que pode ser usada. Funções easing especificam a velocidade que a animação transcorrerá nos disferentes pontos da animação. Há apenas implementações padrões na biblioteca jQuery, uma chamada <code>swing</code>, e outra que progride em um ritmo constante, chamada <code>linear</code>. Mais funções de <code>easing</code> estão disponíveis com o uso de plug-ins, o mais conhecido é <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>Se fornecido, o <code>callback</code> é disparado uma vez que a animação tenha finalizado. Isto pode ser útil para amarrar animações diferentes juntas em sequência. O callback não envia qualquer argumento, mas <code>this</code> é definido apenas para elementos DOM serem animados. Se vários elementos são animados, é importante observar que o callback é executado para cada elemento correspondente, não apenas para a animação como um todo.</p>
 <p>Podemos animar qualquer elemento, como uma simples imagem:</p>
 <pre>&lt;div id="clickme"&gt;
   Click here
@@ -63,7 +63,7 @@ $('#clickme').click(function() {
   <img src="/images/0042_06_01.png" alt=""><img src="/images/0042_06_02.png" alt=""><img src="/images/0042_06_03.png" alt=""><img src="/images/0042_06_04.png" alt=""></p>
 </div>
 <h3 id="notes-0">Observação adicional:</h3>
-<div class="longdesc"><ul><li>Todos efeitos jQuery, incluindo <code>.show()</code>, podem ser desligados globalmente pela configuração  <code>jQuery.fx.off = true</code>, que efetivamente define a duration para 0. Para mais informações, consulte <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<div class="longdesc"><ul><li>Todos efeitos jQuery, incluindo <code>.show()</code>, podem ser desligados globalmente pela configuração  <code>jQuery.fx.off = true</code>, que efetivamente define a <code>duration</code> para 0. Para mais informações, consulte <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
 <h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">

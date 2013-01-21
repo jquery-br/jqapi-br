@@ -3,25 +3,24 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:image Selector</h1>
+          <h1 class="jq-clearfix">Seletor :image</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Formulários</a></span>
   
 
           </div>
 
 </div>
 <div id="image1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">image</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">image</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':image')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements of type image.</p>
-<h3>Example:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':image')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos do tipo image.</p>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all image inputs.</span></h4>
+<h4><span class="desc">Localiza todos os inputs do tipo image.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -32,7 +31,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;form&gt;
-    &lt;input type="button" value="Input Button"/&gt;
+    &lt;input type="button" value="Botão"/&gt;
     &lt;input type="checkbox" /&gt;
 
     &lt;input type="file" /&gt;
@@ -48,15 +47,15 @@
     &lt;select&gt;&lt;option&gt;Option&lt;option/&gt;&lt;/select&gt;
 
     &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;button&gt;Button&lt;/button&gt;
+    &lt;button&gt;Botão&lt;/button&gt;
   &lt;/form&gt;
   &lt;div&gt;
   &lt;/div&gt;
 &lt;script&gt;
     var input = $("input:image").css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
+    $("div").text("Para esse tipo o jQuery encontrou " + input.length + ".")
             .css("color", "red");
-    $("form").submit(function () { return false; }); // so it won't submit
+    $("form").submit(function () { return false; }); // evita o submit
 
 &lt;/script&gt;
 

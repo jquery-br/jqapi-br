@@ -3,10 +3,10 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:radio Selector</h1>
+          <h1 class="jq-clearfix">:radio Seletor</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="Veja todos os posts em Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="Veja todos os posts em Form">Form</a></span>
   
 
           </div>
@@ -14,18 +14,18 @@
 </div>
 <div id="radio1" class="entry selector">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">radio</span>  selector</h2>
+seletor <span class="name">radio</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':radio')</h4>
-<p class="desc"><strong>Description: </strong>Selects all  elements of type radio.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':radio')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos do tipo radio.</p>
 <div class="longdesc">
-<p><code>$(':radio')</code> is equivalent to <code>$('[type=radio]')</code>. As with other pseudo-class selectors (those that begin with a ":") it is recommended to precede it with a tag name or some other selector; otherwise, the universal selector ("*") is implied. In other words, the bare <code>$(':radio')</code> is equivalent to <code>$('*:radio')</code>, so <code>$('input:radio')</code> should be used instead. </p>
-<p>To select a set of associated radio buttons, you might use: <code>$('input[name=gender]:radio')</code></p>
+<p><code>$(':radio')</code> é o equivalente a <code>$('[type=radio]')</code>. Como com outros seletores de pseudo-classes (aqueles que comçam por um ":") é recomendado precedê-lo com uma tag ou algum outro seletor; senão, o seletor universal ("*") é implicado. Em outras palavras, o mero <code>$(':radio')</code> é equivalente a <code>$('*:radio')</code>, então <code>$('input:radio')</code> deveria ser usado ao invés disso.</p>
+<p>Para seleciona uma série de radios associados, você deveria usar: <code>$('input[name=gender]:radio')</code></p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all radio inputs.</span></h4>
+<h4><span class="desc">Encontra todos os input radio.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -61,9 +61,9 @@
 &lt;script&gt;
 
     var input = $("form input:radio").wrap('&lt;span&gt;&lt;/span&gt;').parent().css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
+    $("div").text("Para este tipo jQuery encontrou " + input.length + ".")
             .css("color", "red");
-    $("form").submit(function () { return false; }); // so it won't submit
+    $("form").submit(function () { return false; }); // então ele não vai enviar
 
 &lt;/script&gt;
 

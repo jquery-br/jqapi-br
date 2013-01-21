@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.end()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/traversing/" title="View all posts in Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/miscellaneous-traversal/" title="View all posts in Miscellaneous Traversing">Miscellaneous Traversing</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/traversing/" title="Ver todos os posts em Traversing">Traversing</a> &gt; <a href="http://api.jquery.com/category/traversing/miscellaneous-traversal/" title="Ver todos os posts em Miscellaneous Traversing">Miscellaneous Traversing</a></span>
   
 
           </div>
@@ -14,47 +14,47 @@
 </div>
 <div id="end1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.end()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.end()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.</p>
+<p class="desc"><strong>Descrição: </strong>Termine a operação de filtragem mais recente na cadeia atual e retorne o conjunto dos elementos correspondentes ao seu estado anterior.</p>
 <ul class="signatures"><li class="signature" id="end"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.end()</h4></li></ul>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.0/">1.0</a></span>.end()</h4></li></ul>
 <div class="longdesc">
-<p>Most of jQuery's <a href="http://api.jquery.com/category/traversing">DOM traversal</a> methods operate on a jQuery object instance and produce a new one, matching a different set of DOM elements. When this happens, it is as if the new set of elements is pushed onto a stack that is maintained inside the object. Each successive filtering method pushes a new element set onto the stack. If we need an older element set, we can use <code>end()</code> to pop the sets back off of the stack.</p>
-<p>Suppose we have a couple short lists on a page:</p>
+<p>A maioria dos métodos jQuery <a href="http://api.jquery.com/category/traversing">DOM traversal</a> operam em uma instância de objeto jQuery e produzem um novo objeto, combinando uma série diferente de elementos DOM. Quando isso acontece, é como se o novo conjunto de elementos fosse empurrado para uma pilha que é mantida no interior do objeto. Cada método de filtragem sucessivo empurra um novo conjunto de elementos na pilha. Se precisarmos de um conjunto de elementos mais velho, nós podemos usar <code>end()</code> para exibir o conjunto de volta na pilha.</p>
+<p>Suponhamos que temos um par de pequenas listas em uma página:</p>
 <pre>
-&lt;ul class="first"&gt;
+&lt;ul class="primeiro"&gt;
    &lt;li class="foo"&gt;list item 1&lt;/li&gt;
    &lt;li&gt;list item 2&lt;/li&gt;
    &lt;li class="bar"&gt;list item 3&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul class="second"&gt;
+&lt;ul class="segundo"&gt;
    &lt;li class="foo"&gt;list item 1&lt;/li&gt;
    &lt;li&gt;list item 2&lt;/li&gt;
    &lt;li class="bar"&gt;list item 3&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>The <code>end()</code> method is useful primarily when exploiting jQuery's chaining properties. When not using chaining, we can usually just call up a previous object by variable name, so we don't need to manipulate the stack. With <code>end()</code>, though, we can string all the method calls together:</p>
+<p>O método <code>end()</code> é útil principalmente quando exploramos as propriedades de encadeamento do jQuery. Quando não usamos encadeamento, nós podemos simplesmente chamar o objeto anterior através do nome da variável, então não precisamos manipular a pilha. Com <code>end()</code>, entretanto, podemos enfileirar todas as chamadas de métodos juntas:</p>
 <pre>
-$('ul.first').find('.foo').css('background-color', 'red')
+$('ul.primeiro').find('.foo').css('background-color', 'red')
   <code>.end()</code>.find('.bar').css('background-color', 'green');
 </pre>
-<p>This chain searches for items with the class <code>foo</code> within the first list only and turns their backgrounds red. Then <code>end()</code> returns the object to its state before the call to <code>find()</code>, so the second <code>find()</code> looks for '.bar' inside <code>&lt;ul class="first"&gt;</code>, not just inside that list's <code>&lt;li class="foo"&gt;</code>, and turns the matching elements' backgrounds green. The net result is that items 1 and 3 of the first list have a colored background, and none of the items from the second list do.</p>
-<p>A long jQuery chain can be visualized as a structured code block, with filtering methods providing the openings of nested blocks and <code>end()</code> methods closing them:</p>
+<p>Esse encadeamento procura por items com a classe <code>foo</code> somente dentro da primeira lista e define seu plano de fundo com a cor vermelha. Então <code>end()</code> retorna o objeto ao seu estado anterior à chamada do <code>find()</code>, então o segundo <code>find()</code> procura por '.bar' dentro de <code>&lt;ul class="primeiro"&gt;</code>, definitivamente não dentro daquela lista <code>&lt;li class="foo"&gt;</code>, e transforma o plano de fundo dos elementos selecionados em verde. O resultado final é que os itens 1 e 3 da primeira lista tem um fundo colorido, e nenhum dos itens da segunda lista tem.</p>
+<p>Uma longa cadeia jQuery pode ser visualizada como um bloco de código estruturado, com os métodos de filtragem proporcionando as aberturas dos blocos aninhados e métodos <code>end()</code> os fechando:</p>
 <pre>
-$('ul.first').find('.foo')
+$('ul.primeiro').find('.foo')
   .css('background-color', 'red')
 .end().find('.bar')
   .css('background-color', 'green')
 .end();
 </pre>
-<p>The last <code>end()</code> is unnecessary, as we are discarding the jQuery object immediately thereafter. However, when the code is written in this form, the <code>end()</code> provides visual symmetry and a sense of completion —making the program, at least to the eyes of some developers, more readable, at the cost of a slight hit to performance as it is an additional function call.</p>
+<p>O último <code>end()</code> é desnecessário, já que estamos descartando o objeto jQuery imediamtamente depois disso. De qualquer maneira, quando o código é escrito desta forma, o <code>end()</code> fornece simetria visual e uma sensação de conclusão — tornando o programa, pelo menos aos olhos de alguns desenvolvedores, mais legível, às custas de um pequeno dano ao desempenho, já que se trata de uma chamada de método adicional.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Selects all paragraphs, finds span elements inside these, and reverts the selection back to the paragraphs.</span>
+<h4>Exemplo: <span class="desc">Selecione todos os parágrafos, encontre elementos span dentro deles, e reverta a seleção de volta aos parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -69,24 +69,24 @@ $('ul.first').find('.foo')
 &lt;/head&gt;
 &lt;body&gt;
   &lt;p&gt;
-    Hi there &lt;span&gt;how&lt;/span&gt; are you &lt;span&gt;doing&lt;/span&gt;?
+    E aí &lt;span&gt;como&lt;/span&gt; você está &lt;span&gt;indo&lt;/span&gt;?
   &lt;/p&gt;
 
   &lt;p&gt;
-    This &lt;span&gt;span&lt;/span&gt; is one of 
-    several &lt;span&gt;spans&lt;/span&gt; in this
-    &lt;span&gt;sentence&lt;/span&gt;.
+    Esse &lt;span&gt;span&lt;/span&gt; é um dos 
+    vários &lt;span&gt;spans&lt;/span&gt; nesta
+    &lt;span&gt;frase&lt;/span&gt;.
   &lt;/p&gt;
 
   &lt;div&gt;
-    Tags in jQuery object initially: &lt;b&gt;&lt;/b&gt;
+    Tags no objeto jQuery inicialmente: &lt;b&gt;&lt;/b&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    Tags in jQuery object after find: &lt;b&gt;&lt;/b&gt;
+    Tags no objeto jQuery depois do find: &lt;b&gt;&lt;/b&gt;
 
   &lt;/div&gt;
   &lt;div&gt;
-    Tags in jQuery object after end: &lt;b&gt;&lt;/b&gt;
+    Tags no objeto jQuery depois do end: &lt;b&gt;&lt;/b&gt;
   &lt;/div&gt;
 &lt;script&gt;
 
@@ -115,7 +115,7 @@ $('ul.first').find('.foo')
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Selects all paragraphs, finds span elements inside these, and reverts the selection back to the paragraphs.</span>
+<h4>Exemplo: <span class="desc">Selecione todos os parágrafos, encontre elementos span dentro deles, e reverta a seleção de volta aos parágrafos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -124,7 +124,7 @@ $('ul.first').find('.foo')
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;, how are you?&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Olá&lt;/span&gt;, como você está?&lt;/p&gt;
 &lt;script&gt;$("p").find("span").end().css("border", "2px red solid");&lt;/script&gt;
 
 &lt;/body&gt;

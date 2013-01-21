@@ -3,36 +3,35 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">ID Selector (“#id”)</h1>
+          <h1 class="jq-clearfix">Seletor ID (“#id”)</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/basic-css-selectors/" title="View all posts in Basic">Basic</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/basic-css-selectors/" title="View all posts in Basic">Básico</a></span>
   
 
           </div>
 
 </div>
 <div id="id1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">id</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">id</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery('#id')</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery('#id')</h4>
 <ul class="signatures"><li><dl class="arguments">
 <dt>id</dt>
-<dd>An ID to search for, specified via the id attribute of an element.</dd>
+<dd>Um ID a ser buscado, especificado através do atributo ID de um elemento.</dd>
 </dl></li></ul>
-<p class="desc"><strong>Description: </strong>Selects a single element with the given id attribute. </p>
+<p class="desc"><strong>Descrição: </strong>Seleciona apenas um elemento com o atributo ID dado. </p>
 <div class="longdesc">
-<p>For id selectors, jQuery uses the JavaScript function <code>document.getElementById()</code>, which is extremely efficient. When another selector is attached to the id selector, such as <code>h2#pageTitle</code>, jQuery performs an additional check before identifying the element as a match.</p>
-<blockquote><p>As always, remember that as a developer, your time is typically the most valuable resource. Do not focus on optimization of selector speed unless it is clear that performance needs to be improved.</p></blockquote>
-<p>Each <code>id</code> value must be used only once within a document. If more than one element has been assigned the same ID, queries that use that ID will only select the first matched element in the DOM. This behavior should not be relied on, however; a document with more than one element using the same ID is invalid.</p>
-<p>If the id contains characters like periods or colons you have to <a href="http://docs.jquery.com/Frequently_Asked_Questions#How_do_I_select_an_element_by_an_ID_that_has_characters_used_in_CSS_notation.3F">escape those characters with backslashes</a>.</p>
+<p>Para o seletor id, o jQuery usa a função do JavaScript <code>document.getElementById()</code>, o que é extremamente eficiente. Quando um outro seletor é adicionado junto ao seletor id, como <code>h2#pageTitle</code>, o jQuery executa uma verificação adicional antes de identificar o element como resultado.</p>
+<blockquote><p>Como sempre, relembre que como desenvolvedor, seu tempo é normalmente o recurso mais valioso. Não se foque na otimização da velocidade dos seletores a não ser que esteja claro que a performance precisa ser melhorada.</p></blockquote>
+<p>CADA <code>ID</code> DEVE SER USADO APENAS UMA VEZ DENTRO DO DOCUMENTO. Caso exista mais de um elemento com o mesmo id, pesquisas que use esse ID irão retornar apenas o primeiro elemento no DOM. Esse comportamento não pode ser confiável, entretanto; um documento com mais de um elemento com o mesmo ID é inválido.</p>
+<p>Se o id contem caracteres como If the id contains characters como dois pontos você deve  <a href="http://docs.jquery.com/Frequently_Asked_Questions#How_do_I_select_an_element_by_an_ID_that_has_characters_used_in_CSS_notation.3F">escapar esses caracteres com barra invertida</a>.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Finds the element with the id "myDiv".</span>
+<h4>Exemplo: <span class="desc">Localiza o elemento com o id "myDiv".</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -61,7 +60,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Finds the element with the id "myID.entry[1]".  See how certain characters must be escaped with backslashes.</span>
+<h4>Exemplo: <span class="desc">Localiza o elemento com o id "myID.entry[1]".  Veja como certos caracteres deve ser escapados com barra invertida.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

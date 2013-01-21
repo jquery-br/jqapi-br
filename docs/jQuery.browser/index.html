@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">jQuery.browser</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/properties/" title="View all posts in Properties">Properties</a> &gt; <a href="http://api.jquery.com/category/properties/global-jquery-object-properties/" title="View all posts in Properties of the Global jQuery Object">Properties of the Global jQuery Object</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/properties/" title="Ver todos os posts em Propriedades">Propriedades</a> &gt; <a href="http://api.jquery.com/category/properties/global-jquery-object-properties/" title="Ver todos os posts em Propriedades Globais do Objeto jQuery">Propriedades Globais do Objeto jQuery</a></span> | <span class="category"><a href="http://api.jquery.com/category/utilities/" title="Ver todos os posts em Utilitários">Utilitários</a></span>
   
 
           </div>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Conteúdo:</span></h4>
 <ul class="toc-list">
 <li><a href="#jQuery-browser1">jQuery.browser </a></li>
 <li><a href="#jQuery-browser-version2">jQuery.browser.version </a></li>
@@ -22,30 +22,30 @@
 </div>
 <div id="jQuery-browser1" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.browser</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Map">Map</a></span>
+<span class="name">jQuery.browser</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Map">Map</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery. </p>
+<p class="desc"><strong>Descrição: </strong>Contém opções para o agente de usuário (UserAgent), lidas do navigator.userAgent. Nós desaconselhamos o uso dessa propriedade; por favor, tente usar a detecção de recurso ao invés (veja jQuery.support). O jQuery.browser talvez seja transferido para um plugin em uma futura versão do jQuery. </p>
 <ul class="signatures"><li class="signature" id="jQuery-browser"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.browser</h4></li></ul>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.0/">1.0</a></span> jQuery.browser</h4></li></ul>
 <div class="longdesc">
-<p>The <code>$.browser</code> property provides information about the web browser that is accessing the page, as reported by the browser itself. It contains flags for each of the four most prevalent browser classes (Internet Explorer, Mozilla, Webkit, and Opera) as well as version information.</p>
-<p>Available flags are:</p>
+<p>A propriedade <code>$.browser</code> fornece informação sobre o navegador que está acessando a página, conforme relatado pelo próprio navegador. Ele contém sinalizadores de cada uma das quatro categorias de navegador mais prevalentes (Internet Explorer, Mozilla, Webkit, e Opera), bem como informações sobre a versão.</p>
+<p>Os sinalizadores disponíveis são:</p>
 <ul>
-<li>webkit (as of jQuery 1.4)</li>
-  <li>safari (deprecated)</li>
+<li>webkit (a partir do jQuery 1.4)</li>
+  <li>safari (obsoleto)</li>
   <li>opera</li>
   <li>msie</li>
   <li>mozilla</li>
 </ul>
-<p>This property is available immediately. It is therefore safe to use it to determine whether or not to call <code>$(document).ready()</code>.
-The <code>$.browser</code> property is deprecated in jQuery 1.3, and its functionality may be moved to a team-supported plugin in a future release of jQuery.</p>
-<p>Because <code>$.browser</code> uses <code>navigator.userAgent</code> to determine the platform, it is vulnerable to spoofing by the user or misrepresentation by the browser itself. It is always best to avoid browser-specific code entirely where possible. The <code><a href="http://api.jquery.com/jQuery.support/">$.support</a></code> property is available for detection of support for particular features rather than relying on <code>$.browser</code>. </p>
+<p>Esta propriedade está disponível imediatamente. É, portanto, seguro usá-la para determinar se deseja ou não chamar <code>$(document).ready()</code>.
+A propriedade <code>$.browser</code> é obsoleta no jQuery 1.3, e suas funcionalidades podem ser transferidas para um plugin de uma equipe de apoio em uma futura versão do jQuery.</p>
+<p>Porque o <code>$.browser</code> utiliza o <code>navigator.userAgent</code> para determinar a plataforma, é vulnerável a spoofing pelo usuário ou deturpação do próprio navegador. É sempre melhor evitar código inteiramente específico de navegador sempre que possível. A propriedade <code><a href="http://api.jquery.com/jQuery.support/">$.support</a></code> está disponível para detecção de suporte para características particulares ao invés de confiar em <code>$.browser</code>. </p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Show the browser info.</span>
+<h4>Exemplo: <span class="desc">Exibir informações do navegador.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -59,7 +59,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, and its functio
 &lt;/head&gt;
 &lt;body&gt;
   
-&lt;p&gt;Browser info:&lt;/p&gt;
+&lt;p&gt;Informações de navegador:&lt;/p&gt;
 
 &lt;script&gt;
     jQuery.each(jQuery.browser, function(i, val) {
@@ -73,33 +73,33 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, and its functio
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Returns true if the current useragent is some version of Microsoft's Internet Explorer.</span>
+<h4>Exemplo: <span class="desc">Retorna true se o useragent é alguma versão do Microsoft Internet Explorer.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
   $.browser.msie;
 </code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Alerts "this is WebKit!" only for WebKit browsers</span>
+<h4>Exemplo: <span class="desc">Alerta "isso é WebKit!" somente para navegadores WebKit</span>
 </h4>
 <pre class="prettyprint"><code class="example">
   if ($.browser.webkit) {
-    alert( "this is webkit!" );
+    alert( "isso é webkit!" );
   }
 </code></pre>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">Alerts "Do stuff for Firefox 3" only for Firefox 3 browsers.</span>
+<h4>Exemplo: <span class="desc">Alerta "Faça algo para o Firefox 3" apenas para navegadores Firefox 3.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
   var ua = $.browser;
   if ( ua.mozilla &amp;&amp; ua.version.slice(0,3) == "1.9" ) {
-    alert( "Do stuff for firefox 3" );
+    alert( "Faça algo para o firefox 3" );
   }
 </code></pre>
 </div>
 <div id="example-4">
-<h4>Example: <span class="desc">Set a CSS property that's specific to a particular browser.</span>
+<h4>Exemplo: <span class="desc">Defina uma propriedade CSS para um navegador específico.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
  if ( $.browser.msie ) {
@@ -114,26 +114,26 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, and its functio
 </div>
 <div id="jQuery-browser-version2" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.browser.version</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#String">String</a></span>
+<span class="name">jQuery.browser.version</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#String">String</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>The version number of the rendering engine for the user's browser.</p>
+<p class="desc"><strong>Descrição: </strong>O número da versão do motor de renderização do navegador do usuário.</p>
 <ul class="signatures"><li class="signature" id="jQuery-browser-version"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.1.3/">1.1.3</a></span>jQuery.browser.version</h4></li></ul>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.1.3/">1.1.3</a></span> jQuery.browser.version</h4></li></ul>
 <div class="longdesc">
-<p>Here are some typical results:</p>
+<p>Aqui estão alguns resultados típicos:</p>
 <ul>
 <li>Internet Explorer: 6.0, 7.0, 8.0</li>
       <li>Mozilla/Firefox/Flock/Camino: 1.7.12, 1.8.1.3, 1.9</li>
       <li>Opera: 10.06, 11.01</li>
       <li>Safari/Webkit: 312.8, 418.9</li>
     </ul>
-<p>Note that IE8 claims to be 7 in Compatibility View.</p>
+<p>Note que o IE8 afirma ser o 7 em modo de compatibilidade.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples-1">
 <div id="example-1-0">
-<h4>Example: <span class="desc">Returns the version number of the rendering engine used by the user's current browser. For example, FireFox 4 returns 2.0 (the version of the Gecko rendering engine it utilizes).</span>
+<h4>Exemplo: <span class="desc">Retora o número da versão do motor de renderização utilizado pelo navegador atual do usuário. Por exemplo, FireFox 4 retorna 2.0 (a versão do motor de renderização Gecko que é utilizada).</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -149,7 +149,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, and its functio
 &lt;p&gt;&lt;/p&gt;
 
 &lt;script&gt;
-$("p").html( "The version number of the rendering engine your browser uses is: &lt;span&gt;" +
+$("p").html( "O número da versão do motor de renderização utilizado pelo seu navegador é: &lt;span&gt;" +
                 $.browser.version + "&lt;/span&gt;" );
 &lt;/script&gt;
 
@@ -159,7 +159,7 @@ $("p").html( "The version number of the rendering engine your browser uses is: &
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1-1">
-<h4>Example: <span class="desc">Alerts the version of IE's rendering engine that is being used:</span>
+<h4>Exemplo: <span class="desc">Alerta a versão do motor de renderização do IE que está sendo utilizado:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 if ( $.browser.msie ) {
@@ -168,7 +168,7 @@ if ( $.browser.msie ) {
 </code></pre>
 </div>
 <div id="example-1-2">
-<h4>Example: <span class="desc">Often you only care about the "major number," the whole number, which you can get by using JavaScript's built-in parseInt() function:</span>
+<h4>Exemplo: <span class="desc">Geralmente você só se preocupa com o "número principal", o número inteiro, que você pode recuperar usando a função nativa do JavaScript parseInt():</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 if ( $.browser.msie ) {

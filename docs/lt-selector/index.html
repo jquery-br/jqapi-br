@@ -3,34 +3,33 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:lt() Selector</h1>
+          <h1 class="jq-clearfix">Seletor :lt()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/basic-filter-selectors/" title="View all posts in Basic Filter">Basic Filter</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Seletores</a> &gt; <a href="http://api.jquery.com/category/selectors/basic-filter-selectors/" title="View all posts in Basic Filter">Filtros básicos</a></span>
   
 
           </div>
 
 </div>
 <div id="lt1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">lt</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor <span class="name">lt</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':lt(index)')</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':lt(index)')</h4>
 <ul class="signatures"><li><dl class="arguments">
 <dt>index</dt>
-<dd>Zero-based index.</dd>
+<dd>Index baseado no zero.</dd>
 </dl></li></ul>
-<p class="desc"><strong>Description: </strong>Select all elements at an index less than index within the matched set.</p>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos com o index menor que o passado na função.</p>
 <div class="longdesc">
-<p><strong>index-related selectors</strong></p>
-<p>The index-related selectors (including this "less than" selector) filter the set of elements that have matched the expressions that precede them. They narrow the set down based on the order of the elements within this matched set. For example, if elements are first selected with a class selector (<code>.myclass</code>) and four elements are returned, these elements are given indices 0 through 3 for the purposes of these selectors.</p>
-<p>Note that since JavaScript arrays use <em>0-based indexing</em>, these selectors reflect that fact. This is why <code>$('.myclass:lt(1)')</code> selects the first element in the document with the class <code>myclass</code>, rather than selecting no elements. In contrast, <code>:nth-child(n)</code> uses <em>1-based indexing</em> to conform to the CSS specification.</p>
+<p><strong>Seletores relacionados com o index</strong></p>
+<p>Os seletores relacionados com o index (incluindo esse seletor "menor que") filtra os elementos baseado no seletor anterior. Eles limitam o conjunto com base na ordem dos elementos dentro do conjunto. Por exemplo, se elementos são primeiramente selecionados com o seletor de class (<code>.myclass</code>) e quatro elementos são retornados, esses elementos são dados do indice 0 até o 3.</p>
+<p>Note que os arrays no JavaScript usam o <em>index baseado no 0</em>, esses seletores refletem esse efeito. É por isso que <code>$('.myclass:lt(1)')</code> seleciona o primeiro elemento no documento com a classe <code>myclass</code> ao invés de não selecionar nenhum. Em contraste <code>:nth-child(n)</code> usa <em> index baseado em 1</em> em conformidade com as especificações do CSS</p>
 </div>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds TDs less than the one with the 4th index (TD#4).</span></h4>
+<h4><span class="desc">Encontra TDs com index menor que 4 (TD#4).</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

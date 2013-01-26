@@ -14,28 +14,28 @@
 </div>
 <div id="fadeToggle1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.fadeToggle( [ duration ], [ easing ], [ callback ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.fadeToggle( [ duration ], [ easing ], [ callback ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Display or hide the matched elements by animating their opacity.</p>
+<p class="desc"><strong>Descrição: </strong>Mostra ou esconde os elementos encontrados animando sua opacidade.</p>
 <ul class="signatures"><li class="signature" id="fadeToggle-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.4/">1.4.4</a></span>.fadeToggle( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>easing</strong>A string indicating which easing function to use for the transition.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">Adicionado na versão: <a href="/category/version/1.4.4/">1.4.4</a></span>.fadeToggle( [ duration ], [ easing ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma palavra ou número que determina por quanto tempo durará a animação.</p>
+<p class="arguement"><strong>easing</strong>Uma palavra que determina qual função de suavização será usada para a transição.</p>
+<p class="arguement"><strong>callback</strong>Uma função para ser executada quando a animação finalizar.</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>.fadeToggle()</code> method animates the opacity of the matched elements. When called on a visible element, the element's <code>display</code> style property is set to <code>none</code> once the opacity reaches 0, so the element no longer affects the layout of the page.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively.</p>
-<p>The string representing an easing function specifies the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
+<p>O método <code>.fadeToggle()</code> anima a opacidade dos elementos encontrados. Quando um elemento visível é chamado, a propriedade de estilo <code>display</code> é definida como <code>none</code> quando a opacidade chegar a 0, então o elemento não aparecerá no layout da página.</p>
+<p>A duração é explicita em milisegundos; Valores maiores indicam animações mais demoradas, não mais rápidas. As palavras <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar a duração de <code>200</code> e <code>600</code> milisegundos, respectivamente.</p>
+<p>Funções easing(suavização) especificam a velocidade que a animação transcorrerá nos disferentes pontos da animação. Há apenas implementações padrões na biblioteca jQuery, uma chamada <code>swing</code>, e outra que progride em um ritmo constante, chamada <code>linear</code>. Mais funções de <code>easing</code> estão disponíveis com o uso de plug-ins, o mais conhecido é <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>Se fornecido, o <code>callback</code> é disparado uma vez que a animação tenha finalizado. Isto pode ser útil para amarrar animações diferentes juntas em sequência. O callback não envia qualquer argumento, mas <code>this</code> é definido apenas para elementos DOM serem animados. Se vários elementos são animados, é importante observar que o callback é executado para cada elemento correspondente, não apenas para a animação como um todo.</p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.fadeToggle()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Example:</h3>
+<h3 id="notes-0">Observação adicional:</h3>
+<div class="longdesc"><ul><li>Todos efeitos jQuery, incluindo <code>.fadeToggle()</code>, podem ser desligados globalmente pela configuração  <code>jQuery.fx.off = true</code>, que efetivamente define a <code>duration</code> para 0. Para mais informações, consulte <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Fades first paragraph in or out, completing the animation within 600 milliseconds and using a linear easing. Fades last paragraph in or out for 200 milliseconds, inserting a "finished" message upon completion. </span></h4>
+<h4><span class="desc">Esconde ou mostra o primeiro parágrafo gradualmente, completando a animação dentro de 600 milisegundos e usando uma suavização linear. Esconde ou mostra o último parágrafo gradualmente dentro de 200 milisegundos, adicionando a mensagem "finished" quando estiver finalizado. </span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

@@ -3,9 +3,9 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:text Selector</h1>
+          <h1 class="jq-clearfix">Seletor :text</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/form-selectors/" title="View all posts in Form">Form</a></span>
   
 
@@ -13,19 +13,18 @@
 
 </div>
 <div id="text1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">text</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor
+<span class="name">text</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery(':text')</h4>
-<p class="desc"><strong>Description: </strong>Selects all elements of type text.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery(':text')</h4>
+<p class="desc"><strong>Descrição: </strong>Seleciona todos os elementos do tipo text.</p>
 <div class="longdesc">
-<p><code>$(':text')</code> is equivalent to <code>$('[type=text]')</code> and thus selects all <code>&lt;input type="text"&gt;</code> elements. As with other pseudo-class selectors (those that begin with a ":") it is recommended to precede it with a tag name or some other selector; otherwise, the universal selector ("*") is implied. In other words, the bare <code>$(':text')</code> is equivalent to <code>$('*:text')</code>, so <code>$('input:text')</code> should be used instead. </p>
-<p><strong>Note:</strong> As of jQuery 1.5.2, <code>:text</code> selects <code>input</code> elements that have no specified <code>type</code> attribute (in which case <code>type="text"</code> is implied).  </p>
+<p><code>$(':text')</code> é equivalente ao <code>$('[type=text]')</code> e portanto seleciona todos os elementos <code>&lt;input type="text"&gt;</code>. Assim como outros pseudo seletores (aqueles que começam com ":") é recomendado utilizar em conjunto com outro seletor. Caso contrário o seletor universal ("*") será usado implicitamente. Em outras palavras, o <code>$(':text')</code> por si só é equivalente ao <code>$('*:text')</code>, então é recomendado usar o <code>$('input:text')</code>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Finds all text inputs.</span></h4>
+<h4><span class="desc">Encontra todos os elementos do tipo text.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -59,7 +58,7 @@
 &lt;script&gt;
 
     var input = $("form input:text").css({background:"yellow", border:"3px red solid"});
-    $("div").text("For this type jQuery found " + input.length + ".")
+    $("div").text("Para esse tipo o jQuery encontrou " + input.length + ".")
             .css("color", "red");
     $("form").submit(function () { return false; }); // so it won't submit
 

@@ -28,6 +28,6 @@ Basta enviar um e-mail para jquerybrasil@gmail.com com o seu nome, o que você i
 
 ## Alteração
 
-O owner (dono) do repositório mudou. Antes era do luiztiago agora está no jquery-br. Caso você já tinha um clone do projeto, por favor, atualizem o seu upstream para a nova url:
+O owner (dono) do repositório mudou. Antes era do luiztiago agora está no jquery-br. Caso você já tinha um clone do projeto. Favor atualizem o seu upstream para a nova url:
 
     git remote set-url upstream https://github.com/jquery-br/jqapi-br.git

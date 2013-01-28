@@ -22,6 +22,12 @@ Basta enviar um e-mail para jquerybrasil@gmail.com com o seu nome, o que você i
 
 ## Como atualizar meu fork com as novas atualizações deste repositório?
 
-    git remote add upstream https://github.com/luiztiago/jqapi-br.git (url origem do fork)
+    git remote add upstream https://github.com/jquery-br/jqapi-br.git (url origem do fork)
     git pull upstream pt-br (nome do branch)
     git push
+
+## Alteração
+
+O owner (dono) do repositório mudou. Antes era do luiztiago agora está no jquery-br. Caso você já tinha um clone do projeto, por favor, atualizem o seu upstream para a nova url:
+
+    git remote set-url upstream https://github.com/jquery-br/jqapi-br.git

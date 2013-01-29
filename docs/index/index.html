@@ -14,31 +14,31 @@
 </div>
 <div id="index1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.index(  )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
+<span class="name">.index(  )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Search for a given element from among the matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Procura por um dado elemento dentre os elementos encontrados.</p>
 <ul class="signatures">
 <li class="signature" id="index"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.index()</h4></li>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.index()</h4></li>
 <li class="signature" id="index-selector">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.index( selector )</h4>
-<p class="arguement"><strong>selector</strong>A selector representing a jQuery collection in which to look for an element.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.index( seletor )</h4>
+<p class="arguement"><strong>selector</strong>Um seletor que representa uma coleção do jQuery na qual procurar por um elemento.</p>
 </li>
 <li class="signature" id="index-element">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.index( element )</h4>
-<p class="arguement"><strong>element</strong>The DOM element or first element within the jQuery object to look for.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.index( elemento )</h4>
+<p class="arguement"><strong>elemento</strong>Um elemento DOM ou o primeiro elemento dentro do objeto jQuery para procurar.</p>
 </li>
 </ul>
 <div class="longdesc">
-<h4>Return Values</h4>
-<p>If no argument is passed to the <code>.index()</code> method, the return value is an integer indicating the position of the first element within the jQuery object relative to its sibling elements.</p>
-<p>If <code>.index()</code> is called on a collection of elements and a DOM element or jQuery object is passed in, <code>.index()</code> returns an integer indicating the position of the passed element relative to the original collection.</p>
-<p>If a selector string is passed as an argument, <code>.index()</code> returns an integer indicating the position of the original element relative to the elements matched by the selector. If the element is not found, <code>.index()</code> will return -1.</p>
-<h4>Detail</h4>
-<p>The complementary operation to <code>.get()</code>, which accepts an index and returns a DOM node, <code>.index()</code> can take a DOM node and returns an index. Suppose we have a simple unordered list on the page:</p>
+<h4>Valores Retornados</h4>
+<p>Se nenhum argumento for passado para o método <code>.index()</code>, o valor de retorno vai ser um inteiro indicando a posição do primeiro elemento dentro dentro do objeto jQuery relativo aos seus elementos irmãos.</p>
+<p>Se o método <code>.index()</code> for chamado numa coleção de elementos e um elemento DOM ou um objeto jQuery for passado, <code>.index()</code> retornará um inteiro indicando a posição do elemento passado relativo a coleção original.</p>
+<p>Se um seletor for passado como argumento, <code>.index()</code> retornará um inteiro indicando a posição do elemento original relativa aos elementos encontrados pelo seletor. Se nenhum elemento for encontrado, <code>.index()</code> retornará -1.</p>
+<h4>Detalhe</h4>
+<p>A operação complementar de <code>.get()</code>, que aceita e retorna um nó DOM, <code>.index()</code> pode aceitar um nó DOM e retornar um índice. Suponha que tenhamos uma lista não ordenada simples na página:</p>
 <pre>
 &lt;ul&gt;
   &lt;li id="foo"&gt;foo&lt;/li&gt;
@@ -46,43 +46,43 @@
   &lt;li id="baz"&gt;baz&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>If we retrieve one of the three list items (for example, through a DOM function or as the context to an event handler), <code>.index()</code> can search for this list item within the set of matched elements:</p>
+<p>Se recuperarmos um dos três itens da lista (Por exemplo, através de uma função DOM ou como contexto de um handler de evento), <code>.index()</code> pode procurar por este item de lista dentro do conjunto de elementos encontrados:</p>
 <pre>
 var listItem = document.getElementById('bar');
-alert('Index: ' + $('li').index(listItem));
-We get back the zero-based position of the list item:
+alert('Indice: ' + $('li').index(listItem));
 </pre>
-<p><span class="output">Index: 1</span></p>
-<p>Similarly, if we retrieve a jQuery object consisting of one of the three list items, <code>.index()</code> will search for that list item:</p>
+<p>Nós recebemos de volta a posição( baseada em 0 ) do item da lista:</p>
+<p><span class="output">Indice: 1</span></p>
+<p>Similarmente, se nós recuperarmos um objeto jQuery que consiste em um dos três itens da lista, <code>.index()</code> vai procurar por este item da lista:</p>
 <pre>
 var listItem = $('#bar');
-alert('Index: ' + $('li').index(listItem));
+alert('Indice: ' + $('li').index(listItem));
 </pre>
-<p>We get back the zero-based position of the list item:</p>
-<p><span class="output">Index: 1</span></p>
-<p>Note that if the jQuery collection used as the <code>.index()</code> method's argument contains more than one element, the first element within the matched set of elements will be used.</p>
+<p>Nós recebemos de volta a posição( baseada em 0 ) do item da lista:</p>
+<p><span class="output">Indice: 1</span></p>
+<p>Note que se a coleção jQuery usada como argumento para o método <code>.index()</code> contiver mais de um elemento, o primeiro elemento dentro do conjunto encontrado de elementos vai ser usado.</p>
 <pre>
 var listItems = $('li:gt(0)');
-alert('Index: ' + $('li').index(listItems));
+alert('Indice: ' + $('li').index(listItems));
 </pre>
-<p>We get back the zero-based position of the first list item within the matched set:</p>
-<p><span class="output">Index: 1</span></p>
-<p>If we use a string as the <code>.index()</code> method's argument, it is interpreted as a jQuery selector string. The first element among the object's matched elements which also matches this selector is located.</p>
+<p>Nós recebemos de volta a posição( baseada em 0 ) do primeiro item da lista dentro do conjunto encontrado:</p>
+<p><span class="output">Indice: 1</span></p>
+<p>Se usarmos uma string como o argumento do método <code>.index()</code> , ela vai ser interpretada como uma string seletora do jQuery. O primeiro elemento dentre os objetos encontrados que também obedece ao seletor é então localizado.</p>
 <pre>
 var listItem = $('#bar');
-alert('Index: ' + listItem.index('li'));
+alert('Indice: ' + listItem.index('li'));
 </pre>
-<p>We get back the zero-based position of the list item:</p>
-<p><span class="output">Index: 1</span></p>
-<p>If we omit the argument, <code>.index()</code> will return the position of the first element within the set of matched elements in relation to its siblings:</p>
-<pre>alert('Index: ' + $('#bar').index();</pre>
-<p>Again, we get back the zero-based position of the list item:</p>
-<p><span class="output">Index: 1</span></p>
+<p>Nós recebemos de volta a posição( baseada em 0 ) do item da lista:</p>
+<p><span class="output">Indice: 1</span></p>
+<p>Se omitirmos o argumento, <code>.index()</code> vai retornar a posição do primeiro elemento dentro do conjunto de elementos encontrados em relação aos seus irmãos:</p>
+<pre>alert('Indice: ' + $('#bar').index();</pre>
+<p>Novamente, nós recebemos de volta a posição( baseada em 0 ) do item da lista::</p>
+<p><span class="output">Indice: 1</span></p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">On click, returns the index (based zero) of that div in the page.</span>
+<h4>Exemplo: <span class="desc">Ao clicar, retorna o índice(baseado em 0) da div clicada na página.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -94,15 +94,15 @@ span { color:red; }
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;span&gt;Click a div!&lt;/span&gt;
-&lt;div&gt;First div&lt;/div&gt;
-&lt;div&gt;Second div&lt;/div&gt;
-&lt;div&gt;Third div&lt;/div&gt;
+  &lt;span&gt;Clique em uma div!&lt;/span&gt;
+&lt;div&gt;Primeira div&lt;/div&gt;
+&lt;div&gt;Segunda div&lt;/div&gt;
+&lt;div&gt;Terceira div&lt;/div&gt;
 &lt;script&gt;
 $("div").click(function () {
-  // this is the dom element clicked
-  var index = $("div").index(this);
-  $("span").text("That was div index #" + index);
+  // Este é o elemento dom clicado
+  var indice = $("div").index(this);
+  $("span").text("Esta foi a div de numero:" + indice);
 });
 &lt;/script&gt;
 
@@ -112,7 +112,7 @@ $("div").click(function () {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Returns the index for the element with ID bar.</span>
+<h4>Exemplo: <span class="desc">Retorna o índice do elemento com o ID bar.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -128,7 +128,7 @@ $("div").click(function () {
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var listItem = $('#bar');
-    $('div').html( 'Index: ' + $('li').index(listItem) );&lt;/script&gt;
+    $('div').html( 'Indice: ' + $('li').index(listItem) );&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -136,7 +136,7 @@ $("div").click(function () {
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Returns the index for the first item in the jQuery collection.</span>
+<h4>Exemplo: <span class="desc">Retorna o índice do primeiro item na coleção jQuery.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -152,7 +152,7 @@ $("div").click(function () {
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var listItems = $('li:gt(0)');
-$('div').html( 'Index: ' + $('li').index(listItems) );
+$('div').html( 'Indice: ' + $('li').index(listItems) );
 &lt;/script&gt;
 
 &lt;/body&gt;
@@ -161,7 +161,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 <div class="demo code-demo"></div>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">Returns the index for the element with ID bar in relation to all &lt;li&gt; elements.</span>
+<h4>Exemplo: <span class="desc">Retorna o índice do elemento com ID bar em relação a todos os elementos &lt;li&gt;</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -176,7 +176,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
   &lt;li id="baz"&gt;baz&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
-&lt;script&gt;$('div').html('Index: ' +  $('#bar').index('li') );&lt;/script&gt;
+&lt;script&gt;$('div').html('Indice: ' +  $('#bar').index('li') );&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -184,7 +184,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 <div class="demo code-demo"></div>
 </div>
 <div id="example-4">
-<h4>Example: <span class="desc">Returns the index for the element with ID bar in relation to its siblings.</span>
+<h4>Exemplo: <span class="desc">Retorna o índice do elemento com o ID bar em relação aos seus irmãos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -200,7 +200,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var barIndex = $('#bar').index();
-$('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
+$('div').html( 'Indice: ' +  barIndex );&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -208,7 +208,7 @@ $('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
 <div class="demo code-demo"></div>
 </div>
 <div id="example-5">
-<h4>Example: <span class="desc">Returns -1, as there is no element with ID foobar.</span>
+<h4>Exemplo: <span class="desc">Retorna -1, já que não existe nenhum elemento com o ID foobar.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -224,7 +224,7 @@ $('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var foobar = $("li").index( $('#foobar') );
-$('div').html('Index: ' + foobar);&lt;/script&gt;
+$('div').html('Indice: ' + foobar);&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>

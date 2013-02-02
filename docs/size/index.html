@@ -14,31 +14,31 @@
 </div>
 <div id="size1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.size()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
+<span class="name">.size()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Return the number of elements in the jQuery object.</p>
+<p class="desc"><strong>Descrição: </strong>Retorna o número de elementos no objeto jQuery.</p>
 <ul class="signatures"><li class="signature" id="size"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.size()</h4></li></ul>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.size()</h4></li></ul>
 <div class="longdesc">
-<p>The <code>.size()</code> method is functionally equivalent to the <code><a href="http://api.jquery.com/length/">.length</a></code> property; however, <strong>the <code>.length</code> property is preferred</strong> because it does not have the overhead of a function call.</p>
-<p>Given a simple unordered list on the page:</p>
+<p>O metódo <code>.size()</code> é funcionalmente equivalente a propiedade <code><a href="http://api.jquery.com/length/">.length</a></code>; porém, <strong>é preferível usar a propriedade <code>.length</code> </strong> porque ela não tem o overhead de uma chamada de função.</p>
+<p>Dado uma lista simples e não ordenada na página:</p>
 <pre>
 &lt;ul&gt;
   &lt;li&gt;foo&lt;/li&gt;
   &lt;li&gt;bar&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-<p>Both <code>.size()</code> and <code>.length</code> identify the number of items:</p>
-<pre>alert( "Size: " + $("li").size() );
-alert( "Size: " + $("li").length );</pre>
+<p>Tanto <code>.size()</code> quanto <code>.length</code> identificam o número de itens:</p>
+<pre>alert( "Tamanho: " + $("li").size() );
+alert( "Tamanho: " + $("li").length );</pre>
 <p>This results in two alerts:</p>
-<p><span class="output">Size: 2</span></p>
-<p><span class="output">Size: 2</span></p>
+<p><span class="output">Tamanho: 2</span></p>
+<p><span class="output">Tamanho: 2</span></p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Count the divs. Click to add more.</span></h4>
+<h4><span class="desc">Conte as divs. Clique para adicionar mais.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -60,9 +60,9 @@ $(document.body)
 .click(function() { 
   $(this).append( $("&lt;div&gt;") );
   var n = $("div").size();
-  $("span").text("There are " + n + " divs. Click to add more.");
+  $("span").text("Existem " + n + " divs. Clique para adicionar mais.");
 })
-// trigger the click to start
+// dispara-se o trigger de clique para iniciar
 .click(); 
 &lt;/script&gt;
 

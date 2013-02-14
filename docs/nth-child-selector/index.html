@@ -3,7 +3,7 @@
 <div class="entry-content">
         <div class="entry-title roundTop">
           
-          <h1 class="jq-clearfix">:nth-child() Selector</h1>
+          <h1 class="jq-clearfix">Seletor :nth-child()</h1>
           <div class="entry-meta jq-clearfix">
                         Categories:
             <span class="category"><a href="http://api.jquery.com/category/selectors/" title="View all posts in Selectors">Selectors</a> &gt; <a href="http://api.jquery.com/category/selectors/child-filter-selectors/" title="View all posts in Child Filter">Child Filter</a></span>
@@ -13,25 +13,25 @@
 
 </div>
 <div id="nth-child1" class="entry selector">
-<h2 class="jq-clearfix roundTop section-title">
-<span class="name">nth-child</span>  selector</h2>
+<h2 class="jq-clearfix roundTop section-title">Seletor
+<span class="name">nth-child</span></h2>
 <div class="jq-box roundBottom entry-details">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.1.4/">1.1.4</a></span>jQuery(':nth-child(index/even/odd/equation)')</h4>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.1.4/">1.1.4</a></span>jQuery(':nth-child(index/even/odd/equation)')</h4>
 <ul class="signatures"><li><dl class="arguments">
 <dt>index</dt>
-<dd>The index of each child to match, starting with <code>1</code>, the string <code>even</code> or <code>odd</code>, or an equation ( eg. <code>:nth-child(even)</code>, <code>:nth-child(4n)</code> )</dd>
+<dd>O índice de cada filho, começando com <code>1</code>, a string <code>even</code> ou <code>odd</code>, ou uma equação, ex: <code>:nth-child(even)</code>, <code>:nth-child(4n)</code> )</dd>
 </dl></li></ul>
-<p class="desc"><strong>Description: </strong>Selects all elements that are the nth-child of their parent.</p>
+<p class="desc"><strong>Descricão: </strong>Seleciona todos os elementos que são os enésimos filhos.</p>
 <div class="longdesc">
-<p>Because jQuery's implementation of <code>:nth-child(n)</code> is strictly derived from the CSS specification, the value of <code>n</code> is "1-indexed", meaning that the counting starts at 1. For all other selector expressions, however, jQuery follows JavaScript's "0-indexed" counting. Therefore, given a single <code>&lt;ul&gt;</code> containing two <code>&lt;li&gt;</code>s, <code>$('li:nth-child(1)')</code> selects the first <code>&lt;li&gt;</code> while  <code>$('li:eq(1)')</code> selects the second.</p>
-<p>The <code>:nth-child(n)</code> pseudo-class is easily confused with <code>:eq(n)</code>, even though the two can result in dramatically different matched elements. With <code>:nth-child(n)</code>, all children are counted, regardless of what they are, and the specified element is selected only if it matches the selector attached to the pseudo-class. With <code>:eq(n)</code> only the selector attached to the pseudo-class is counted, not limited to children of any other element, and the (n+1)th one (n is 0-based) is selected.</p>
-<p>Further discussion of this unusual usage can be found in the <a href="http://www.w3.org/TR/css3-selectors/#nth-child-pseudo">W3C CSS specification</a>.</p>
+<p> Devido a implementação do <code>:nth-child(n)</code> ser estritamente derivada da especificação do CSS, o valor do <code>n</code> é baseado no 1 (indexado a partir do 1 e não do 0 como em arrays), significa que a conta começa no 1. Para todos os outros seletores o jQuery segue a indexação do JavaScript que é baseada no zero. Portanto, se um <code>&lt;ul&gt;</code> têm dois <code>&lt;li&gt;</code>, <code>$('li:nth-child(1)')</code> seleciona o primeiro <code>&lt;li&gt;</code> enquanto  <code>$('li:eq(1)')</code> seleciona o segundo.</p>
+<p>A pseudo classe <code>:nth-child(n)</code> é facilmente confundida com o <code>:eq(n)</code>, apesar dos seus dois resultado serem drasticamente diferentes. Com o <code>:nth-child(n)</code>, todos os filhos são contados, indiferente do que eles sejam, e o elemento especiífico só é selecionado se ele bater com o seletor anexado com o peseudo classe. Com o <code>:eq(n)</code> apenas o seletor anexado à pseudo classe é contado, não limitado aos filhos de outros elemento, e o (n+1)to (n é baseado no zero) é selecionado.</p>
+<p>Mais discussão pode ser lida no <a href="http://www.w3.org/TR/css3-selectors/#nth-child-pseudo">W3C CSS specification</a>.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Finds the second li in each matched ul and notes it.</span>
+<h4>Exemplo: <span class="desc">Encontra a segunda li em cada ul selecionada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -69,7 +69,8 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">This is a playground to see how the selector works with different strings.  Notice that this is different from the :even and :odd which have no regard for parent and just filter the list of elements to every other one.  The :nth-child, however, counts the index of the child to its particular parent.  In any case, it's easier to see than explain so...</span>
+<h4>Exemplo: <span class="desc">
+  Isso é um parque para ver como o seletor funciona com diferentes strings. Note que isso é diferente do :even e :odd que não consideram os pais e apenas filtram a lista de elementos. Entretanto o :nth-child, conta o indíce de cada filho relativo ao seu pai em particular. Em qualquer caso, é mais fácil ver do que explicar...</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

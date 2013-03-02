@@ -34,7 +34,7 @@
   success: <em>callback</em>
 });
 </pre>
-<p>Dados enviados ao servidor são anexados à URL como uma string query. Se o valor do parametro <code>data</code> for um objeto (map), este é convertido em uma string e codificado em url antes de ser anexado à URL.</p>
+<p>Dados enviados ao servidor são anexados à URL como uma query string. Se o valor do parametro <code>data</code> for um objeto (map), este é convertido em uma string e codificado em url antes de ser anexado à URL.</p>
 <p>A maioria das implementações especificarão um sucess handler:</p>
 <pre>$.getJSON('ajax/test.json', function(data) {
   var items = [];
@@ -57,7 +57,7 @@
 }
 </pre>
 <p>Usando esta estrutura, o exemplo percorre os dados solicitados, constrói uma lista não ordenada e anexa esta ao corpo.</p>
-<p>O <code>success</code> callback passa os dados retornados, que tipicamente são um objeto JavaScript ou um array como definido pela estrutura JSON e analisados usando o método <code><a href="/jQuery.parseJSON">$.parseJSON()</a></code>. Ele também passa o status em texto da resposta.</p>
+<p>O callback <code>success</code> passa os dados retornados, que tipicamente são um objeto JavaScript ou um array como definido pela estrutura JSON e analisados usando o método <code><a href="/jQuery.parseJSON">$.parseJSON()</a></code>. Ele também passa o status em texto da resposta.</p>
 <p><strong>No jQuery 1.5</strong>, a função callback <code>success</code> recebe o objeto <a href="http://api.jquery.com/jQuery.get/#jqxhr-object">"jqXHR"</a> (no <strong>jQuery 1.4</strong>, ela recebia o objeto <code>XMLHttpRequest</code>). Entretanto, como requisições JSONP e requisições GET entre domínios não utilizam <abbr title="XMLHTTPRequest">XHR</abbr>, nestes casos os parâmetros <code>jqXHR</code> e <code>textStatus</code> passados para o success callback são indefinidos.</p>
 <blockquote>
     <p><strong>Importante:</strong> No jQuery 1.4, se o arquivo JSON possuir erro de sintaxe, a requisição, normalmente, falhará silenciosamente. Por esse motivo, evite a edição manual de dados JSON. JSON é um formato de troca de dados com regras de sintaxe que são mais exigentes que as da notação literal de objetos JavaScript. Por exemplo,  todas as strings representadas em JSON, sendo elas propriedades ou valores, devem ser colocadas entres aspas duplas. Para detalhes do formato JSON, veja <a href="http://json.org/">http://json.org/</a>.</p>

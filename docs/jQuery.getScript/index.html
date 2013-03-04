@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.getScript()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/shorthand-methods/" title="View all posts in Shorthand Methods">Shorthand Methods</a></span>
   
 
@@ -14,36 +14,36 @@
 </div>
 <div id="jQuery-getScript1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.getScript( url, [ success(data, textStatus) ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#XMLHttpRequest">XMLHttpRequest</a></span>
+<span class="name">jQuery.getScript( url, [ success(data, textStatus) ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#XMLHttpRequest">XMLHttpRequest</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Load a JavaScript file from the server using a GET HTTP request, then execute it.</p>
+<p class="desc"><strong>Descrição: </strong>Carrega um arquivo JavaScript do servidor usando uma requisição GET HTTP, então o executa.</p>
 <ul class="signatures"><li class="signature" id="jQuery-getScript-url-successdata- textStatus">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.getScript( url, [ success(data, textStatus) ] )</h4>
-<p class="arguement"><strong>url</strong>A string containing the URL to which the request is sent.</p>
-<p class="arguement"><strong>success(data, textStatus)</strong>A callback function that is executed if the request succeeds.</p>
+<span class="versionAdded">Adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery.getScript( url, [ success(data, textStatus) ] )</h4>
+<p class="arguement"><strong>url</strong> Uma string contendo a URL à qual a requisição será enviada .</p>
+<p class="arguement"><strong>success(data, textStatus)</strong> Uma função callback que é executada se a requisição for bem sucedida.</p>
 </li></ul>
 <div class="longdesc">
-<p>This is a shorthand Ajax function, which is equivalent to:</p>
+<p>>Essa é uma simplificação de uma função Ajax, que é equivalente a:</p>
 <pre>$.ajax({
   url: <em>url</em>,
   dataType: 'script',
   success: <em>success</em>
 });
 </pre>
-<p>The callback is passed the returned JavaScript file. This is generally not useful as the script will already have run at this point.</p>
-<p>The script is executed in the global context, so it can refer to other variables and use jQuery functions. Included scripts should have some impact on the current page:</p>
+<p>O arquivo JavaScript é passado ao callback. Isso geralmente não é útil pois o script já foi executado neste ponto.</p>
+<p>O script é executa em um  contexto global, então ele pode se referir a outras variáveis e usar funções JQuery. Scripts incluídos devem ter algum impacto sobre a página atual:</p>
 <pre>$('.result').html('&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;');</pre>
-<p>The script can then be included and run by referencing the file name:</p>
+<p>O script pode então ser incluído e executado referenciando o nome do arquivo:</p>
 <pre>$.getScript('ajax/test.js', function() {
   alert('Load was performed.');
 });</pre>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Load the official jQuery Color Animation plugin dynamically and bind some color animations to occur once the new functionality is loaded.</span>
+<h4>Exemplo: <span class="desc">Carrega o plugin JQuery Color Animation oficial e faz com que algumas animações de cor ocorram assim que a funcialidade é carregada.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -74,12 +74,12 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Load the test.js JavaScript file and execute it.</span>
+<h4>Exemplo: <span class="desc">Carrega o arquivo JavaScript test.js e o executa.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.getScript("test.js");</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Load the test.js JavaScript file and execute it, displaying an alert message when the execution is complete.</span>
+<h4>Exemplo: <span class="desc">Carrega o arquivo JavaScript test.js e o executa, mostrando um mensagem de alerta ao completar a execução.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.getScript("test.js", function(){
    alert("Script loaded and executed.");

@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.getJSON()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/shorthand-methods/" title="View all posts in Shorthand Methods">Shorthand Methods</a></span>
   
 
@@ -14,19 +14,19 @@
 </div>
 <div id="jQuery-getJSON1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.getJSON( url, [ data ], [ success(data, textStatus, jqXHR) ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jqXHR">jqXHR</a></span>
+<span class="name">jQuery.getJSON( url, [ data ], [ success(data, textStatus, jqXHR) ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jqXHR">jqXHR</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Load JSON-encoded data from the server using a GET HTTP request.</p>
+<p class="desc"><strong>Descrição: </strong>Carrega dados com codificação JSON do servidor usando uma solicitação HTTP GET.</p>
 <ul class="signatures"><li class="signature" id="jQuery-getJSON-url-data-successdata- textStatus- jqXHR">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.getJSON( url, [ data ], [ success(data, textStatus, jqXHR) ] )</h4>
-<p class="arguement"><strong>url</strong>A string containing the URL to which the request is sent.</p>
-<p class="arguement"><strong>data</strong>A map or string that is sent to the server with the request.</p>
-<p class="arguement"><strong>success(data, textStatus, jqXHR)</strong>A callback function that is executed if the request succeeds.</p>
+<span class="versionAdded">Adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jQuery.getJSON( url, [ data ], [ success(data, textStatus, jqXHR) ] )</h4>
+<p class="arguement"><strong>url</strong> Uma string contendo a URL à qual a requisição será enviada .</p>
+<p class="arguement"><strong>data</strong> Um map ou string que é enviado ao servidor com a requisição.</p>
+<p class="arguement"><strong>success(data, textStatus, jqXHR)</strong> Uma função callback que é executada se a requisição for bem sucedida.</p>
 </li></ul>
 <div class="longdesc">
-<p>This is a shorthand Ajax function, which is equivalent to:</p>
+<p>Essa é uma simplificação de uma função Ajax, que é equivalente a:</p>
 <pre>$.ajax({
   url: <em>url</em>,
   dataType: 'json',
@@ -34,8 +34,8 @@
   success: <em>callback</em>
 });
 </pre>
-<p>Data that is sent to the server is appended to the URL as a query string. If the value of the <code>data</code> parameter is an object (map), it is converted to a string and url-encoded before it is appended to the URL.</p>
-<p>Most implementations will specify a success handler:</p>
+<p>Dados enviados ao servidor são anexados à URL como uma query string. Se o valor do parametro <code>data</code> for um objeto (map), este é convertido em uma string e codificado em url antes de ser anexado à URL.</p>
+<p>A maioria das implementações especificarão um sucess handler:</p>
 <pre>$.getJSON('ajax/test.json', function(data) {
   var items = [];
 
@@ -49,26 +49,26 @@
   }).appendTo('body');
 });
 </pre>
-<p>This example, of course, relies on the structure of the JSON file:</p>
+<p>Este exemplo, é claro, depende da estrutura do arquivo JSON:</p>
 <pre>{
   "one": "Singular sensation",
   "two": "Beady little eyes",
   "three": "Little birds pitch by my doorstep"
 }
 </pre>
-<p>Using this structure, the example loops through the requested data, builds an unordered list, and appends it to the body.</p>
-<p>The <code>success</code> callback is passed the returned data, which is typically a JavaScript object or array as defined by the JSON structure and parsed using the <code><a href="/jQuery.parseJSON">$.parseJSON()</a></code> method. It is also passed the text status of the response.</p>
-<p><strong>As of jQuery 1.5</strong>, the <code>success</code> callback function receives a <a href="http://api.jquery.com/jQuery.get/#jqxhr-object">"jqXHR" object</a> (in <strong>jQuery 1.4</strong>, it received the <code>XMLHttpRequest</code> object). However, since JSONP and cross-domain GET requests do not use <abbr title="XMLHTTPRequest">XHR</abbr>, in those cases the <code>jqXHR</code> and <code>textStatus</code> parameters passed to the success callback are undefined.</p>
+<p>Usando esta estrutura, o exemplo percorre os dados solicitados, constrói uma lista não ordenada e anexa esta ao corpo.</p>
+<p>O callback <code>success</code> passa os dados retornados, que tipicamente são um objeto JavaScript ou um array como definido pela estrutura JSON e analisados usando o método <code><a href="/jQuery.parseJSON">$.parseJSON()</a></code>. Ele também passa o status em texto da resposta.</p>
+<p><strong>No jQuery 1.5</strong>, a função callback <code>success</code> recebe o objeto <a href="http://api.jquery.com/jQuery.get/#jqxhr-object">"jqXHR"</a> (no <strong>jQuery 1.4</strong>, ela recebia o objeto <code>XMLHttpRequest</code>). Entretanto, como requisições JSONP e requisições GET entre domínios não utilizam <abbr title="XMLHTTPRequest">XHR</abbr>, nestes casos os parâmetros <code>jqXHR</code> e <code>textStatus</code> passados para o success callback são indefinidos.</p>
 <blockquote>
-    <p><strong>Important:</strong> As of jQuery 1.4, if the JSON file contains a syntax error, the request will usually fail silently. Avoid frequent hand-editing of JSON data for this reason. JSON is a data-interchange format with syntax rules that are stricter than those of JavaScript's object literal notation. For example, all strings represented in JSON, whether they are properties or values, must be enclosed in double-quotes. For details on the JSON format, see <a href="http://json.org/">http://json.org/</a>.</p>
+    <p><strong>Importante:</strong> No jQuery 1.4, se o arquivo JSON possuir erro de sintaxe, a requisição, normalmente, falhará silenciosamente. Por esse motivo, evite a edição manual de dados JSON. JSON é um formato de troca de dados com regras de sintaxe que são mais exigentes que as da notação literal de objetos JavaScript. Por exemplo,  todas as strings representadas em JSON, sendo elas propriedades ou valores, devem ser colocadas entres aspas duplas. Para detalhes do formato JSON, veja <a href="http://json.org/">http://json.org/</a>.</p>
   </blockquote>
 <h4 id="jsonp">JSONP</h4>
-<p>If the URL includes the string "callback=?" (or similar, as defined by the server-side API), the request is treated as JSONP instead. See the discussion of the <code>jsonp</code> data type in <code><a href="http://api.jquery.com/jQuery.ajax/">$.ajax()</a></code> for more details.</p>
-<h4 id="jqxhr-object">The jqXHR Object</h4>
-<p><strong>As of jQuery 1.5</strong>, all of jQuery's Ajax methods return  a superset of the <code>XMLHTTPRequest</code> object. This jQuery XHR object, or "jqXHR," returned by <code>$.getJSON()</code> implements the Promise interface, giving it all the properties, methods, and behavior of a Promise (see <a href="http://api.jquery.com/category/deferred-object/">Deferred object</a> for more information). For convenience and consistency with the callback names used by <code><a href="http://api.jquery.com/jQuery.ajax/">$.ajax()</a></code>, it provides <code>.error()</code>, <code>.success()</code>, and <code>.complete()</code> methods. These methods take a function argument that is called when the request terminates, and the function receives the same arguments as the correspondingly-named <code>$.ajax()</code> callback.</p>
-<p>The Promise interface in jQuery 1.5 also allows jQuery's Ajax methods, including <code>$.getJSON()</code>, to chain multiple <code>.success()</code>, <code>.complete()</code>, and <code>.error()</code> callbacks on a single request, and even to assign these callbacks after the request may have completed. If the request is already complete, the callback is fired immediately.</p>
-<pre>// Assign handlers immediately after making the request,
-// and remember the jqxhr object for this request
+<p>Se a URL incluir  a string "callback=?" (ou similar, como definido pela API do servidor), a requisição será tratada como JSONP. Veja a discussão do tipo de dados <code>jsonp</code> em <code><a href="http://api.jquery.com/jQuery.ajax/">$.ajax()</a></code> para mais detalhes.</p>
+<h4 id="jqxhr-object">O objeto jqXHR</h4>
+<p><strong>No jQuery 1.5</strong>, todos os métodos Ajax do jQuery retornão um superset do objeto <code>XMLHTTPRequest</code>. Este objeto jQuery XHR, ou "jqXHR," retornado pelo <code>$.getJSON()</code> implementa a interface Promise, dando-o todas as propriedades, métodos, e comportamentos da Promise (veja <a href="http://api.jquery.com/category/deferred-object/">Deferred object</a> para mais informações). Por conveniência e consistência com os nomes de callback usados por <code><a href="http://api.jquery.com/jQuery.ajax/">$.ajax()</a></code>, ele fornece os métodos <code>.error()</code>, <code>.success()</code>, e <code>.complete()</code>. Esses métodos recebem um argumento de função que é chamado quando a requisição é finalizada, e a função recebe os mesmos argumentos do callback <code>$.ajax()</code> de nome correspondente.</p>
+<p>A interface Promise no jQuery 1.5 também permite que métodos Ajax do jQuery, incluindo <code>$.getJSON()</code>, encadear múltiplos callbacks <code>.success()</code>, <code>.complete()</code>, e <code>.error()</code> em uma única requisição, e ainda atribuir esses callbacks depois que a requisição possa ter sido concluída. Se a requisição já estiver completa, o callback é disparado imediatamente.</p>
+<pre>// Atribui handlers imediatamente após fazer a requisição,
+// e grava o objeto jqxhr para aquela requisição
 var jqxhr = $.getJSON("example.json", function() {
   alert("success");
 })
@@ -76,20 +76,20 @@ var jqxhr = $.getJSON("example.json", function() {
 .error(function() { alert("error"); })
 .complete(function() { alert("complete"); });
 
-// perform other work here ...
+// Realize outro trabalho aqui ...
 
-// Set another completion function for the request above
+// Define outra função de conclusão para a requisição acima
 jqxhr.complete(function(){ alert("second complete"); });</pre>
 </div>
 <h3 id="notes-0">Additional Notes:</h3>
 <div class="longdesc"><ul>
-<li>Due to browser security restrictions, most "Ajax" requests are subject to the <a title="Same Origin Policy on Wikipedia" href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>; the request can not successfully retrieve data from a different domain, subdomain, or protocol.</li>
-<li>Script and JSONP requests are not subject to the same origin policy restrictions.</li>
+<li>Devido a restrições de segurança dos browsers, a maioria das requisições "Ajax" estão sujeitas a <a title="Same Origin Policy on Wikipedia" href="http://en.wikipedia.org/wiki/Same_origin_policy">política de mesma origem</a>; a requisição pode não ser bem sucedida ao recuperar dados de um domínio diferente, subdomínio, ou protocolo.</li>
+<li>Script e requisições JSONP não estão suijeitos às restrições da política de mesma origem</li>
 </ul></div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Loads the four most recent cat pictures from the Flickr JSONP API.</span>
+<h4>Exemplo: <span class="desc">Carrega as quatro fotos de gato mais recentes da API JSONP do Flickr.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -121,14 +121,14 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Load the JSON data from test.js and access a name from the returned JSON data.</span>
+<h4>Exemplo: <span class="desc">Carrega os dados JSON de test.js e acessa o nome dos dados JSON retornados.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.getJSON("test.js", function(json) {
    alert("JSON Data: " + json.users[3].name);
  });</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Load the JSON data from test.js, passing along additional data, and access a name from the returned JSON data.</span>
+<h4>Exemplo: <span class="desc">Carrega os dados JSON de test.js, passando dados adicionais, e acessa o nome dos dados JSON retornados.</span>
 </h4>
 <pre class="prettyprint"><code class="example">$.getJSON("test.js", { name: "John", time: "2pm" }, function(json) {
     alert("JSON Data: " + json.users[3].name);

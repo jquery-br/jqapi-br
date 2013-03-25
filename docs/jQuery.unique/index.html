@@ -14,22 +14,22 @@
 </div>
 <div id="jQuery-unique1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.unique( array )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
+<span class="name">jQuery.unique( array )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.</p>
+<p class="desc"><strong>Descrição: </strong>Ordena um array de elementos DOM, e remove os duplicados. Note que isso funciona apenas para elementos do DOM, não funciona com strings ou números.</p>
 <ul class="signatures"><li class="signature" id="jQuery-unique-array">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.1.3/">1.1.3</a></span>jQuery.unique( array )</h4>
-<p class="arguement"><strong>array</strong>The Array of DOM elements.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.1.3/">1.1.3</a></span>jQuery.unique( array )</h4>
+<p class="arguement"><strong>array</strong>O Array de elementos do DOM.</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>$.unique()</code> function searches through an array of objects, sorting the array, and removing any duplicate nodes. This function only works on plain JavaScript arrays of DOM elements, and is chiefly used internally by jQuery.</p>
-<p>As of jQuery 1.4 the results will always be returned in document order.</p>
+<p>A função <code>$.unique()</code> procura através de um array de objetos, ordenando o array e removendo qualquer nó duplicado. Essa função só funciona com array plenos de JavaScript de elementos do DOM e é principalmente usado internamente pelo jQuery.</p>
+<p>O resultado sempre será retornado na ordem do documento.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Removes any duplicate elements from the array of divs.</span></h4>
+<h4><span class="desc">Remove qualquer elemento duplicado do array de divs.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -48,14 +48,14 @@
   &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
 
-    var divs = $("div").get(); // unique() must take a native array
+    var divs = $("div").get(); // unique() precisa pegar um array nativo
 
-    // add 3 elements of class dup too (they are divs)
+    // adicionad 3 elementos com a classe dup (eles são divs)
     divs = divs.concat($(".dup").get());
-    $("div:eq(1)").text("Pre-unique there are " + divs.length + " elements.");
+    $("div:eq(1)").text("Antes do unique são: " + divs.length + " elementos.");
 
     divs = jQuery.unique(divs);
-    $("div:eq(2)").text("Post-unique there are " + divs.length + " elements.")
+    $("div:eq(2)").text("Depois do unique são: " + divs.length + " elementos.")
                   .css("color", "red");
 
 &lt;/script&gt;

@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">event.timeStamp</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/events/" title="View all posts in Events">Events</a> &gt; <a href="http://api.jquery.com/category/events/event-object/" title="View all posts in Event Object">Event Object</a></span>
   
 
@@ -14,16 +14,16 @@
 </div>
 <div id="event-timeStamp1" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">event.timeStamp</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
+<span class="name">event.timeStamp</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Number">Number</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>The difference in milliseconds between the time an event is triggered and January 1, 1970.</p>
+<p class="desc"><strong>Descrição: </strong>A diferença em milisegundos entre a hora que o evento é disparado e 1 de janeiro de 1970.</p>
 <ul class="signatures"><li class="signature" id="event-timeStamp"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2.6/">1.2.6</a></span>event.timeStamp</h4></li></ul>
-<div class="longdesc"><p>This property can be useful for profiling the performance of certain jQuery functions by getting the <code>event.timeStamp</code> value at two points in the code and noting the difference.</p></div>
-<h3>Example:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.2.6/">1.2.6</a></span>event.timeStamp</h4></li></ul>
+<div class="longdesc"><p>Essa propriedade pode ser útil para medições de performance de certas funções do jquery, egando o valor do <code>event.timeStamp</code> em diferentes pontos do código e notando a diferença.</p></div>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Display the time since the click handler last executed.</span></h4>
+<h4><span class="desc">Mostra o tempo desde o ultimo clique.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -41,9 +41,9 @@ var last, diff;
 $('div').click(function(event) {
   if ( last ) {
     diff = event.timeStamp - last
-    $('div').append('time since last event: ' + diff + '&lt;br/&gt;');
+    $('div').append('Tempo desde o ultimo evento: ' + diff + '&lt;br/&gt;');
   } else {
-    $('div').append('Click again.&lt;br/&gt;');
+    $('div').append('Click novamente.&lt;br/&gt;');
   }
   last = event.timeStamp;
 });  

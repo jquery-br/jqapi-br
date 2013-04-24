@@ -17,24 +17,24 @@
 <span class="name">deferred.promise( [ target ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Promise">Promise</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong> Return a Deferred's Promise object. </p>
+<p class="desc"><strong>Descrição: </strong> Retorna um objeto Promise do Deferred. </p>
 <ul class="signatures"><li class="signature" id="deferred-promise-target">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.5/">1.5</a></span>deferred.promise( [ target ] )</h4>
-<p class="arguement"><strong>target</strong>Object onto which the promise methods have to be attached</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.5/">1.5</a></span>deferred.promise( [ target ] )</h4>
+<p class="arguement"><strong>target</strong>Objeto no qual os métodos promise tem de ser acoplados</p>
 </li></ul>
 <div class="longdesc">
-<p>The <code>deferred.promise()</code> method allows an asynchronous function to prevent other code from interfering with the progress or status of its internal request. The Promise exposes only the Deferred methods needed to attach additional handlers or determine the state (<code>then</code>, <code>done</code>, <code>fail</code>, <code>isResolved</code>, and <code>isRejected</code>), but not ones that change the state (<code>resolve</code>, <code>reject</code>, <code>resolveWith</code>, and <code>rejectWith</code>). <strong>As of jQuery 1.6</strong>, the Promise also exposes the <code>always</code> and <code>pipe</code> Deferred methods.</p>
-<p>If <code>target</code> is provided, <code>deferred.promise()</code> will attach the methods onto it and then return this object rather than create a new one. This can be useful to attach the Promise behavior to an object that already exists.</p>
-<p>If you are creating a Deferred, keep a reference to the Deferred so that it can be resolved or rejected at some point. Return <em>only</em> the Promise object via <code>deferred.promise()</code> so other code can register callbacks or inspect the current state.</p>
-<p>For more information, see the documentation for <a href="/category/deferred-object/">Deferred object</a>.</p>
+<p>O método <code>deferred.promise()</code> permite uma função assíncrona para prevenir outro código de interferir no progresso ou status de sua requisição interna. O Promise expõe apenas os métodos Deferred necessários para acoplar manipuladores adicionais ou determinar o estado (<code>then</code>, <code>done</code>, <code>fail</code>, <code>isResolved</code>, and <code>isRejected</code>), mas não modifica o estado (<code>resolve</code>, <code>reject</code>, <code>resolveWith</code>, and <code>rejectWith</code>). <strong>Como em jQuery 1.6</strong>, o Promise também expõe os métodos Deferred <code>always</code> e <code>pipe</code>.</p>
+<p>Se <code>target</code> é provido, <code>deferred.promise()</code> acoplará os métodos nele e então retornar este objeto ao invés de criar um novo. Iso pode ser útil para acoplar o comportamento de Promise a um objeto que já existe.</p>
+<p>Se você está criando um Deferred, mantenha uma referência ao Deferred, assim ele pode ser resolvido ou rejeitado no mesmo ponto. Retorna <em>only</em> o objeto Promise via <code>deferred.promise()</code>, então outro código pode registrar callbacks ou inspecionar o estado atual.</p>
+<p>Para mais informação, veja a documentação para <a href="/category/deferred-object/"> object Deferred</a>.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Create a Deferred and set two timer-based functions to either resolve or reject the Deferred after a random interval. Whichever one fires first "wins" and will call one of the callbacks. The second timeout has no effect since the Deferred is already complete (in a resolved or rejected state) from the first timeout action.</span>
+<h4>Exemplo: <span class="desc">Cria um Deferred e configura duas funções baseadas em timer para ambos e resolve ou rejeita o objeto Deferred depois de um intervalo randômico. Qualquer um dispara primeiro "wins" e chamará um dos callbacks. O segundo timeout não tem efeito  desde que o objeto Deferred já esteja completo (em um estado resolvido ou rejeitado) da primeira ação de timeout.</span>
 </h4>
-<pre class="prettyprint"><code class="example">// Create a Deferred and return its Promise
+<pre class="prettyprint"><code class="example">// Cria um objeto Deferred e retorna o seu Promise
 function asyncEvent(){
     var dfd = new jQuery.Deferred();
     setTimeout(function(){
@@ -46,7 +46,7 @@ function asyncEvent(){
     return dfd.promise();
 }
 
-// Attach a done and fail handler for the asyncEvent
+// Acioka um manipulador de sucesso e falha para o asyncEvent
 $.when( asyncEvent() ).then(
     function(status){
         alert( status+', things are going well' );
@@ -58,28 +58,28 @@ $.when( asyncEvent() ).then(
 </code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Use the target argument to promote an existing object to a Promise:</span>
+<h4>Exemplo: <span class="desc">Usa o argumento alvo para promover um objeto existente para um Promise:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
-// Existing object
+// Objeto existente
 var obj = {
   hello: function( name ) {
     alert( "Hello " + name );
   }
 },
-// Create a Deferred
+// Cria um objeto Deferred
 defer = $.Deferred();
 
-// Set object as a promise
+// Configura o objeto como um promise
 defer.promise( obj );
 
-// Resolve the deferred
+// Resolve o deferred
 defer.resolve( "John" );
 
-// Use the object as a Promise
+// Usa o objeto como um Promise
 obj.done(function( name ) {
-  this.hello( name ); // will alert "Hello John"
-}).hello( "Karl" ); // will alert "Hello Karl"
+  this.hello( name ); // alertará "Hello John"
+}).hello( "Karl" ); // alertará "Hello Karl"
 </code></pre>
 </div>
 </div>

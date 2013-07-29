@@ -14,68 +14,68 @@
 </div>
 <div id="add1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.add( selector )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.add( seletor )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Add elements to the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Adiciona elementos no conjunto de elementos encontrados.</p>
 <ul class="signatures">
 <li class="signature" id="add-selector">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.add( selector )</h4>
-<p class="arguement"><strong>selector</strong>A string representing a selector expression to find additional elements to add to the set of matched elements.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.add( seletor )</h4>
+<p class="arguement"><strong>seletor</strong>Uma string representando um seletor para encontrar elementos adicionais para adicionar ao conjunto de elementos encontrados.</p>
 </li>
 <li class="signature" id="add-elements">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.add( elements )</h4>
-<p class="arguement"><strong>elements</strong>One or more elements to add to the set of matched elements.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.add( elementos )</h4>
+<p class="arguement"><strong>elementos</strong>Um ou mais elementos para adicionar ao conjunto de elementos encontrados.</p>
 </li>
 <li class="signature" id="add-html">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.add( html )</h4>
-<p class="arguement"><strong>html</strong>An HTML fragment to add to the set of matched elements.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.add( html )</h4>
+<p class="arguement"><strong>html</strong>Um fragmento HTML para adicionar ao conjunto de elementos encontrados.</p>
 </li>
 <li class="signature" id="add-selector-context">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.add( selector, context )</h4>
-<p class="arguement"><strong>selector</strong>A string representing a selector expression to find additional elements to add to the set of matched elements.</p>
-<p class="arguement"><strong>context</strong>The point in the document at which the selector should begin matching; similar to the context argument of the <code>$(selector, context)</code> method.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4/">1.4</a></span>.add( seletor, contexto )</h4>
+<p class="arguement"><strong>seletor</strong>Uma string representando um seletor para encontrar elementos adicionais para adicionar ao conjunto de elementos encontrados.</p>
+<p class="arguement"><strong>contexto</strong>O ponto no documento no qual o seletor deve começar a procurar; similar ao argumento contexto do método <code>$(seletor, contexto)</code>.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>Given a jQuery object that represents a set of DOM elements, the <code>.add()</code> method constructs a new jQuery object from the union of those elements and the ones passed into the method. The argument to <code>.add()</code> can be pretty much anything that  <code>$()</code> accepts, including a jQuery selector expression, references to DOM elements, or an HTML snippet.</p>
-<p>The updated set of elements can be used in a following (chained) method, or assigned to a variable for later use. For example:</p>
+<p>Dado um objeto jQuery que representa um conjunto de elementos DOM, o método <code>.add()</code> constrói um novo objeto jQuery a partir da união destes elementos com os elemtnos passados como argumento do método. O argumento para o método <code>.add()</code> pode praticamente qualquer coisa que o <code>$()</code> aceita, incluindo um seletor jQuery, referência para elementos DOM, ou um fragmento HTML.</p>
+<p>O conjunto atualizado de elementos pode ser usado num método seguinte(em cadeia), ou atribuído a uma variável para ser usado depois. Por exemplo:</p>
 <pre>
 $("p").add("div").addClass("widget");
 var pdiv = $("p").add("div");
 </pre>
-<p>The following will <em>not</em> save the added elements, because the <code>.add()</code> method creates a new set and leaves the original set in pdiv unchanged:</p>
+<p>O seguinte <em>não</em> vai salvar os elementos adicionados, porque o método <code>.add()</code> cria um novo conjunto e deixa o conjunto original em pdiv sem modificações:</p>
 <pre>
 var pdiv = $("p");
-pdiv.add("div");  // WRONG, pdiv will not change
+pdiv.add("div");  // ERRADO, pdiv não vai mudar
 </pre>
-<p>Consider a page with a simple list and a paragraph following it:</p>
+<p>Considere uma página com uma lista simples e um parágrafo após ela:</p>
 <pre>&lt;ul&gt;
   &lt;li&gt;list item 1&lt;/li&gt;
   &lt;li&gt;list item 2&lt;/li&gt;
   &lt;li&gt;list item 3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;a paragraph&lt;/p&gt;</pre>
-<p>We can select the list items and then the paragraph by using either a selector or a reference to the DOM element itself as the <code>.add()</code> method's argument:</p>
+<p>Nós podemos selecionar os itens da lista e então selecionar o parágrafo usando um seletor ou uma referência para o elemento DOM como argumento para o método <code>.add()</code>:</p>
 <pre>$('li').add('p').css('background-color', 'red');</pre>
 <p>Or:</p>
 <pre>$('li').add(document.getElementsByTagName('p')[0])
   .css('background-color', 'red');</pre>
-<p>The result of this call is a red background behind all four elements.
-Using an HTML snippet as the <code>.add()</code> method's argument (as in the third version), we can create additional elements on the fly and add those elements to the matched set of elements. Let's say, for example, that we want to alter the background of the list items along with a newly created paragraph:</p>
+<p>O resultado desta chamada vai ser um fundo vermelho atrás de todos os quatro elementos.
+Usando um fragmento HTML como argumento do método <code>.add()</code>(assim como na terceira versão), nós podemos criar elementos adicionais em tempo de execução e adicionar estes elementos ao conjunto encontrado de elementos. Digamos, por exemplo, que queremos alterar o fundo do itens da lista junto ao de um parágrafo recém criado:</p>
 <pre>$('li').add('&lt;p id="new"&gt;new paragraph&lt;/p&gt;')
   .css('background-color', 'red');</pre>
-<p>Although the new paragraph has been created and its background color changed, it still does not appear on the page. To place it on the page, we could add one of the insertion methods to the chain.</p>
-<p>As of jQuery 1.4 the results from .add() will always be returned in document order (rather than a simple concatenation).</p>
+<p>Apesar do novo parágrafo ter sido criado e sua cor de fundo ter mudado, ele ainda não aparece na página. Para colocá-lo na página, nós podemos adicionar um dos métodos de inserção na cadeia de métodos.</p>
+<p>A partir do jQuery 1.4 os resultados do método .add() vão sempre ser retornados na ordem do documento(ao invés de uma simples concatenação).</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Finds all divs and makes a border.  Then adds all paragraphs to the jQuery object to set their backgrounds yellow.</span>
+<h4>Exemplo: <span class="desc">Acha todas as divs e faz uma borda. Então adiciona todos os parágrafos ao objeto jQuery para deixar seu fundo amarelo.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -110,7 +110,7 @@ $("div").css("border", "2px solid red")
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Adds more elements, matched by the given expression, to the set of matched elements.</span>
+<h4>Exemplo: <span class="desc">Adiciona mais elementos, encontrados pelo seletor dado, ao conjunto de elementos encontrados.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -127,7 +127,7 @@ $("div").css("border", "2px solid red")
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Adds more elements, created on the fly, to the set of matched elements.</span>
+<h4>Exemplo: <span class="desc">Adiciona mais elementos, criados na execução, ao conjunto de elementos encontrados.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -144,7 +144,7 @@ $("div").css("border", "2px solid red")
 <div class="demo code-demo"></div>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">Adds one or more Elements to the set of matched elements.</span>
+<h4>Exemplo: <span class="desc">Adiciona um ou mais Elementos ao conjunto de elementos encontrados.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -161,7 +161,7 @@ $("div").css("border", "2px solid red")
 <div class="demo code-demo"></div>
 </div>
 <div id="example-4">
-<h4>Example: <span class="desc">Demonstrates how to add (or push) elements to an existing collection</span>
+<h4>Exemplo: <span class="desc">Demonstra como adicionar elementos ao uma coleção existente.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

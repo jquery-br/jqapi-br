@@ -5,8 +5,8 @@
           
           <h1 class="jq-clearfix">.slideToggle()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
-            <span class="category"><a href="http://api.jquery.com/category/effects/" title="View all posts in Effects">Effects</a> &gt; <a href="http://api.jquery.com/category/effects/sliding/" title="View all posts in Sliding">Sliding</a></span>
+                        Categorias:
+            <span class="category"><a href="http://api.jquery.com/category/effects/" title="Ver todos os posts em Efeitos">Efeitos</a> &gt; <a href="http://api.jquery.com/category/effects/sliding/" title="Ver todos os posts em Sliding">Sliding</a></span>
   
 
           </div>
@@ -14,55 +14,55 @@
 </div>
 <div id="slideToggle1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.slideToggle( [ duration ], [ callback ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.slideToggle( [ duration ], [ callback ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Display or hide the matched elements with a sliding motion.</p>
+<p class="desc"><strong>Descrição: </strong>Exibe ou esconde os elementos selecionados com um movimento deslizante.</p>
 <ul class="signatures">
 <li class="signature" id="slideToggle-duration-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.slideToggle( [ duration ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>.slideToggle( [ duration ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número que determina a duração da animação.</p>
+<p class="arguement"><strong>callback</strong>Função que será chamada quando a animação completar.</p>
 </li>
 <li class="signature" id="slideToggle-duration-easing-callback">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>.slideToggle( [ duration ], [ easing ], [ callback ] )</h4>
-<p class="arguement"><strong>duration</strong>A string or number determining how long the animation will run.</p>
-<p class="arguement"><strong>easing</strong>A string indicating which easing function to use for the transition.</p>
-<p class="arguement"><strong>callback</strong>A function to call once the animation is complete.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.slideToggle( [ duration ], [ easing ], [ callback ] )</h4>
+<p class="arguement"><strong>duration</strong>Uma string ou número que determina a duração da animação.</p>
+<p class="arguement"><strong>easing</strong>Uma string indicando qual função easing(função pronta de animação) usar para a transição</p>
+<p class="arguement"><strong>callback</strong>Função que será chamada quando a animação completar.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>The <code>.slideToggle()</code> method animates the height of the matched elements. This causes lower parts of the page to slide up or down, appearing to reveal or conceal the items. If the element is initially displayed, it will be hidden; if hidden, it will be shown. The <code>display</code> property is saved and restored as needed. If an element has a <code>display</code> value of <code>inline</code>, then is hidden and shown, it will once again be displayed <code>inline</code>. When the height reaches 0 after a hiding animation, the <code>display</code> style property is set to <code>none</code> to ensure that the element no longer affects the layout of the page.</p>
-<p>As of jQuery 1.4.3, an optional string naming an easing function may be used. Easing functions specify the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
-<p>We can animate any element, such as a simple image:</p>
+<p>O metódo <code>.slideToggle()</code> anima a altura dos elementos selecionados. Isso faz com que os elementos abaixo deslizem para cima ou para baixo, mostrando ou revelando ou escondendo os itens. Se o elemento estiver inicialmente visivel, ele será escondido; se estiver escondido, ele será mostrado. A propriedade <code>display</code> é setada e restaurada quando precisar. Se um elemento tiver a propriedade de estilo <code>display</code> setado em <code>inline</code>, for escondido e mostrado, ele voltará a ter o valor <code>inline</code> em <code>display</code>. Quando a altura chegar a 0 depois de uma animação que ocultará o elemento, a propriedade de estilo <code>display</code> é setada para <code>none</code> para assegurar que o elemento não afetará mais o layout da página.</p>
+<p>A partir da jQuery 1.4.3, uma string opcional chamando uma função de easing pode ser usada. Funções de atenuação especificam a velocidade com que a animação progride em diferentes pontos dentro da animação. As únicas implementações na biblioteca jQuery como padrão, chamada <code>swing</code>, e a outra procede em ritmo constante se chama <code>linear</code>. Mais funções de easing estão disponíveis com o uso de plug-ins, como o notável <a href="http://jqueryui.com">suite jQuery UI</a>.</p>
+<p>A duração tem que ser passada em milisegundos; valores altos indicam animações mais demoradas, não mais rápidas. As strigns <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar a duração de <code>200</code> e <code>600</code> milisegundos, respectivamente. Se outra string for fornecida, ou se o parâmetro <code>duration</code> for omitido, é usado o valor padrão de <code>400</code> millisegundos.</p>
+<p>Se fornecido, o callback é executado uma vez quando a animação é completada. Isso pode ser muito útil para fazer animações em sequência. O callback não envia nenhum argumento, mas <code>this</code> é setado para o elemento DOM que está sendo animado. Se vários elementos estão sendo animados, é importante notar que o callback é executado uma vez por elemento selecionado, não uma vez por animação como um todo.</p>
+<p>Podemos animar qualquer elemento, como uma simples imagem:</p>
 <pre>&lt;div id="clickme"&gt;
-  Click here
+  Clique aqui
 &lt;/div&gt;
 &lt;img id="book" src="book.png" alt="" width="100" height="123" /&gt;</pre>
-<p>We will cause <code>.slideToggle()</code> to be called when another element is clicked:</p>
+<p>Vamos fazer <code>.slideToggle()</code> para ser chamada quando outro elemento for clicado:</p>
 <pre>$('#clickme').click(function() {
   $('#book').slideToggle('slow', function() {
     // Animation complete.
   });
 });
 </pre>
-<p>With the element initially shown, we can hide it slowly with the first click:</p>
+<p>Com o elemento inicialmente visivel, nós podemos esconde-lo lentamente:</p>
 <p class="image four-across"> 
     <img src="/images/0042_06_25.png" alt=""><img src="/images/0042_06_26.png" alt=""><img src="/images/0042_06_27.png" alt=""><img src="/images/0042_06_28.png" alt=""></p>
-<p>A second click will show the element once again:</p>
+<p>O segundo click mostrará o elemento mais uma vez:</p>
 <p class="image four-across"> 
     <img src="/images/0042_06_29.png" alt=""><img src="/images/0042_06_30.png" alt=""><img src="/images/0042_06_31.png" alt=""><img src="/images/0042_06_32.png" alt=""></p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.slideToggle()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Notas adicionais:</h3>
+<div class="longdesc"><ul><li>Todos os efeitos jQuery, incluindo <code>.slideToggle()</code>, pode ser desativado globalmente setando <code>jQuery.fx.off = true</code>, o que efetivamente define a duração para 0. Para mais informações veja <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Animates all paragraphs to slide up or down, completing the animation within 600 milliseconds.</span>
+<h4>Exemplo: <span class="desc">Anima todos os parágrafos para deslizarem para cima ou para baixo, completando a animação em 600 milesegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -88,11 +88,11 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Animates divs between dividers with a toggle that makes some appear and some disappear.</span>
+<h4>Exemplo: <span class="desc">Anima as divs entre os divisores com uma alternância que faz com que alguns apareçam e outros desapareçam.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -131,7 +131,7 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4>Demo:</h4>
+<h4>Demonstração:</h4>
 <div class="demo code-demo"></div>
 </div>
 </div>
